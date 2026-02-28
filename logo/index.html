@@ -4000,6 +4000,19 @@
     }, 1000);
 
   </script>
+  <script>
+    // Fallback to reveal content if opening animation hangs
+    setTimeout(function () {
+      const openingMasks = document.querySelectorAll(".opening, .opening-mask, .logo-sticky, .logo-0-content");
+      openingMasks.forEach(el => {
+        el.style.opacity = "1";
+        el.style.visibility = "visible";
+      });
+      // Specifically hide the loading overlay if it exists
+      const loadingOverlay = document.querySelector(".opening-animation-script");
+      if (loadingOverlay) loadingOverlay.style.display = "none";
+    }, 2000);
+  </script>
 </body>
 
 </html>
