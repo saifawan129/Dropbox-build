@@ -1,0 +1,55 @@
+.ccpa-iframe {
+    border: 0;
+    position: fixed;
+    height: 0;
+    left: 0;
+    bottom: 0;
+    background-color: transparent;
+    z-index: 999999;
+    overflow: hidden;
+    color-scheme: none; /* This allows the background to be transparent on 3rd party sites */
+}
+
+.ccpa-iframe.banner-visible {
+    /* The shadow needs to be placed on the iframe element itself to be seen otherwise,
+    if placed on any child elements, it will but cut off since the iframe is sized exactly
+    to the content - using hard-coded values for 3rd party where it isn't included */
+    /* stylelint-disable-next-line dig/var-recommended-colors */
+    box-shadow: 0 16px 32px 0 #0000001a;
+    width: 600px;
+    left: 24px;
+    bottom: 24px;
+}
+
+@media (max-width: 648px) {
+    .ccpa-iframe.banner-visible {
+        width: calc(100% - 24px); /* Iframe width - inline padding of the banner */
+        left: 12px;
+        bottom: 12px;
+    }
+}
+
+/* When the banner is hidden from the user move it outside of the viewport to exclude it from the ttvc measurement */
+.ccpa-iframe:not(.banner-visible):not(.detailed-view-visible):not(.floating-button-visible) {
+    left: -1px;
+    display: none;
+}
+
+.ccpa-iframe.floating-button-visible {
+    width: 32px;
+    height: 32px;
+    left: 0;
+    bottom: 24px;
+}
+
+@media (max-width: 648px) {
+    .ccpa-iframe.floating-button-visible {
+        bottom: 12px;
+    }
+}
+
+/* the iframe should take up the entire viewport when the options modal is open */
+.ccpa-iframe.detailed-view-visible {
+    height: 100%;
+    width: 100%;
+}

@@ -1,0 +1,3221 @@
+<!DOCTYPE html><!-- This site was created in Webflow. https://webflow.com --><!-- Last Published: Thu Mar 13 2025 16:03:14 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain="www.dropboxbrand.com" data-wf-page="6700810f44c9d9dcded5153e" data-wf-site="66c503d081b2f012369fc5d2" data-wf-intellimize-customer-id="117618206" lang="en"><head><meta charset="utf-8"/><title>Framework - Dropbox Brand Guidelines</title><meta content="Dropbox is designed to simplify the frenzy of modern work. Our design strategy prompts humanity, clarity, action, and delight." name="description"/><meta content="Framework - Dropbox Brand Guidelines" property="og:title"/><meta content="Dropbox is designed to simplify the frenzy of modern work. Our design strategy prompts humanity, clarity, action, and delight." property="og:description"/><meta content="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/67609bad3af052836b946e71_Framework.png" property="og:image"/><meta content="Framework - Dropbox Brand Guidelines" property="twitter:title"/><meta content="Dropbox is designed to simplify the frenzy of modern work. Our design strategy prompts humanity, clarity, action, and delight." property="twitter:description"/><meta content="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/67609bad3af052836b946e71_Framework.png" property="twitter:image"/><meta property="og:type" content="website"/><meta content="summary_large_image" name="twitter:card"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="3tCRabxJ2U9f5U63I6kPjRzRX-6Mc17_xew2pnbksyA" name="google-site-verification"/><meta content="Webflow" name="generator"/><link href="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/css/brand-app-site.webflow.6721586f7.css" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script><script type="text/javascript">WebFont.load({  google: {    families: ["Noto Sans Mono:regular,500"]  }});</script><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/67336e1ef555445999b4a0a3_favicon.ico" rel="shortcut icon" type="image/x-icon"/><link href="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673385fd3198626bd743eb08_1024x1024bb%20(1).jpg" rel="apple-touch-icon"/><link href="https://brand.dropbox.com/framework" rel="canonical"/><style>.anti-flicker, .anti-flicker * {visibility: hidden !important; opacity: 0 !important;}</style><style>[data-wf-hidden-variation], [data-wf-hidden-variation] * {
+        display: none !important;
+      }</style><meta http-equiv="Content-Language" content="en">
+<meta name="google-site-verification" content="VYIqNLKSnn3DRBtfCGlDP5uDzkoMMkdL15OupQPjovE" />
+
+<script src="https://www.dropbox.com/pithos/privacy_consent" async defer></script>
+
+<script>
+
+window.dropbox = window.dropbox || {};
+window.dropbox.privacyConsent = {
+    autoInit: {
+        thirdPartyConfig: {
+            cookieDomain: "brand.dropbox.com"
+        },
+        injectToFooter: true,
+        injectFloatingButton: true,
+        disableBanner: false,
+        consentChangedCallback: function (categories) {
+            handleConsentChange(categories);
+        }
+    }
+};
+
+function handleConsentChange(categories) {
+    const analyticsAllowed = categories["analytics"];
+    if (analyticsAllowed) {
+        loadAnalytics();
+    } else {
+        disableAnalytics();
+    }
+}
+
+function loadAnalytics() {
+    if (document.getElementById("adobetm")) return;
+
+    const scriptUrls = {
+        prod: "https://assets.adobedtm.com/7c31e7b46b8e/232fdafca1c4/launch-d74dfe2ac870.min.js",
+        staging: "https://assets.adobedtm.com/7c31e7b46b8e/232fdafca1c4/launch-bd197fe5d4fb-development.min.js"
+    };
+    const prodHostnames = ["brand.dropbox.com", "dropboxbrand.com", "www.brand.dropbox.com", "www.dropboxbrand.com"];
+    const isProd = prodHostnames.includes(window.location.hostname);
+
+    const scriptElement = document.createElement("script");
+    scriptElement.src = scriptUrls[isProd ? "prod" : "staging"];
+    scriptElement.id = "adobetm";
+    scriptElement.async = true;
+
+    document.head.appendChild(scriptElement);
+}
+
+function disableAnalytics() {
+    document.getElementById("adobetm")?.remove();
+
+    delete window._satellite;
+    delete window.s;
+
+    const cookiesToClear = ["s_cc", "s_sq", "s_vi", "s_fid", "AMCV_", "AMCVS_"];
+    cookiesToClear.forEach((cookieName) => {
+        document.cookie = `${cookieName}=; Max-Age=0; path=/; domain=.brand.dropbox.com`;
+    });
+}
+
+
+</script><meta name="theme-color" content="#1e1919">
+<meta name="author" content="Daybreak Studio; Kiran Patel and Ben Giannis"></head><body><div><div class="nav-style w-embed"><style>
+
+:root {
+    --nav-easing: cubic-bezier(.4,0,.2,1);
+    --nav-easing-swoop: cubic-bezier(.6,0,0,1);
+    --highest-tile-yeet: calc((max(100vw, 100vh) - 90px) / -4);
+    --overscroll-progress: 0;
+}
+
+.nav-container.no-transitions * {
+  transition: none !important;
+}
+
+.nav-button-content h3 {
+    opacity: 0;
+}
+.tile-line {
+    opacity: 0;
+}
+
+.nav {
+    pointer-events: none;
+}
+.nav-container.open .nav {
+    pointer-events: all;
+}
+
+.nav-wrapper {
+    transition: background-color 0.3s var(--nav-easing);
+}
+.nav-container.open .nav-wrapper {
+    background-color: white;
+    transition: background-color 0.3s var(--nav-easing) 0.2s;
+}
+
+.nav-container .menu {
+	left: calc(var(--button-size) / -6);
+  bottom: 50%;
+}
+
+.nav-container.open .menu {
+	transition: transform 0.5s var(--nav-easing-swoop), opacity 0.7s cubic-bezier(0.4, 0, 0.1, 1);
+	transform: translate(calc(50vw - var(--button-size) / 3), 50%);
+}
+
+.nav-container:not(.open) .menu {
+	transform: translate(0, 50%);
+  transition: transform 0.5s var(--nav-easing-swoop) 0.05s, opacity 0.7s cubic-bezier(0.4, 0, 0.1, 1);
+}
+
+/*start warp*/
+
+@keyframes nav-button-open {
+    20% {
+        transform: scale(2, 0.7);
+    }
+    40% {
+        transform: scale(1.2, 0.82);
+    }
+    60% {
+        transform: scale(1, 0.93);
+    }
+    75% {
+        transform: scale(0.98, 0.97);
+    }
+    90% {
+        transform: scale(0.99, 0.99);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes nav-button-close {
+    30% {
+        transform: scale(1.2, 0.85);
+    }
+    60% {
+        transform: scale(1.9, 0.7);
+    }
+    80% {
+        transform: scale(1.2, calc(2 / 3));
+    }
+    90% {
+        transform: scale(0.7, 0.7);
+    }
+    100% {
+        transform: scale(0.666667, 0.666667);
+    }
+}
+
+.nav-container.warp.open .nav-button {
+    animation: nav-button-open 0.4s linear 0.1s forwards;
+    transform: scale(calc(2 / 3));
+    transition: none;
+}
+
+.nav-container.warp:not(.open) .nav-button {
+    animation: nav-button-close 0.3s linear 0.05s forwards;
+    transition: none;
+}
+
+.nav-container:not(.warp) .nav-button {
+    transform: scale(calc(2 / 3));
+}
+
+@media (min-width: 992px) {
+   .nav-container:not(.outro) .nav-button:hover .nav-button-highlight {
+      opacity: 0.12;
+      visibility: visible;
+   }
+}
+
+@media (max-width: 991px) {
+    .nav-container.warp.open .nav-button {
+      	transition: transform 0.5s var(--nav-easing-swoop) 0.1s;
+        transform: scale(1);
+        animation: none;
+    }
+    .nav-container.warp:not(.open) .nav-button {
+    	  transition: transform 0.3s var(--nav-easing);
+        transform: scale(calc(0.75));
+        animation: none;
+    }
+}
+
+
+/*end warp*/
+
+.nav-container:not(.open) .nav-tile {
+    transition: transform 0.5s var(--nav-easing-swoop);
+}
+
+.nav-container.open .nav-tile {
+    opacity: 1;
+    transform: initial;
+    transition: transform 0.5s var(--nav-easing-swoop) 0.1s;
+}
+
+.nav-container:not(.open) .nav-tile:has(.tile.strategy) { transform: scale(2) translate(calc(var(--highest-tile-yeet) * 4), calc(var(--highest-tile-yeet) * 2)); }
+.nav-container:not(.open) .nav-tile:has(.tile.voice-tone) { transform: scale(2) translate(calc(var(--highest-tile-yeet) * -0.1), calc(var(--highest-tile-yeet) * 1)); }
+.nav-container:not(.open) .nav-tile:has(.tile.logo) { transform: scale(2) translate(calc(var(--highest-tile-yeet) * -1), calc(var(--highest-tile-yeet) * -0.1)); }
+.nav-container:not(.open) .nav-tile:has(.tile.typography) { transform: scale(2) translate(calc(var(--highest-tile-yeet) * -4), calc(var(--highest-tile-yeet) * 2)); }
+.nav-container:not(.open) .nav-tile:has(.tile.iconography) { transform: scale(2) translate(calc(var(--highest-tile-yeet) * 4), calc(var(--highest-tile-yeet) * -2)); }
+.nav-container:not(.open) .nav-tile:has(.tile.color) { transform: scale(2) translate(calc(var(--highest-tile-yeet) * 1), calc(var(--highest-tile-yeet) * 0.1)); }
+.nav-container:not(.open) .nav-tile:has(.tile.imagery) { transform: scale(2) translate(calc(var(--highest-tile-yeet) * 0.1), calc(var(--highest-tile-yeet) * -1)); }
+.nav-container:not(.open) .nav-tile:has(.tile.motion) { transform: scale(2) translate(calc(var(--highest-tile-yeet) * -4), calc(var(--highest-tile-yeet) * -2)); }
+
+@media (max-width: 991px) {
+    .nav-container .menu {
+      left: 50%;
+      bottom: calc(var(--button-size) / -8);
+    }
+    .nav-container.open .menu {
+      transform: translate(-50%, calc(-50dvh - var(--button-size) * 3 / -8));
+    }
+    .nav-container:not(.open) .menu {
+      transform: translate(-50%, 0);
+    }
+    .nav-container:not(.open) .nav-button {
+      transform: scale(calc(3 / 4));
+    }
+
+    .nav-container:not(.open) .nav-tile:has(.tile.strategy) { transform: scale(2) translate(calc(var(--highest-tile-yeet) * 2), calc(var(--highest-tile-yeet) * 3)); }
+    .nav-container:not(.open) .nav-tile:has(.tile.voice-tone) { transform: scale(2) translate(calc(var(--highest-tile-yeet) * -2), calc(var(--highest-tile-yeet) * 3)); }
+    .nav-container:not(.open) .nav-tile:has(.tile.logo) { transform: scale(2) translate(calc(var(--highest-tile-yeet) * 0.25), calc(var(--highest-tile-yeet) * 1.5)); }
+    .nav-container:not(.open) .nav-tile:has(.tile.typography) { transform: scale(2) translate(calc(var(--highest-tile-yeet) * -1.5), calc(var(--highest-tile-yeet) * 0.25)); }
+    .nav-container:not(.open) .nav-tile:has(.tile.iconography) { transform: scale(2) translate(calc(var(--highest-tile-yeet) * 1.5), calc(var(--highest-tile-yeet) * -0.25)); }
+    .nav-container:not(.open) .nav-tile:has(.tile.color) { transform: scale(2) translate(calc(var(--highest-tile-yeet) * -0.25), calc(var(--highest-tile-yeet) * -1.5)); }
+    .nav-container:not(.open) .nav-tile:has(.tile.imagery) { transform: scale(2) translate(calc(var(--highest-tile-yeet) * 2), calc(var(--highest-tile-yeet) * -3)); }
+    .nav-container:not(.open) .nav-tile:has(.tile.motion) { transform: scale(2) translate(calc(var(--highest-tile-yeet) * -2), calc(var(--highest-tile-yeet) * -3)); }
+}
+
+/*.nav.open .nav-tile-1 { transition-delay: 0s; }
+.nav.open .nav-tile-2 { transition-delay: 0.03s; }
+.nav.open .nav-tile-3 { transition-delay: 0.06s; }
+.nav.open .nav-tile-4 { transition-delay: 0.09s; }
+.nav.open .nav-tile-5 { transition-delay: 0.12s; }
+.nav.open .nav-tile-6 { transition-delay: 0.15s; }
+.nav.open .nav-tile-7 { transition-delay: 0.18s; }
+.nav.open .nav-tile-8 { transition-delay: 0.21s; }
+
+.nav:not(.open) .nav-tile-1 { transition-delay: 0.21s; }
+.nav:not(.open) .nav-tile-2 { transition-delay: 0.18s; }
+.nav:not(.open) .nav-tile-3 { transition-delay: 0.15s; }
+.nav:not(.open) .nav-tile-4 { transition-delay: 0.12s; }
+.nav:not(.open) .nav-tile-5 { transition-delay: 0.09s; }
+.nav:not(.open) .nav-tile-6 { transition-delay: 0.06s; }
+.nav:not(.open) .nav-tile-7 { transition-delay: 0.03s; }
+.nav:not(.open) .nav-tile-8 { transition-delay: 0s; }*/
+
+
+.nav-container > *:not(.nav-background, .nav-page-title) {
+	transition: background-color 0.2s, transform 0.7s cubic-bezier(.4,0,.1,1), color 0.9s cubic-bezier(.2,.7,.45,1), opacity 0.7s cubic-bezier(.4,0,.1,1);
+}
+
+.nav-container .nav-page-title, .nav-background {
+	transition: transform 0.7s cubic-bezier(.4,0,.1,1), opacity 0.7s cubic-bezier(.4,0,.1,1);
+}
+
+.nav-background {
+	transition: transform 0.7s cubic-bezier(.4,0,.1,1), background-color 0.2s ease;
+}
+
+.nav-container > .outro-nav-background {
+	transition: opacity 0.5s ease-in-out;
+}
+
+.nav-container.outro > .outro-page, .nav-container.outro > .nav {
+	transform: translateX(calc(100vw - 60px));
+}
+
+.nav-container.outro > .menu {
+	transform: translate(calc(100vw - 60px), 50%);
+  opacity: 0.25;
+}
+
+.nav-container.outro > .partner-info-button, .nav-container.outro .nav-page-title, .nav-container.outro .outro-mobile-close-button {
+  transform: translateX(calc(100vw - 60px)) rotateZ(180deg);
+}
+
+.nav-container.outro .outro-nav-background {
+    opacity: 1;
+}
+
+.nav-container.outro .nav-border-line {
+	transform: translateX(calc(100vw - 120px));
+  left: 59px;
+}
+
+.nav-container.outro > .partner-info-button {
+	color: var(--accent--ui-accent) !important;
+}
+
+@media (max-width: 991px) {
+  .nav-container.outro > .nav, .nav-container.outro > .partner-info-button, .nav-container.outro .nav-page-title, .nav-container.outro .nav-background, .nav-container.outro .outro-mobile-close-button {
+    transform: translateY(-65vh);
+  }
+  .nav-container.outro > .nav-background {
+    background-color: white !important;
+  }
+  .nav-container.outro > .menu {
+    transform: translate(-50%, -65vh);
+    opacity: 0;
+    pointer-events: none;
+  }
+  .nav-container.outro > .outro-page {
+    transform: translateY(calc(-65vh - 48px));
+  }
+  .nav-container.outro .nav-border-line {
+    transform: translateY(calc(-65vh + 48px));
+    left: 0;
+  }
+  .nav-container.outro .outro-nav-background {
+  	pointer-events: auto;
+  }
+  .nav-container.outro .cursor-anchor {
+  	opacity: 0;
+  }
+  .nav-container.outro .outro-mobile-close-button {
+  	opacity: 1;
+  	pointer-events: auto;
+  }
+  .nav-container.outro .nav-page-title {
+  	opacity: 0 !important;
+  }
+}
+
+.tile-menu-tile.nav-button:not(.nav-button-gridline) {
+	background: conic-gradient(
+    from 0deg,
+    color-mix(in srgb, var(--accent--tab) 60%, black) 0deg,
+    color-mix(in srgb, var(--accent--tab) 60%, black) calc(var(--overscroll-progress) * 360deg),
+    var(--accent--tab) calc(var(--overscroll-progress) * 360deg)
+  );
+}
+
+.nav-container.open .tile-menu-tile.nav-button:not(.nav-button-gridline) {
+	background: var(--accent--tab);
+}
+
+.page-section.dark > * {
+	opacity: calc(1 - var(--overscroll-progress));
+  transform: scale(calc(1 - calc(var(--overscroll-progress) * 0.05)));
+}
+
+.home-logo-container {
+	display: none;
+}
+
+</style></div></div><div persist-id="nav" class="nav-container"><div class="w-embed"><style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-rendering: geometricPrecision;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  *::-webkit-scrollbar, ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  ::selection {
+    background-color: var(--accent--tab);
+    color: white;
+	}
+  
+  body {
+    overscroll-behavior: none;
+  }
+
+  :root {
+    --button-size: 90px;
+    --nav-tile-gap: 10px;
+    --tile-transition: 0.35s cubic-bezier(.4,0,.2,1);
+  }
+
+  @media screen and (max-width: 991px) {
+    :root {
+      --button-size: 64px;
+      --nav-tile-gap: 5px;
+    }
+  }
+
+  .w-embed, [data-animation-type="rive"] {
+    line-height: 0;
+  }
+
+  h1,h2,h3,h4,h5,p, .h1,.h2,.h3,.h4,.h5 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .title, h1, h2, h3, h4, .nav-header, .button, .h1,.h2,.h3,.h4, blockquote, q {
+    font-family: "Dbsharpgroteskvariable Vf";
+  }
+
+  .title, h1, h2, h3, h4, .h1,.h2,.h3,.h4, blockquote, q {
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  .title, .nav-header {
+    font-variation-settings: "wght" 500, "wdth" 100, "ital" 0;
+  }
+
+  .title {
+    font-size: clamp(0px,10vw,200px);
+  }
+
+  h1, .h1 {
+    font-variation-settings: "wght" 520, "wdth" 106, "ital" 0;
+    font-size: 60px;
+  }
+
+  h2, .h2 {
+    font-variation-settings: "wght" 520, "wdth" 106, "ital" 0;
+    font-size: 40px;
+  }
+
+  h3, .h3 {
+    font-variation-settings: "wght" 520, "wdth" 106, "ital" 0;
+    font-size: 30px;
+  }
+
+  h4, .h4 {
+    font-variation-settings: "wght" 520, "wdth" 106, "ital" 0;
+    font-size: 24px;
+  }
+  
+  blockquote, q {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font-variation-settings: "wght" 520, "wdth" 106, "ital" 0;
+    vertical-align: baseline;
+    background: transparent;
+    quotes: none;
+  }
+
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none;
+  }
+  
+  .tile-title {
+    font-variation-settings: "wght" 500;
+  }
+
+  .nav-header {
+    line-height: 100%;
+    letter-spacing: 0;
+    font-size: 36px;
+  }
+
+  .p-large, .p, .ui-label, .annotation, .p-small {
+    font-family: "Atlasgrotesk Web";
+  }
+
+  .p-large, .p, .p-small {
+    font-weight: 400;
+  }
+  
+  button, input[type="submit"], input[type="reset"] {
+		background: none;
+    color: inherit;
+	}
+
+  .button {
+    line-height: 100%;
+    letter-spacing: 0.03em;
+    font-variation-settings: "wght" 500, "wdth" 100, "ital" 0;
+  }
+
+  .ui-label, .annotation {
+    font-weight: 500;
+  }
+
+  .p-large, .ui-label {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .annotation {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .p-small {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  @media screen and (max-width: 991px) {
+    .title {
+      font-size: clamp(36px,12vw,96px);
+    }
+
+    h1, .h1 {
+      font-size: 36px;
+    }
+
+    h2, .h2 {
+      font-size: 28px;
+    }
+
+    h3, .h3 {
+      font-size: 24px;
+    }
+
+    .nav-header {
+      font-size: 20px;
+    }
+
+    .ui-label {
+      font-size: 14px;
+    }
+
+    .annotation {
+      font-size: 10px;
+      line-height: 14px;
+    }
+
+    .bezier-point {
+      transform: scale(0.667);
+      stroke-width: 3px !important;
+    }
+  }
+
+  .tile * {
+    pointer-events: none;
+  }
+
+  .nav-scroll-indicator {
+    transform: scaleY(0);
+  }
+  
+  .nav-button-svg.menu-svg-hidden {
+  	opacity: 0;
+    transform: scale(0.8);
+  }
+
+  @media screen and ((max-height: 399px) or ((max-width: 991px) and (max-height: 480px)) or (max-width: 249px)) {
+    .strategy-visual-container, .voice-tone-visual-container, .logo-visual-container, .typography-visual-container, .iconography-visual-container, .color-visual-container, .imagery-visual-container, .motion-visual-container {
+      display: none;
+    }
+  }
+  
+  @media (any-hover: hover) {
+	.tile:hover {
+    background-color: var(--text--base) !important;
+    color: white !important;
+  }}
+
+  /* Opening */
+
+  .opening .tile-title {
+  	opacity: 1!important;
+    transform: scale(4)!important;
+  }
+
+  @media screen and (max-width: 991px) {
+    .opening .tile-title {
+      transform: scale(2.5)!important;
+    }
+  }
+
+  :root {
+    --nav-easing: cubic-bezier(.4,0,.2,1);
+    --nav-easing-swoop: cubic-bezier(.6,0,0,1);
+    --highest-tile-yeet: calc((max(100vw, 100vh) - 90px) / -4);
+    --overscroll-progress: 0;
+    --opening-margin: 120px;
+    --opening-gutter: 24px;
+    --opening-total-margins: calc(2 * var(--opening-margin));
+    --opening-total-gutters: calc(11 * var(--opening-gutter));
+    --opening-grid-width: calc(100vw - var(--opening-total-margins));
+    --opening-single-column: calc((var(--opening-grid-width) - var(--opening-total-gutters)) / 12);
+    --opening-col-1-left: var(--opening-margin);
+    --opening-col-1-right: calc(var(--opening-margin) + var(--opening-single-column));
+    --opening-col-2-left: calc(var(--opening-margin) + 1 * (var(--opening-single-column) + var(--opening-gutter)));
+    --opening-col-2-right: calc(var(--opening-margin) + 1 * (var(--opening-single-column) + var(--opening-gutter)) + var(--opening-single-column));
+    --opening-col-3-left: calc(var(--opening-margin) + 2 * (var(--opening-single-column) + var(--opening-gutter)));
+    --opening-col-3-right: calc(var(--opening-margin) + 2 * (var(--opening-single-column) + var(--opening-gutter)) + var(--opening-single-column));
+    --opening-col-4-left: calc(var(--opening-margin) + 3 * (var(--opening-single-column) + var(--opening-gutter)));
+    --opening-col-4-right: calc(var(--opening-margin) + 3 * (var(--opening-single-column) + var(--opening-gutter)) + var(--opening-single-column));
+    --opening-col-5-left: calc(var(--opening-margin) + 4 * (var(--opening-single-column) + var(--opening-gutter)));
+    --opening-col-5-right: calc(var(--opening-margin) + 4 * (var(--opening-single-column) + var(--opening-gutter)) + var(--opening-single-column));
+    --opening-col-6-left: calc(var(--opening-margin) + 5 * (var(--opening-single-column) + var(--opening-gutter)));
+    --opening-col-6-right: calc(var(--opening-margin) + 5 * (var(--opening-single-column) + var(--opening-gutter)) + var(--opening-single-column));
+    --opening-col-7-left: calc(var(--opening-margin) + 6 * (var(--opening-single-column) + var(--opening-gutter)));
+    --opening-col-7-right: calc(var(--opening-margin) + 6 * (var(--opening-single-column) + var(--opening-gutter)) + var(--opening-single-column));
+    --opening-col-8-left: calc(var(--opening-margin) + 7 * (var(--opening-single-column) + var(--opening-gutter)));
+    --opening-col-8-right: calc(var(--opening-margin) + 7 * (var(--opening-single-column) + var(--opening-gutter)) + var(--opening-single-column));
+    --opening-col-9-left: calc(var(--opening-margin) + 8 * (var(--opening-single-column) + var(--opening-gutter)));
+    --opening-col-9-right: calc(var(--opening-margin) + 8 * (var(--opening-single-column) + var(--opening-gutter)) + var(--opening-single-column));
+    --opening-col-10-left: calc(var(--opening-margin) + 9 * (var(--opening-single-column) + var(--opening-gutter)));
+    --opening-col-10-right: calc(var(--opening-margin) + 9 * (var(--opening-single-column) + var(--opening-gutter)) + var(--opening-single-column));
+    --opening-col-11-left: calc(var(--opening-margin) + 10 * (var(--opening-single-column) + var(--opening-gutter)));
+    --opening-col-11-right: calc(var(--opening-margin) + 10 * (var(--opening-single-column) + var(--opening-gutter)) + var(--opening-single-column));
+    --opening-col-12-left: calc(var(--opening-margin) + 11 * (var(--opening-single-column) + var(--opening-gutter)));
+    --opening-col-12-right: calc(100vw - var(--opening-margin));
+    --opening-span-1: var(--opening-single-column);
+    --opening-span-2: calc(2 * var(--opening-single-column) + var(--opening-gutter));
+    --opening-span-3: calc(3 * var(--opening-single-column) + 2 * var(--opening-gutter));
+    --opening-span-4: calc(4 * var(--opening-single-column) + 3 * var(--opening-gutter));
+    --opening-span-5: calc(5 * var(--opening-single-column) + 4 * var(--opening-gutter));
+    --opening-span-6: calc(6 * var(--opening-single-column) + 5 * var(--opening-gutter));
+    --opening-span-7: calc(7 * var(--opening-single-column) + 6 * var(--opening-gutter));
+    --opening-span-8: calc(8 * var(--opening-single-column) + 7 * var(--opening-gutter));
+    --opening-span-9: calc(9 * var(--opening-single-column) + 8 * var(--opening-gutter));
+    --opening-span-10: calc(10 * var(--opening-single-column) + 9 * var(--opening-gutter));
+    --opening-span-11: calc(11 * var(--opening-single-column) + 10 * var(--opening-gutter));
+    --opening-span-12: calc(12 * var(--opening-single-column) + 11 * var(--opening-gutter));
+
+    --body-margin-real: 120px;
+    --body-gutter: 24px;
+    --body-total-margins: calc(2 * var(--body-margin-real));
+    --body-total-gutters: calc(11 * var(--body-gutter));
+    --body-grid-width: min(calc(100vw - var(--body-total-margins)), 1920px);
+    --body-single-column: calc((var(--body-grid-width) - var(--body-total-gutters)) / 12);
+    --body-margin: calc((100vw - var(--body-grid-width)) / 2);
+    --body-col-1-left: var(--body-margin);
+    --body-col-1-right: calc(var(--body-margin) + var(--body-single-column));
+    --body-col-2-left: calc(var(--body-margin) + 1 * (var(--body-single-column) + var(--body-gutter)));
+    --body-col-2-right: calc(var(--body-margin) + 1 * (var(--body-single-column) + var(--body-gutter)) + var(--body-single-column));
+    --body-col-3-left: calc(var(--body-margin) + 2 * (var(--body-single-column) + var(--body-gutter)));
+    --body-col-3-right: calc(var(--body-margin) + 2 * (var(--body-single-column) + var(--body-gutter)) + var(--body-single-column));
+    --body-col-4-left: calc(var(--body-margin) + 3 * (var(--body-single-column) + var(--body-gutter)));
+    --body-col-4-right: calc(var(--body-margin) + 3 * (var(--body-single-column) + var(--body-gutter)) + var(--body-single-column));
+    --body-col-5-left: calc(var(--body-margin) + 4 * (var(--body-single-column) + var(--body-gutter)));
+    --body-col-5-right: calc(var(--body-margin) + 4 * (var(--body-single-column) + var(--body-gutter)) + var(--body-single-column));
+    --body-col-6-left: calc(var(--body-margin) + 5 * (var(--body-single-column) + var(--body-gutter)));
+    --body-col-6-right: calc(var(--body-margin) + 5 * (var(--body-single-column) + var(--body-gutter)) + var(--body-single-column));
+    --body-col-7-left: calc(var(--body-margin) + 6 * (var(--body-single-column) + var(--body-gutter)));
+    --body-col-7-right: calc(var(--body-margin) + 6 * (var(--body-single-column) + var(--body-gutter)) + var(--body-single-column));
+    --body-col-8-left: calc(var(--body-margin) + 7 * (var(--body-single-column) + var(--body-gutter)));
+    --body-col-8-right: calc(var(--body-margin) + 7 * (var(--body-single-column) + var(--body-gutter)) + var(--body-single-column));
+    --body-col-9-left: calc(var(--body-margin) + 8 * (var(--body-single-column) + var(--body-gutter)));
+    --body-col-9-right: calc(var(--body-margin) + 8 * (var(--body-single-column) + var(--body-gutter)) + var(--body-single-column));
+    --body-col-10-left: calc(var(--body-margin) + 9 * (var(--body-single-column) + var(--body-gutter)));
+    --body-col-10-right: calc(var(--body-margin) + 9 * (var(--body-single-column) + var(--body-gutter)) + var(--body-single-column));
+    --body-col-11-left: calc(var(--body-margin) + 10 * (var(--body-single-column) + var(--body-gutter)));
+    --body-col-11-right: calc(var(--body-margin) + 10 * (var(--body-single-column) + var(--body-gutter)) + var(--body-single-column));
+    --body-col-12-left: calc(var(--body-margin) + 11 * (var(--body-single-column) + var(--body-gutter)));
+    --body-col-12-right: calc(100vw - var(--body-margin));
+    --body-span-1: var(--body-single-column);
+    --body-span-2: calc(2 * var(--body-single-column) + var(--body-gutter));
+    --body-span-3: calc(3 * var(--body-single-column) + 2 * var(--body-gutter));
+    --body-span-4: calc(4 * var(--body-single-column) + 3 * var(--body-gutter));
+    --body-span-5: calc(5 * var(--body-single-column) + 4 * var(--body-gutter));
+    --body-span-6: calc(6 * var(--body-single-column) + 5 * var(--body-gutter));
+    --body-span-7: calc(7 * var(--body-single-column) + 6 * var(--body-gutter));
+    --body-span-8: calc(8 * var(--body-single-column) + 7 * var(--body-gutter));
+    --body-span-9: calc(9 * var(--body-single-column) + 8 * var(--body-gutter));
+    --body-span-10: calc(10 * var(--body-single-column) + 9 * var(--body-gutter));
+    --body-span-11: calc(11 * var(--body-single-column) + 10 * var(--body-gutter));
+    --body-span-12: calc(12 * var(--body-single-column) + 11 * var(--body-gutter));
+  }
+
+  @media (max-width: 991px) {
+    :root {
+      --opening-margin: 60px;
+      --opening-gutter: 12px;
+      --body-margin-real: 60px;
+      --body-gutter: 12px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    :root {
+      --opening-margin: 32px;
+      --body-margin-real: 32px;
+    }
+  }
+
+</style></div><div class="outro-nav-background"></div><div class="nav-scroll-indicator"></div><aside class="outro-page"><div class="outro-wrapper"><div class="outro-lines"><div id="w-node-_01f3d6e0-f00f-0c01-9deb-9e523172e3d0-3172e3cd" class="line-vertical-left"></div><div id="w-node-_01f3d6e0-f00f-0c01-9deb-9e523172e3d1-3172e3cd" class="line-vertical-right"></div><div id="w-node-_01f3d6e0-f00f-0c01-9deb-9e523172e3d2-3172e3cd" class="line-horizontal-top"></div><div id="w-node-_01f3d6e0-f00f-0c01-9deb-9e523172e3d3-3172e3cd" class="line-horizontal-bot"></div></div><div id="w-node-_01f3d6e0-f00f-0c01-9deb-9e523172e3d4-3172e3cd" class="outro-heading-area"><div class="outro-heading-container"><h3 class="outro-heading hanging-punctuation">“</h3><h3 class="outro-heading">The details are not the details. They make the design.”</h3></div><div class="p">— Charles Eames</div></div><div id="w-node-_01f3d6e0-f00f-0c01-9deb-9e523172e3dc-3172e3cd" class="outro-info"><div id="w-node-_01f3d6e0-f00f-0c01-9deb-9e523172e3dd-3172e3cd" class="outro-paragraphs"><p class="p">These guidelines are meant to help you create things that live in the Dropbox ecosystem and express our brand in the best way possible. But they’re just the beginning. What’s next is up to you.</p><p class="p">All of this information is a toolkit. Go use it to make things. Really cool, well-designed things. Then share them with us, and the world. We can’t wait to see them.</p></div><div class="outro-links"><a href="https://www.dropbox.com/scl/fo/6qjduc7j5ujf09f75w1p7/AFc217w49gnfwVNr64Bd1_A?rlkey=tkqw8jcoi7f24voc6577vakky&amp;st=2l9cr2v5&amp;dl=0" target="_blank" class="outro-link w-inline-block"><div>Brand Partner Toolkit</div><div class="w-embed"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+<path d="M7.49998 1V2.5H12.4395L6.86098 8.0785L7.92148 9.139L13.5 3.5605V8.5H15V1H7.49998Z"/>
+<path d="M13.5 12.75C13.5 12.9489 13.421 13.1397 13.2803 13.2803C13.1397 13.421 12.9489 13.5 12.75 13.5H3.25C3.05109 13.5 2.86032 13.421 2.71967 13.2803C2.57902 13.1397 2.5 12.9489 2.5 12.75V3.25C2.5 3.05109 2.57902 2.86032 2.71967 2.71967C2.86032 2.57902 3.05109 2.5 3.25 2.5H6V1H3.25C2.65326 1 2.08097 1.23705 1.65901 1.65901C1.23705 2.08097 1 2.65326 1 3.25V12.75C1 13.3467 1.23705 13.919 1.65901 14.341C2.08097 14.7629 2.65326 15 3.25 15H12.75C13.0455 15 13.3381 14.9418 13.611 14.8287C13.884 14.7157 14.1321 14.5499 14.341 14.341C14.5499 14.1321 14.7157 13.884 14.8287 13.611C14.9418 13.3381 15 13.0455 15 12.75V10H13.5V12.75Z"/>
+</svg></div></a><a href="https://www.dropbox.com/branding" target="_blank" class="outro-link w-inline-block"><div>Legal Branding Resources</div><div class="w-embed"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+<path d="M7.49998 1V2.5H12.4395L6.86098 8.0785L7.92148 9.139L13.5 3.5605V8.5H15V1H7.49998Z"/>
+<path d="M13.5 12.75C13.5 12.9489 13.421 13.1397 13.2803 13.2803C13.1397 13.421 12.9489 13.5 12.75 13.5H3.25C3.05109 13.5 2.86032 13.421 2.71967 13.2803C2.57902 13.1397 2.5 12.9489 2.5 12.75V3.25C2.5 3.05109 2.57902 2.86032 2.71967 2.71967C2.86032 2.57902 3.05109 2.5 3.25 2.5H6V1H3.25C2.65326 1 2.08097 1.23705 1.65901 1.65901C1.23705 2.08097 1 2.65326 1 3.25V12.75C1 13.3467 1.23705 13.919 1.65901 14.341C2.08097 14.7629 2.65326 15 3.25 15H12.75C13.0455 15 13.3381 14.9418 13.611 14.8287C13.884 14.7157 14.1321 14.5499 14.341 14.341C14.5499 14.1321 14.7157 13.884 14.8287 13.611C14.9418 13.3381 15 13.0455 15 12.75V10H13.5V12.75Z"/>
+</svg></div></a><a href="https://www.dropbox.design/" target="_blank" class="outro-link hidden w-inline-block"><div>Dropbox Design</div><div class="w-embed"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+<path d="M7.49998 1V2.5H12.4395L6.86098 8.0785L7.92148 9.139L13.5 3.5605V8.5H15V1H7.49998Z"/>
+<path d="M13.5 12.75C13.5 12.9489 13.421 13.1397 13.2803 13.2803C13.1397 13.421 12.9489 13.5 12.75 13.5H3.25C3.05109 13.5 2.86032 13.421 2.71967 13.2803C2.57902 13.1397 2.5 12.9489 2.5 12.75V3.25C2.5 3.05109 2.57902 2.86032 2.71967 2.71967C2.86032 2.57902 3.05109 2.5 3.25 2.5H6V1H3.25C2.65326 1 2.08097 1.23705 1.65901 1.65901C1.23705 2.08097 1 2.65326 1 3.25V12.75C1 13.3467 1.23705 13.919 1.65901 14.341C2.08097 14.7629 2.65326 15 3.25 15H12.75C13.0455 15 13.3381 14.9418 13.611 14.8287C13.884 14.7157 14.1321 14.5499 14.341 14.341C14.5499 14.1321 14.7157 13.884 14.8287 13.611C14.9418 13.3381 15 13.0455 15 12.75V10H13.5V12.75Z"/>
+</svg></div></a></div></div><div class="outro-credits"><a href="https://dropbox.com" target="_blank" class="annotation credit-link">Dropbox Brand Studio</a><div class="annotation credit-emoji">🤝</div><a href="https://daybreak.studio/" target="_blank" class="annotation credit-link">Daybreak Studio</a></div><div class="w-embed w-script"><style>
+
+.cursor-anchor {
+	transition: transform 0.4s cubic-bezier(.15,.5,.05,1), opacity 0.4s cubic-bezier(.15,.5,.05,1);
+}
+
+.cursor-anchor.initial {
+	opacity: 0;
+}
+
+.cursor-anchor:not(.initial) {
+	transform: translate(0, 0) !important;
+}
+
+</style>
+<script>
+
+//html
+//<div class="cursortag" data-name="Ben Giannis" data-role="0" data-foreground="#000000" data-background="#ffffff" data-direction="0"></div>
+
+//js
+
+const outroCursorTags = [
+    {
+        name: "Bijan Rafie-Tari",
+        role: 1,
+        monogram: "",
+        foregroundColor: "var(--color--identity--on-yellow)",
+        backgroundColor: "var(--color--identity--yellow)",
+        direction: 0,
+    },
+    {
+        name: "Mike Chiu",
+        role: 2,
+        monogram: "",
+        foregroundColor: "var(--color--identity--on-red)",
+        backgroundColor: "var(--color--identity--red)",
+        direction: 0,
+    },
+    {
+        name: "Theresa Ma",
+        role: 2,
+        monogram: "",
+        foregroundColor: "var(--color--identity--on-orange)",
+        backgroundColor: "var(--color--identity--orange)",
+        direction: 0,
+    },
+    {
+        name: "Otis Rubottom",
+        role: 4,
+        monogram: "",
+        foregroundColor: "var(--color--identity--on-blue)",
+        backgroundColor: "var(--color--identity--blue)",
+        direction: 0,
+    },
+    {
+        name: "Taha Hossain",
+        role: 2,
+        monogram: "",
+        foregroundColor: "var(--color--identity--on-pink)",
+        backgroundColor: "var(--color--identity--pink)",
+        direction: 0,
+    },
+    {
+        name: "Jenny Rudziensky",
+        role: 2,
+        monogram: "",
+        foregroundColor: "var(--color--identity--on-red)",
+        backgroundColor: "var(--color--identity--red)",
+        direction: 0,
+    },
+    {
+        name: "Jessica Lai",
+        role: 2,
+        monogram: "",
+        foregroundColor: "var(--color--identity--on-purple)",
+        backgroundColor: "var(--color--identity--purple)",
+        direction: 0,
+    },
+    {
+        name: "Kiran Patel",
+        role: 3,
+        monogram: "",
+        foregroundColor: "var(--color--identity--on-orange)",
+        backgroundColor: "var(--color--identity--orange)",
+        direction: 0,
+    },
+    {
+        name: "Ben Giannis",
+        role: 3,
+        monogram: "",
+        foregroundColor: "var(--color--identity--on-green)",
+        backgroundColor: "var(--color--identity--green)",
+        direction: 0,
+    },
+    {
+        name: "Dennis Ish",
+        role: 5,
+        monogram: "",
+        foregroundColor: "var(--color--identity--on-cyan)",
+        backgroundColor: "var(--color--identity--cyan)",
+        direction: 0,
+    },
+];
+
+function createCursorTagPlaceholder(name, role, monogram, foregroundColor, backgroundColor, direction = 0) {
+    const cursortag = document.createElement("div");
+    cursortag.className = "cursortag";
+    cursortag.setAttribute("data-name", name);
+    cursortag.setAttribute("data-role", role);
+    cursortag.setAttribute("data-monogram", monogram);
+    cursortag.setAttribute("data-foreground", foregroundColor);
+    cursortag.setAttribute("data-background", backgroundColor);
+    cursortag.setAttribute("data-direction", direction);
+
+    return cursortag;
+}
+
+const outroCursorsMarginX = 10;
+const outroCursorsMarginY = 10;
+const outroCursorsPaddingX = 3;
+const outroCursorsPaddingY = 5;
+const outroCursorsSectionWidth = (100 - outroCursorsMarginX * 2) / 5;
+const outroCursorsSectionHeight = (100 - outroCursorsMarginY * 2) / 2;
+
+//randomize the order of the cursor tags
+const randomizedCursorTags = outroCursorTags.sort(() => Math.random() - 0.5);
+
+randomizedCursorTags.forEach((cursorTag, index) => {
+    const cursorAnchor = document.createElement("div");
+    cursorAnchor.className = "cursor-anchor initial";
+    const cursorTagElement = createCursorTagPlaceholder(cursorTag.name, cursorTag.role, cursorTag.monogram, cursorTag.foregroundColor, cursorTag.backgroundColor, cursorTag.direction);
+    cursorAnchor.appendChild(cursorTagElement);
+
+    cursorAnchor.style.position = "absolute";
+
+    const column = index % 5;
+    const row = Math.floor(index / 5);
+    const randomX = outroCursorsPaddingX + Math.random() * (outroCursorsSectionWidth - outroCursorsPaddingX * 2);
+    const randomY = outroCursorsPaddingY + Math.random() * (outroCursorsSectionHeight - outroCursorsPaddingY * 2);
+    cursorAnchor.style.left = `${outroCursorsMarginX + column * outroCursorsSectionWidth + randomX}%`;
+    cursorAnchor.style.top = `${outroCursorsMarginY + row * outroCursorsSectionHeight + randomY}%`;
+
+    let offsetX = Math.random() * 200;
+    let offsetY = Math.random() * 200;
+    if (cursorAnchor.style.left < "50%") {
+        cursorTagElement.setAttribute("data-direction", 1);
+        offsetX *= -1;
+    }
+    if (row == 0) {
+        offsetY *= -1;
+    }
+
+    cursorAnchor.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+    cursorAnchor.style.transitionDelay = `${Math.random() * 250}ms`;
+
+    document.querySelector(".outro-page").appendChild(cursorAnchor);
+});
+
+// Add hover event listeners to outro-credits
+const outroCredits = document.querySelector(".outro-credits");
+const cursorAnchors = document.querySelectorAll(".cursor-anchor");
+
+outroCredits.addEventListener("mouseenter", () => {
+    cursorAnchors.forEach((anchor) => {
+        anchor.classList.remove("initial");
+    });
+});
+
+outroCredits.addEventListener("mouseleave", () => {
+    cursorAnchors.forEach((anchor) => {
+        anchor.classList.add("initial");
+    });
+});
+
+
+
+</script></div></div></aside><div class="nav-border-line"></div><div class="nav"><nav class="nav-wrapper"><div class="nav-tile nav-tile-1"><a id="tilestrategy" href="framework" aria-current="page" class="tile strategy w-inline-block w--current"><div class="tile-title">Framework</div><div class="strategy-visual-container"><div class="strategy-visual-square"><div class="w-embed"><svg class="bezier-point point-1" width="20" height="20" viewBox="-2 -2 20 20">
+<path d="M0 8C0 5.19974 0 3.79961 0.544967 2.73005C1.02433 1.78924 1.78924 1.02433 2.73005 0.544967C3.79961 0 5.19974 0 8 0C10.8003 0 12.2004 0 13.27 0.544967C14.2108 1.02433 14.9757 1.78924 15.455 2.73005C16 3.79961 16 5.19974 16 8C16 10.8003 16 12.2004 15.455 13.27C14.9757 14.2108 14.2108 14.9757 13.27 15.455C12.2004 16 10.8003 16 8 16C5.19974 16 3.79961 16 2.73005 15.455C1.78924 14.9757 1.02433 14.2108 0.544967 13.27C0 12.2004 0 10.8003 0 8Z"/>
+</svg>
+<svg class="bezier-point point-2" width="20" height="20" viewBox="-2 -2 20 20">
+<path d="M0 8C0 5.19974 0 3.79961 0.544967 2.73005C1.02433 1.78924 1.78924 1.02433 2.73005 0.544967C3.79961 0 5.19974 0 8 0C10.8003 0 12.2004 0 13.27 0.544967C14.2108 1.02433 14.9757 1.78924 15.455 2.73005C16 3.79961 16 5.19974 16 8C16 10.8003 16 12.2004 15.455 13.27C14.9757 14.2108 14.2108 14.9757 13.27 15.455C12.2004 16 10.8003 16 8 16C5.19974 16 3.79961 16 2.73005 15.455C1.78924 14.9757 1.02433 14.2108 0.544967 13.27C0 12.2004 0 10.8003 0 8Z"/>
+</svg>
+<svg class="bezier-point point-3" width="20" height="20" viewBox="-2 -2 20 20">
+<path d="M0 8C0 5.19974 0 3.79961 0.544967 2.73005C1.02433 1.78924 1.78924 1.02433 2.73005 0.544967C3.79961 0 5.19974 0 8 0C10.8003 0 12.2004 0 13.27 0.544967C14.2108 1.02433 14.9757 1.78924 15.455 2.73005C16 3.79961 16 5.19974 16 8C16 10.8003 16 12.2004 15.455 13.27C14.9757 14.2108 14.2108 14.9757 13.27 15.455C12.2004 16 10.8003 16 8 16C5.19974 16 3.79961 16 2.73005 15.455C1.78924 14.9757 1.02433 14.2108 0.544967 13.27C0 12.2004 0 10.8003 0 8Z"/>
+</svg>
+
+<style>
+
+.tile.strategy .bezier-point {
+	fill: var(--color--identity--blue);
+  stroke: var(--color--identity--blue);
+  stroke-width: 2px;
+  position: absolute;
+  z-index: 2;
+  transition: left var(--tile-transition), right var(--tile-transition), fill var(--tile-transition), stroke var(--tile-transition);
+}
+
+.tile.strategy .bezier-point.point-1 {
+	left: 0;
+  top: 0;
+}
+
+.tile.strategy .bezier-point.point-2 {
+	right: 0;
+  top: calc(50% - 10px);
+}
+
+.tile.strategy .bezier-point.point-3 {
+	left: 0;
+  bottom: 0;
+}
+
+@media (any-hover: hover) {
+.tile.strategy:hover .bezier-point {
+	fill: var(--text--base);
+  stroke: white;
+}
+}
+
+
+</style></div><div id="strategysvg" class="strategy-bezier-container"><div class="strategy-bezier-container-embed w-embed"><svg class="strategy-bezier-path" viewBox="0 0 100 100" preserveAspectRatio="none">
+  <path d="M 0 25
+           Q 31.25 32.8125, 62.5 40.625
+           Q 93.75 48.4375, 100 50
+           C 70 57.5, 80 55, 50 62.5
+           C 20 70, 30 67.5, 0 75">
+  <!--<animate attributeName="d" dur="0.35s" fill="freeze" keyTimes="0; 1" keySplines=".4 0 .2 1" calcMode="spline"    
+    to="M 0 25 Q 55 50, 65 32.5 Q 75 15, 100 50 C 65 32.5, 55 75, 35 65 C 15 55, 15 55, 0 75"
+    begin="tilestrategy.mouseover"
+  />
+  <animate attributeName="d" dur="0.35s" fill="freeze" keyTimes="0; 1" keySplines=".4 0 .2 1" calcMode="spline"  
+    to="M 0 25
+           Q 31.25 32.8125, 62.5 40.625
+           Q 93.75 48.4375, 100 50
+           C 70 57.5, 80 55, 50 62.5
+           C 20 70, 30 67.5, 0 75"
+    begin="tilestrategy.mouseout"
+  />-->
+  </path>
+</svg>
+
+<style>
+
+.strategy-bezier-path {
+	width: 100%;
+  height: 100%;
+  fill: none;
+  stroke-width: 2px;
+}
+
+.strategy-bezier-path path {
+  vector-effect: non-scaling-stroke;
+  stroke: var(--color--identity--blue);
+  transition: opacity var(--tile-transition);
+  pointer-events: none;
+}
+
+.tile.strategy:hover .strategy-bezier-path path {
+  opacity: 0;
+}
+
+
+</style></div></div><div class="strategy-sketch-1-embed w-embed"><svg class="strategy-sketch-path-1" width="230" height="134" fill="none" viewBox="0 0 230 134" preserveAspectRatio="none">
+<path d="M10 25.9355C18.5 21.266 20.8707 19.9053 29.968 16.173C42.5012 11.0312 56.0106 11.8857 69.3085 11.8857C86.1833 11.8857 104.199 14.8053 117.944 25.6051C126.871 32.619 132.508 39.5429 134.476 51.0204C136.056 60.2398 138.357 71.0643 134.819 80.1056C132.69 85.546 126.533 90.478 121.5 90.9355C115.296 91.4995 108.734 92.337 105 85.9355C100.933 78.9636 106.721 68.6751 112.5 64.9355C120.248 59.9219 128.67 55.4355 137.5 55.4355C152.272 55.4355 167.625 66.3328 179.5 75.8325C189.5 83.8325 194.985 91.3048 197.5 95.8325C200 100.333 201.66 101.419 204.5 111.833C205.182 114.333 207.5 122.833 207.712 124.248C207.712 124.408 203.344 121.813 201.66 120.425C199.399 118.562 197.5 117.826 195.5 116.833C193.472 115.826 190 112.833 188 112.333C187.156 112.122 202 120.833 208 123.833C209.5 121.833 210.5 119.833 212.5 116.833C213.677 115.067 217 110.833 220 107.833" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+<style>
+
+.strategy-sketch-path-1 {
+	width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: white;
+  stroke-width: clamp(1.5px, calc(4.5px - min(0.2vw, 0.2vh)), 5px);
+}
+
+.strategy-sketch-path-1 path {
+  /*vector-effect: non-scaling-stroke;*/
+  stroke-dasharray: 433;
+  stroke-dashoffset: 433;
+  opacity: 0;
+  transition: stroke-dashoffset 0.2s cubic-bezier(.2,.1,0,1), opacity 0.4s;
+}
+
+
+@media (any-hover: hover) {
+.tile.strategy:hover .strategy-sketch-path-1 path {
+	stroke-dashoffset: 0;
+  opacity: 1;
+  transition: stroke-dashoffset 0.75s cubic-bezier(.5,0,.3,1), opacity 0.4s;
+}}
+
+
+</style></div><div class="strategy-sketch-2-embed w-embed"><svg class="strategy-sketch-path-2" width="230" height="134" fill="none" viewBox="0 0 230 134" preserveAspectRatio="none">
+<path d="M219.36 17.1993C219.006 16.4914 214.909 15.59 213.801 15.5317C209.624 15.3118 205.295 14.1842 201.108 13.5861C189.734 11.9612 177.606 12.3757 166.18 13.1846C155.481 13.9421 144.868 14.4116 134.309 16.6743C121.742 19.3673 109.21 24.1555 97.3736 29.1818C90.7444 31.9969 83.7225 34.8108 77.6088 38.6318C73.0482 41.4822 69.1444 45.2812 65.0087 48.6995C43.6854 66.3239 27.3717 93.2898 25.3555 121.15C24.2391 118.308 21.4909 116.548 19.8259 114.033C18.5433 112.095 16.993 110.261 15.4726 108.507C14.57 107.465 13.9753 106.314 12.9878 105.326C12.2757 104.614 11.3185 103.936 11 102.98L25.6881 121.15C32 114.5 35 113 38.5 111C42 109 44.5 105.5 46 105" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+<style>
+
+.strategy-sketch-path-2 {
+	width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: white;
+  stroke-width: clamp(1.5px, calc(4.5px - min(0.2vw, 0.2vh)), 5px);
+}
+
+.strategy-sketch-path-2 path {
+  /*vector-effect: non-scaling-stroke;*/
+  stroke-dasharray: 321;
+  stroke-dashoffset: 321;
+  opacity: 0;
+  transition: stroke-dashoffset 0.3s cubic-bezier(.2,.1,0,1), opacity 0.4s;;
+}
+
+
+@media (any-hover: hover) {
+.tile.strategy:hover .strategy-sketch-path-2 path {
+	stroke-dashoffset: 0;
+  opacity: 1;
+  transition: stroke-dashoffset 0.7s cubic-bezier(.2,.1,0,1) 0.3s, opacity 0.4s;
+}
+}
+
+
+</style></div></div></div></a></div><div class="nav-tile nav-tile-2"><a id="tilevoicetone" href="voice-and-tone/" class="tile voice-tone w-inline-block"><div class="tile-title">Voice &amp; Tone</div><div class="voice-tone-visual-container"><div class="w-embed"><svg class="voice-tone-quotation-mark left" width="204" height="163" viewBox="0 0 204 163">
+  <defs>
+    <clipPath id="clip-shape">
+      <path d="M8.16 50.9646C2.72 65.2502 0 82.2384 0 101.929C0 116.987 1.36 128.763 4.08 137.257C7.18857 145.751 12.0457 151.929 18.6514 155.79C25.2571 159.264 34 161.002 44.88 161.002C54.9829 161.002 63.1429 159.651 69.36 156.948C75.5771 154.245 80.0457 149.805 82.7657 143.628C85.8743 137.45 87.4286 129.149 87.4286 118.724C87.4286 107.528 86.0686 99.2266 83.3486 93.8213C81.0171 88.0298 77.1314 84.1689 71.6914 82.2384C66.2514 79.9218 59.0629 78.7635 50.1257 78.7635C47.4878 78.7635 44.9198 78.9721 42.4217 79.3891C43.1347 71.3966 44.537 64.4314 46.6286 58.4935C49.7371 50.7716 54.2057 44.594 60.0343 39.9609C65.8629 35.3277 72.8571 32.6251 81.0172 31.8529L75.7714 0C58.6743 2.31657 44.4914 7.91495 33.2229 16.7951C21.9543 25.2893 13.6 36.6791 8.16 50.9646Z"/>
+      <path d="M124.731 50.9646C119.291 65.2502 116.571 82.2384 116.571 101.929C116.571 116.987 117.931 128.763 120.651 137.257C123.76 145.751 128.617 151.929 135.223 155.79C141.829 159.264 150.571 161.002 161.451 161.002C171.554 161.002 179.714 159.651 185.931 156.948C192.149 154.245 196.617 149.805 199.337 143.628C202.446 137.45 204 129.149 204 118.724C204 107.528 202.64 99.2266 199.92 93.8213C197.589 88.0298 193.703 84.1689 188.263 82.2384C182.823 79.9218 175.634 78.7635 166.697 78.7635C164.059 78.7635 161.491 78.9721 158.993 79.3891C159.706 71.3966 161.108 64.4314 163.2 58.4935C166.309 50.7716 170.777 44.594 176.606 39.9609C182.434 35.3277 189.429 32.6251 197.589 31.8529L192.343 0C175.246 2.31657 161.063 7.91495 149.794 16.7951C138.526 25.2893 130.171 36.6791 124.731 50.9646Z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-shape)">
+    <path d="M8.16 50.9646C2.72 65.2502 0 82.2384 0 101.929C0 116.987 1.36 128.763 4.08 137.257C7.18857 145.751 12.0457 151.929 18.6514 155.79C25.2571 159.264 34 161.002 44.88 161.002C54.9829 161.002 63.1429 159.651 69.36 156.948C75.5771 154.245 80.0457 149.805 82.7657 143.628C85.8743 137.45 87.4286 129.149 87.4286 118.724C87.4286 107.528 86.0686 99.2266 83.3486 93.8213C81.0171 88.0298 77.1314 84.1689 71.6914 82.2384C66.2514 79.9218 59.0629 78.7635 50.1257 78.7635C47.4878 78.7635 44.9198 78.9721 42.4217 79.3891C43.1347 71.3966 44.537 64.4314 46.6286 58.4935C49.7371 50.7716 54.2057 44.594 60.0343 39.9609C65.8629 35.3277 72.8571 32.6251 81.0172 31.8529L75.7714 0C58.6743 2.31657 44.4914 7.91495 33.2229 16.7951C21.9543 25.2893 13.6 36.6791 8.16 50.9646Z"/>
+    <path d="M124.731 50.9646C119.291 65.2502 116.571 82.2384 116.571 101.929C116.571 116.987 117.931 128.763 120.651 137.257C123.76 145.751 128.617 151.929 135.223 155.79C141.829 159.264 150.571 161.002 161.451 161.002C171.554 161.002 179.714 159.651 185.931 156.948C192.149 154.245 196.617 149.805 199.337 143.628C202.446 137.45 204 129.149 204 118.724C204 107.528 202.64 99.2266 199.92 93.8213C197.589 88.0298 193.703 84.1689 188.263 82.2384C182.823 79.9218 175.634 78.7635 166.697 78.7635C164.059 78.7635 161.491 78.9721 158.993 79.3891C159.706 71.3966 161.108 64.4314 163.2 58.4935C166.309 50.7716 170.777 44.594 176.606 39.9609C182.434 35.3277 189.429 32.6251 197.589 31.8529L192.343 0C175.246 2.31657 161.063 7.91495 149.794 16.7951C138.526 25.2893 130.171 36.6791 124.731 50.9646Z"/>
+  </g>
+</svg>
+<svg class="voice-tone-quotation-mark right" width="204" height="163" viewBox="0 0 204 163">
+  <defs>
+    <clipPath id="clip-shape">
+      <path d="M8.16 50.9646C2.72 65.2502 0 82.2384 0 101.929C0 116.987 1.36 128.763 4.08 137.257C7.18857 145.751 12.0457 151.929 18.6514 155.79C25.2571 159.264 34 161.002 44.88 161.002C54.9829 161.002 63.1429 159.651 69.36 156.948C75.5771 154.245 80.0457 149.805 82.7657 143.628C85.8743 137.45 87.4286 129.149 87.4286 118.724C87.4286 107.528 86.0686 99.2266 83.3486 93.8213C81.0171 88.0298 77.1314 84.1689 71.6914 82.2384C66.2514 79.9218 59.0629 78.7635 50.1257 78.7635C47.4878 78.7635 44.9198 78.9721 42.4217 79.3891C43.1347 71.3966 44.537 64.4314 46.6286 58.4935C49.7371 50.7716 54.2057 44.594 60.0343 39.9609C65.8629 35.3277 72.8571 32.6251 81.0172 31.8529L75.7714 0C58.6743 2.31657 44.4914 7.91495 33.2229 16.7951C21.9543 25.2893 13.6 36.6791 8.16 50.9646Z"/>
+      <path d="M124.731 50.9646C119.291 65.2502 116.571 82.2384 116.571 101.929C116.571 116.987 117.931 128.763 120.651 137.257C123.76 145.751 128.617 151.929 135.223 155.79C141.829 159.264 150.571 161.002 161.451 161.002C171.554 161.002 179.714 159.651 185.931 156.948C192.149 154.245 196.617 149.805 199.337 143.628C202.446 137.45 204 129.149 204 118.724C204 107.528 202.64 99.2266 199.92 93.8213C197.589 88.0298 193.703 84.1689 188.263 82.2384C182.823 79.9218 175.634 78.7635 166.697 78.7635C164.059 78.7635 161.491 78.9721 158.993 79.3891C159.706 71.3966 161.108 64.4314 163.2 58.4935C166.309 50.7716 170.777 44.594 176.606 39.9609C182.434 35.3277 189.429 32.6251 197.589 31.8529L192.343 0C175.246 2.31657 161.063 7.91495 149.794 16.7951C138.526 25.2893 130.171 36.6791 124.731 50.9646Z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-shape)">
+    <path d="M8.16 50.9646C2.72 65.2502 0 82.2384 0 101.929C0 116.987 1.36 128.763 4.08 137.257C7.18857 145.751 12.0457 151.929 18.6514 155.79C25.2571 159.264 34 161.002 44.88 161.002C54.9829 161.002 63.1429 159.651 69.36 156.948C75.5771 154.245 80.0457 149.805 82.7657 143.628C85.8743 137.45 87.4286 129.149 87.4286 118.724C87.4286 107.528 86.0686 99.2266 83.3486 93.8213C81.0171 88.0298 77.1314 84.1689 71.6914 82.2384C66.2514 79.9218 59.0629 78.7635 50.1257 78.7635C47.4878 78.7635 44.9198 78.9721 42.4217 79.3891C43.1347 71.3966 44.537 64.4314 46.6286 58.4935C49.7371 50.7716 54.2057 44.594 60.0343 39.9609C65.8629 35.3277 72.8571 32.6251 81.0172 31.8529L75.7714 0C58.6743 2.31657 44.4914 7.91495 33.2229 16.7951C21.9543 25.2893 13.6 36.6791 8.16 50.9646Z"/>
+    <path d="M124.731 50.9646C119.291 65.2502 116.571 82.2384 116.571 101.929C116.571 116.987 117.931 128.763 120.651 137.257C123.76 145.751 128.617 151.929 135.223 155.79C141.829 159.264 150.571 161.002 161.451 161.002C171.554 161.002 179.714 159.651 185.931 156.948C192.149 154.245 196.617 149.805 199.337 143.628C202.446 137.45 204 129.149 204 118.724C204 107.528 202.64 99.2266 199.92 93.8213C197.589 88.0298 193.703 84.1689 188.263 82.2384C182.823 79.9218 175.634 78.7635 166.697 78.7635C164.059 78.7635 161.491 78.9721 158.993 79.3891C159.706 71.3966 161.108 64.4314 163.2 58.4935C166.309 50.7716 170.777 44.594 176.606 39.9609C182.434 35.3277 189.429 32.6251 197.589 31.8529L192.343 0C175.246 2.31657 161.063 7.91495 149.794 16.7951C138.526 25.2893 130.171 36.6791 124.731 50.9646Z"/>
+  </g>
+</svg>
+
+<style>
+
+.voice-tone-quotation-mark {
+	position: absolute;
+  height: auto;
+  width: calc(min(6vw, 8vh) + 32px);
+  fill: var(--color--identity--on-yellow);
+  stroke: transparent;
+  stroke-width: 4px;
+  transition: fill var(--tile-transition), stroke var(--tile-transition), transform var(--tile-transition);
+}
+
+.voice-tone-quotation-mark path {
+  vector-effect: non-scaling-stroke;
+}
+
+.voice-tone-quotation-mark.left {
+  left: 0;
+  top: 0;
+}
+
+.voice-tone-quotation-mark.right {
+  right: 0;
+  bottom: 0;
+  transform: rotateZ(180deg);
+}
+@media (any-hover: hover) {
+.tile.voice-tone:hover .voice-tone-quotation-mark {
+	stroke: white;
+	fill: var(--text--base);
+}
+
+.tile.voice-tone:hover .voice-tone-quotation-mark.left {
+	transform: translateX(40%);
+}
+
+.tile.voice-tone:hover .voice-tone-quotation-mark.right {
+	transform: rotateZ(180deg) translateX(40%);
+}}
+
+</style></div></div></a></div><div class="nav-tile nav-tile-3"><a id="tilelogo" href="/logo" data-w-id="ca3f3316-2d3b-9693-1a7c-0bbddcad8ac0" class="tile logo w-inline-block"><div class="tile-title">Logo</div><div class="logo-visual-container"><div class="logo-visual-square"><div class="w-embed"><style>
+
+/*.logo-visual-lottie path {
+	fill: var(--color--identity--on-cyan);
+  stroke: var(--color--identity--on-cyan);
+  stroke-width: 5px;
+  transition: fill var(--tile-transition), stroke var(--tile-transition);
+}
+
+.tile.logo:hover .logo-visual-lottie path {
+	fill: var(--text--base);
+  stroke: white;
+}*/
+
+.logo-visual-lottie path {
+	fill: var(--color--identity--on-cyan);
+  transition: opacity var(--tile-transition);
+}
+
+.tile.logo:hover .logo-visual-lottie path {
+	opacity: 0;
+/*	transform: scale(0.7);*/
+  transition: opacity var(--tile-transition), transform var(--tile-transition);
+}
+
+.logo-visual-outline-lottie path {
+	fill: var(--text--base);
+  stroke-width: 5px;
+  stroke: white;
+/*	transform: scale(0.7);*/
+	opacity: 0;
+  transition: opacity var(--tile-transition), transform var(--tile-transition) 0.8s;
+}
+
+.tile.logo:hover .logo-visual-outline-lottie path {
+  transition: opacity var(--tile-transition) 0s, transform var(--tile-transition) 0.1s;
+	opacity: 1;
+	transform: initial;
+}
+
+</style></div><div data-is-ix2-target="1" class="logo-visual-lottie" data-w-id="ca3f3316-2d3b-9693-1a7c-0bbddcad8ac6" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/671028fc31978e2572941a61_DB_Master_Dropbox.json" data-loop="0" data-direction="-1" data-autoplay="0" data-renderer="svg" data-default-duration="0" data-duration="0" data-ix2-initial-state="92"></div><div data-is-ix2-target="1" class="logo-visual-outline-lottie" data-w-id="ca3f3316-2d3b-9693-1a7c-0bbddcad8ac7" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/671028fc31978e2572941a61_DB_Master_Dropbox.json" data-loop="0" data-direction="-1" data-autoplay="0" data-renderer="svg" data-default-duration="0" data-duration="0" data-ix2-initial-state="100"></div></div></div></a></div><div class="nav-tile nav-tile-4"><a id="tiletypography" href="/typography" class="tile typography w-inline-block"><div class="tile-title">Typography</div><div class="typography-visual-container"><div class="typography-visual-square"><div class="typography-visual-type-embed w-embed"><svg class="typography-visual-type" viewBox="0 0 196 110">
+  <defs>
+    <path id="typography-visual-type-uppercase-a-path" fill-rule="evenodd" clip-rule="evenodd" d="M47.4654 0.45166L8.9082 106.596H28.8567L36.8115 82.7766H79.1182L87.3625 106.596H107.162L67.7117 0.45166H47.4654ZM73.3987 66.252L57.5868 20.728L42.3301 66.252H73.3987Z">
+      <animate attributeName="d" dur="0.35s" fill="freeze" keyTimes="0; 1" keySplines=".4 0 .2 1" calcMode="spline"    
+        to="M36.1952 0.0527344L0.913086 107.239H35.8974L39.6229 93.6917H68.0607L71.9239 107.239H107.057L71.3284 0.0527344H36.1952ZM60.2071 66.1508L53.5838 42.9247L47.1966 66.1508H60.2071Z"
+        begin="tiletypography.mouseover"
+      />
+      <animate attributeName="d" dur="0.35s" fill="freeze" keyTimes="0; 1" keySplines=".4 0 .2 1" calcMode="spline"  
+        to="M47.4654 0.45166L8.9082 106.596H28.8567L36.8115 82.7766H79.1182L87.3625 106.596H107.162L67.7117 0.45166H47.4654ZM73.3987 66.252L57.5868 20.728L42.3301 66.252H73.3987Z"
+        begin="tiletypography.mouseout"
+      />
+    </path>
+    <path id="typography-visual-type-lowercase-a-path" fill-rule="evenodd" clip-rule="evenodd" d="M126.908 106C131.077 107.886 136.237 108.829 142.391 108.829C149.239 108.829 155.144 107.737 160.106 105.554C165.168 103.271 169.286 100.294 172.462 96.6214C174.388 94.404 176.022 92.0323 177.364 89.5061L179.459 106.596H195.239V48.8343C195.239 44.2689 194.545 40.1502 193.155 36.4781C191.865 32.806 189.731 29.6797 186.754 27.0993C183.776 24.4197 179.856 22.3851 174.993 20.9957C170.229 19.6062 164.374 18.9115 157.427 18.9115C149.288 18.9115 142.291 20.2513 136.436 22.931C130.58 25.6106 126.015 29.382 122.74 34.2451C119.564 39.1081 117.728 44.7652 117.232 51.2162H137.329C137.528 47.5441 138.371 44.4674 139.86 41.9863C141.448 39.4059 143.78 37.4706 146.857 36.1804C149.933 34.7909 153.804 34.0962 158.469 34.0962C161.744 34.0962 164.523 34.3939 166.805 34.9894C169.187 35.4856 171.073 36.23 172.462 37.2225C173.852 38.2149 174.844 39.4555 175.44 40.9442C176.134 42.3336 176.482 43.9216 176.482 45.708C176.482 47.9907 175.738 49.8267 174.249 51.2162C172.859 52.6056 170.577 53.6974 167.401 54.4913C164.225 55.2853 160.106 56.0296 155.045 56.7244C149.685 57.5183 145.269 58.2627 141.795 58.9574C138.322 59.6521 135.344 60.4461 132.863 61.3393C130.481 62.1333 128.05 63.3243 125.568 64.9122C122.095 67.0956 119.366 69.9738 117.381 73.5466C115.396 77.0203 114.403 81.139 114.403 85.9028C114.403 90.5674 115.445 94.6365 117.529 98.1101C119.614 101.484 122.74 104.115 126.908 106ZM169.187 85.4562C161.744 92.8777 154.281 93.7929 149.09 93.7929C135.866 93.7929 135.802 85.4813 135.692 83.0743C135.692 73.5466 146.122 70.7903 159.449 68.7745C166.092 67.7697 173.441 65.9276 176.631 63.3879C176.631 71.7279 176.098 78.5658 169.187 85.4562Z">
+      <animate attributeName="d" dur="0.35s" fill="freeze" keyTimes="0; 1" keySplines=".4 0 .2 1" calcMode="spline"    
+        to="M121.218 107C125.287 108.886 130.498 109.829 136.85 109.829C143.4 109.829 148.61 108.787 152.481 106.703C156.451 104.519 159.478 101.691 161.562 98.217C161.879 97.6742 162.179 97.1223 162.464 96.5612L166.326 107.596H195.207V55.3425C195.207 49.884 194.512 44.9713 193.122 40.6045C191.733 36.1384 189.5 32.3174 186.423 29.1415C183.347 25.8664 179.228 23.3852 174.067 21.698C169.005 19.9116 162.803 19.0184 155.458 19.0184C145.633 19.0184 137.544 20.4574 131.193 23.3356C124.94 26.2137 120.226 30.2332 117.05 35.394C113.973 40.5548 112.187 46.6089 111.691 53.5561H146.675C146.675 51.7697 146.973 50.3306 147.568 49.2389C148.164 48.0479 149.007 47.1547 150.099 46.5592C151.29 45.9638 152.729 45.666 154.416 45.666C155.706 45.666 156.749 45.8149 157.542 46.1126C158.336 46.3111 158.982 46.6585 159.478 47.1547C159.974 47.5517 160.321 48.0479 160.52 48.6434C160.718 49.2389 160.818 49.884 160.818 50.5787C160.818 51.8689 160.272 52.911 159.18 53.705C158.088 54.499 156.401 55.1441 154.118 55.6403C151.935 56.1365 149.007 56.6824 145.335 57.2778C141.365 57.8733 137.892 58.4688 134.914 59.0643C132.036 59.6598 129.456 60.4041 127.173 61.2973C124.89 62.0913 122.707 63.1334 120.623 64.4236C117.149 66.607 114.37 69.4355 112.286 72.9092C110.202 76.2835 109.16 80.7992 109.16 86.4563C109.16 91.2201 110.152 95.3885 112.137 98.9613C114.122 102.435 117.149 105.115 121.218 107ZM159.003 82.0018C157.242 84.2686 155.12 85.4142 152.034 85.4142C146.593 85.4142 145.633 82.9836 145.633 80.7992C145.633 75.2922 151.638 74.3119 154.084 73.8056C156.529 73.2993 158.679 72.9086 160.818 71.3296C160.818 76.2904 161.093 79.3123 159.003 82.0018Z"
+        begin="tiletypography.mouseover"
+      />
+      <animate attributeName="d" dur="0.35s" fill="freeze" keyTimes="0; 1" keySplines=".4 0 .2 1" calcMode="spline"  
+        to="M126.908 106C131.077 107.886 136.237 108.829 142.391 108.829C149.239 108.829 155.144 107.737 160.106 105.554C165.168 103.271 169.286 100.294 172.462 96.6214C174.388 94.404 176.022 92.0323 177.364 89.5061L179.459 106.596H195.239V48.8343C195.239 44.2689 194.545 40.1502 193.155 36.4781C191.865 32.806 189.731 29.6797 186.754 27.0993C183.776 24.4197 179.856 22.3851 174.993 20.9957C170.229 19.6062 164.374 18.9115 157.427 18.9115C149.288 18.9115 142.291 20.2513 136.436 22.931C130.58 25.6106 126.015 29.382 122.74 34.2451C119.564 39.1081 117.728 44.7652 117.232 51.2162H137.329C137.528 47.5441 138.371 44.4674 139.86 41.9863C141.448 39.4059 143.78 37.4706 146.857 36.1804C149.933 34.7909 153.804 34.0962 158.469 34.0962C161.744 34.0962 164.523 34.3939 166.805 34.9894C169.187 35.4856 171.073 36.23 172.462 37.2225C173.852 38.2149 174.844 39.4555 175.44 40.9442C176.134 42.3336 176.482 43.9216 176.482 45.708C176.482 47.9907 175.738 49.8267 174.249 51.2162C172.859 52.6056 170.577 53.6974 167.401 54.4913C164.225 55.2853 160.106 56.0296 155.045 56.7244C149.685 57.5183 145.269 58.2627 141.795 58.9574C138.322 59.6521 135.344 60.4461 132.863 61.3393C130.481 62.1333 128.05 63.3243 125.568 64.9122C122.095 67.0956 119.366 69.9738 117.381 73.5466C115.396 77.0203 114.403 81.139 114.403 85.9028C114.403 90.5674 115.445 94.6365 117.529 98.1101C119.614 101.484 122.74 104.115 126.908 106ZM169.187 85.4562C161.744 92.8777 154.281 93.7929 149.09 93.7929C135.866 93.7929 135.802 85.4813 135.692 83.0743C135.692 73.5466 146.122 70.7903 159.449 68.7745C166.092 67.7697 173.441 65.9276 176.631 63.3879C176.631 71.7279 176.098 78.5658 169.187 85.4562Z"
+        begin="tiletypography.mouseout"
+      />
+    </path>
+    <clipPath id="typography-visual-type-uppercase-a-clip" clip-rule="evenodd">
+      <use xlink:href="#typography-visual-type-uppercase-a-path"/>
+    </clipPath>
+    <clipPath id="typography-visual-type-lowercase-a-clip" clip-rule="evenodd">
+      <use xlink:href="#typography-visual-type-lowercase-a-path"/>
+    </clipPath>
+  </defs>
+  <g>
+    <use xlink:href="#typography-visual-type-uppercase-a-path" stroke-width="4px" clip-path="url(#typography-visual-type-uppercase-a-clip)"/>
+    <use xlink:href="#typography-visual-type-lowercase-a-path" stroke-width="4px" clip-path="url(#typography-visual-type-lowercase-a-clip)"/>
+  </g>
+</svg>
+
+
+<style>
+
+.tile.typography .typography-visual-type {
+	height: 500px;
+	max-height: 100%;
+  max-width: 100%;
+  fill: var(--color--identity--on-red);
+  stroke: transparent;
+  stroke-width: 2px;
+  transition: fill var(--tile-transition), stroke var(--tile-transition);
+}
+
+@media (any-hover: hover) {
+.tile.typography:hover .typography-visual-type {
+	fill: transparent;
+  stroke: white;
+}}
+
+.tile.typography .typography-visual-type path {
+  vector-effect: non-scaling-stroke;
+}
+
+</style>
+
+
+<!--<style>
+
+.typography-visual-type {
+  font-family: Dbsharpgroteskvariable Vf, Arial, sans-serif;
+  font-variation-settings: /*"wght" 500, 'wdth' 90, */'ital' 0.0;
+  -webkit-text-stroke: 2px var(--color--identity-on-red);
+  transition: color var(--tile-transition), font-variation-settings var(--tile-transition), transform var(--tile-transition), -webkit-text-stroke var(--tile-transition);
+}
+
+.tile.typography:hover .typography-visual-type {
+  font-variation-settings: /*"wght" 700, 'wdth' 110*/'ital' 1;
+  transform: translateX(2%);
+  color: var(--text--base);
+}
+
+</style>--></div></div></div></a></div><div class="nav-tile nav-tile-5"><a id="tileiconography" href="/iconography" class="tile iconography w-inline-block"><div class="tile-title">Iconography</div><div class="iconography-visual-container"><div class="iconography-visual-square"><div class="iconography-visual-lock-embed w-embed"><svg class="iconography-visual-lock" viewBox="0 0 103 142">
+  <path d="M44.3743 116.181L57.6864 116.181V102.115C60.501 101.018 62.8802 99.0769 64.4768 96.5757C66.0734 94.0745 66.71 91.1539 66.71 88.2117C66.71 85.9998 66.4417 84.1626 65.7204 82.2617C64.9991 80.3608 63.8606 78.6345 62.3836 77.2022C60.9067 75.77 59.1265 74.6659 57.1662 73.9665C55.2059 73.267 53.1143 72.9998 51.0303 72.9998C48.942 72.9998 46.8548 73.267 44.8945 73.9665C42.9342 74.6659 41.154 75.77 39.6771 77.2022C38.2001 78.6345 37.0616 80.3608 36.3403 82.2617C35.619 84.1626 35.35 85.9998 35.35 88.2117C35.35 91.1539 35.9873 94.0745 37.5839 96.5757C39.1804 99.0769 41.5597 101.018 44.3743 102.115V116.181Z"/>
+  <defs>
+    <path id="iconography-visual-lock-path" fill-rule="evenodd" clip-rule="evenodd" d="M102.06 64.3331C102.06 53.0489 96.3443 47.3331 85.06 47.3331H35.4991V39.2695C35.4991 28.1505 39.5638 24.2089 51.03 24.2089C62.4962 24.2089 66.5609 28.1505 66.5609 39.2695V47.3331H79.873V39.2695C79.873 26.511 74.8677 11.2998 51.03 11.2998C27.1923 11.2998 22.187 26.511 22.187 39.2695V47.3331H17C5.71573 47.3331 0 53.0489 0 64.3331V111.03C0.00939465 121.445 3.05122 128.554 8.45831 133.798C13.8654 139.041 21.1963 141.991 31.843 142H70.2169C80.8637 141.991 88.1946 139.041 93.6017 133.798C99.0088 128.554 102.051 121.445 102.06 111.03V64.3331ZM88.7478 112.03C88.7478 119.024 87.1115 121.855 84.1989 124.68C81.2863 127.504 78.336 129.091 71.2169 129.091H30.843C23.724 129.091 20.7737 127.504 17.8611 124.68C14.9485 121.855 13.3122 119.024 13.3122 112.03V64.2422C13.3122 61.5854 14.6553 60.2422 17.3122 60.2422H84.7478C87.4047 60.2422 88.7478 61.5854 88.7478 64.2422V112.03Z">
+      <animate attributeName="d" dur="0.35s" fill="freeze" keyTimes="0; 1" keySplines=".4 0 .2 1" calcMode="spline"    
+        to="M102.06 64.3331C102.06 53.0489 96.3443 47.3331 85.06 47.3331H35.4991V28.2695C35.4991 17.1505 39.5638 13.2089 51.03 13.2089C62.4962 13.2089 66.5609 17.1505 66.5609 28.2695V34.3331H79.873V28.2695C79.873 15.511 74.8677 0.299805 51.03 0.299805C27.1923 0.299805 22.187 15.511 22.187 28.2695V47.3331H17C5.71573 47.3331 0 53.0489 0 64.3331V111.03C0.00939465 121.445 3.05122 128.554 8.45831 133.798C13.8654 139.041 21.1963 141.991 31.843 142H70.2169C80.8637 141.991 88.1946 139.041 93.6017 133.798C99.0088 128.554 102.051 121.445 102.06 111.03V64.3331ZM88.7478 112.03C88.7478 119.024 87.1115 121.855 84.1989 124.68C81.2863 127.504 78.336 129.091 71.2169 129.091H30.843C23.724 129.091 20.7737 127.504 17.8611 124.68C14.9485 121.855 13.3122 119.024 13.3122 112.03V64.2422C13.3122 61.5854 14.6553 60.2422 17.3122 60.2422H84.7478C87.4047 60.2422 88.7478 61.5854 88.7478 64.2422V112.03Z"
+        begin="tileiconography.mouseover"
+      />
+      <animate attributeName="d" dur="0.2s" fill="freeze" keyTimes="0; 1" keySplines=".6 0 .9 1" calcMode="spline"  
+        to="M102.06 64.3331C102.06 53.0489 96.3443 47.3331 85.06 47.3331H35.4991V39.2695C35.4991 28.1505 39.5638 24.2089 51.03 24.2089C62.4962 24.2089 66.5609 28.1505 66.5609 39.2695V47.3331H79.873V39.2695C79.873 26.511 74.8677 11.2998 51.03 11.2998C27.1923 11.2998 22.187 26.511 22.187 39.2695V47.3331H17C5.71573 47.3331 0 53.0489 0 64.3331V111.03C0.00939465 121.445 3.05122 128.554 8.45831 133.798C13.8654 139.041 21.1963 141.991 31.843 142H70.2169C80.8637 141.991 88.1946 139.041 93.6017 133.798C99.0088 128.554 102.051 121.445 102.06 111.03V64.3331ZM88.7478 112.03C88.7478 119.024 87.1115 121.855 84.1989 124.68C81.2863 127.504 78.336 129.091 71.2169 129.091H30.843C23.724 129.091 20.7737 127.504 17.8611 124.68C14.9485 121.855 13.3122 119.024 13.3122 112.03V64.2422C13.3122 61.5854 14.6553 60.2422 17.3122 60.2422H84.7478C87.4047 60.2422 88.7478 61.5854 88.7478 64.2422V112.03Z"
+        begin="tileiconography.mouseout"
+      />
+    </path>
+    <clipPath id="iconography-visual-lock-clip">
+      <use xlink:href="#iconography-visual-lock-path"/>
+    </clipPath>
+  </defs>
+  <g>
+    <use xlink:href="#iconography-visual-lock-path" stroke-width="4px" clip-path="url(#iconography-visual-lock-clip)"/>
+  </g>
+</svg>
+
+<style>
+
+.iconography-visual-lock {
+	height: 100%;
+  fill: var(--color--identity--on-green);
+  stroke: transparent;
+  stroke-width: 2px;
+  transition: fill var(--tile-transition), stroke var(--tile-transition);
+}
+
+@media (any-hover: hover) {
+.tile.iconography:hover .iconography-visual-lock {
+	fill: transparent;
+  stroke: white;
+}}
+
+.iconography-visual-lock path {
+  vector-effect: non-scaling-stroke;
+}
+
+
+</style></div></div></div></a></div><div class="nav-tile nav-tile-6"><a id="tilecolor" href="/color" class="tile color w-inline-block"><div class="tile-title">Color</div><div class="color-visual-container"><div class="color-tile-embed w-embed"><style>
+
+.tile.color .color-color-block {
+  transition: background-color var(--tile-transition), border var(--tile-transition), transform var(--tile-transition);
+  border: 2px solid transparent;
+}
+
+@media (any-hover: hover) {
+.tile.color:hover .color-color-block {
+	background-color: transparent;
+  border-color: white;
+}
+
+.tile.color:hover .color-color-block.block-1 {
+	transform: translate(calc(100% - 1px), 1px);
+}
+
+.tile.color:hover .color-color-block.block-2 {
+	transform: translate(calc(-100% + 1px), -1px);
+}}
+
+.tile.color .color-color-circle {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+  stroke-width: 2px;
+  stroke: transparent;
+  transition: fill var(--tile-transition), stroke var(--tile-transition);
+}
+
+.tile.color .color-color-circle path {
+  vector-effect: non-scaling-stroke;
+}
+
+.tile.color .color-color-block.block-1 .color-color-circle {
+	fill: var(--color--identity--on-orange);
+}
+
+.tile.color .color-color-block.block-2 .color-color-circle {
+	fill: var(--color--accent--rust);
+}
+
+@media (any-hover: hover) {
+.tile.color:hover .color-color-circle {
+	fill: transparent !important;
+  stroke: white;
+}}
+
+</style></div><div class="color-visual-square"><div class="color-visual-square-square"><div class="color-color-block block-1"><div class="w-embed"><svg class="color-color-circle" viewBox="0 0 150 150">
+<path d="M75 25C42.7594 25 25 42.7563 25 75C25 107.244 42.7594 125 75 125C107.241 125 125 107.244 125 75C125 42.7563 107.241 25 75 25Z"/>
+</svg></div></div><div class="color-color-block block-2"><div class="w-embed"><svg class="color-color-circle" viewBox="0 0 150 150">
+<path d="M75 25C42.7594 25 25 42.7563 25 75C25 107.244 42.7594 125 75 125C107.241 125 125 107.244 125 75C125 42.7563 107.241 25 75 25Z"/>
+</svg></div></div></div></div></div></a></div><div class="nav-tile nav-tile-7"><a id="tileimagery" href="/imagery" class="tile imagery w-inline-block"><div class="tile-title">Imagery</div><div class="imagery-visual-container"><div class="imagery-visual-square"><div class="imagery-visual-picture"><div class="imagery-visual-picture-embed w-embed w-script"><svg class="hills" viewBox="0 0 250 150" fill="none">
+	<defs>
+		<path id="imagery-hills-path" d="M39 64.6059C16.4306 64.6059 0 83.8921 0 83.8921V150H250V34.2917C250 34.2917 229 0 202.602 0C155 0 136.444 87.8921 100 87.8921C77 87.8921 64 64.6059 39 64.6059Z"/>
+    <clipPath id="imagery-hills-clip">
+      <use xlink:href="#imagery-hills-path"/>
+    </clipPath>
+  </defs>
+  <g>
+    <use xlink:href="#imagery-hills-path" stroke-width="4px" clip-path="url(#imagery-hills-clip)"/>
+  </g>
+</svg>
+
+<div class="sunandmoon">
+  <svg class="sunmoon sun" viewBox="-2 -2 44 44">
+    <defs>
+      <circle id="imagery-sun-path" cx="20" cy="20" r="20"/>
+      <clipPath id="imagery-sun-clip">
+        <use xlink:href="#imagery-sun-path"/>
+      </clipPath>
+    </defs>
+    <g>
+      <use xlink:href="#imagery-sun-path" stroke-width="4px" clip-path="url(#imagery-sun-clip)"/>
+    </g>
+  </svg>
+	<svg class="sunmoon moon" viewBox="-2 -2 44 44">
+    <defs>
+  		<path id="imagery-moon-path" d="M37.789 27.8581C37.789 27.8581 25.4475 32.7572 15.6202 22.5197C5.79294 12.2821 11.3735 0.765137 11.3735 0.765137C9.44381 1.70298 7.6356 2.97261 6.03402 4.57419C-1.71664 12.3248 -1.69319 24.9146 6.08638 32.6942C13.866 40.4737 26.4557 40.4972 34.2064 32.7465C35.6825 31.2704 36.8767 29.6187 37.789 27.8581Z"/>
+      <clipPath id="imagery-moon-clip">
+        <use xlink:href="#imagery-moon-path"/>
+      </clipPath>
+    </defs>
+    <g>
+      <use xlink:href="#imagery-moon-path" stroke-width="4px" clip-path="url(#imagery-moon-clip)"/>
+    </g>
+  </svg>
+</div>
+
+<style>
+
+.tile.imagery .hills {
+	position: absolute;
+  width: calc(100% + 8px);
+  height: calc(75% + 4px);
+  left: -4px;
+  bottom: -4px;
+	fill: var(--color--accent--azalea);
+	stroke: transparent;
+  stroke-width: 2px;
+  z-index: 2;
+	transition: fill var(--tile-transition), stroke var(--tile-transition);
+}
+
+
+@media (any-hover: hover) {
+.tile.imagery:hover .hills {
+	fill: var(--text--base);
+  stroke: white;
+}}
+
+.tile.imagery .hills path, .tile.imagery .sun circle, .tile.imagery .moon path {
+  vector-effect: non-scaling-stroke;
+}
+
+.tile.imagery .imagery-visual-picture-embed {
+	background-color: var(--color--accent--pink);
+	transition: background-color var(--tile-transition);
+}
+
+@media (any-hover: hover) {
+.tile.imagery:hover .imagery-visual-picture-embed {
+	background-color: transparent;
+}}
+
+.tile.imagery .imagery-visual-picture-border {
+	opacity: 0;
+  transition: opacity var(--tile-transition);
+}
+
+@media (any-hover: hover) {
+.tile.imagery:hover .imagery-visual-picture-border {
+	opacity: 1;
+}}
+
+.tile.imagery .sunandmoon {
+	position: absolute;
+  top: 25%;
+  left: 17%;
+  height: 70%;
+  aspect-ratio: 1;
+  transform: rotateZ(-25deg);
+  transition: transform 0.7s cubic-bezier(.4,0.2,.2,1);
+}
+
+.tile.imagery .sunmoon {
+	position: absolute;
+  height: 30%;
+  aspect-ratio: 1;
+  fill: var(--color--accent--azalea);
+  stroke: transparent;
+  stroke-width: 2px;
+  transition: fill var(--tile-transition), stroke var(--tile-transition), transform 0.7s cubic-bezier(.4,0.2,.2,1);
+}
+
+.tile.imagery .sun {
+	top: 0;
+  left: 35%;
+}
+
+.tile.imagery .moon {
+	bottom: 0;
+  left: 35%;
+  transform: rotateZ(25deg);
+}
+
+@media (any-hover: hover) {
+.tile.imagery:hover .sunmoon {
+	fill: transparent;
+  stroke: white;
+}}
+
+</style>
+
+<script>
+
+let initialRotation = -25;
+let dayCounter = 0;
+let hoverTimeout;
+
+function setNight() {
+    let sunAndMoonRotation = (360 * dayCounter) + initialRotation + 180;
+    document.querySelector(".sunandmoon").style.transform = `rotateZ(${sunAndMoonRotation}deg)`;
+    document.querySelector(".moon").style.transform = `rotateZ(${-sunAndMoonRotation}deg)`;
+    dayCounter += 1;
+}
+
+function setDay() {
+    let sunAndMoonRotation = (360 * dayCounter) + initialRotation;
+    document.querySelector(".sunandmoon").style.transform = `rotateZ(${sunAndMoonRotation}deg)`;
+    document.querySelector(".moon").style.transform = `rotateZ(${-sunAndMoonRotation}deg)`;
+}
+
+document.querySelectorAll(".tile.imagery").forEach(tile => {
+    tile.addEventListener("mouseenter", () => {
+        hoverTimeout = setTimeout(setNight, 100);
+    });
+    tile.addEventListener("mouseleave", () => {
+        clearTimeout(hoverTimeout);
+        setDay();
+    });
+});
+
+</script></div><div class="imagery-visual-picture-border"></div></div></div></div></a></div><div class="nav-tile nav-tile-8"><a id="tilemotion" href="/motion" class="tile motion w-inline-block"><div class="tile-title">Motion</div><div class="motion-visual-container"><div class="w-embed"><div class="bezier-tangent tangent-1"></div>
+<div class="bezier-tangent tangent-2"></div>
+<svg class="bezier-point point-1" width="20" height="20" viewBox="-2 -2 20 20">
+<path d="M0 8C0 5.19974 0 3.79961 0.544967 2.73005C1.02433 1.78924 1.78924 1.02433 2.73005 0.544967C3.79961 0 5.19974 0 8 0C10.8003 0 12.2004 0 13.27 0.544967C14.2108 1.02433 14.9757 1.78924 15.455 2.73005C16 3.79961 16 5.19974 16 8C16 10.8003 16 12.2004 15.455 13.27C14.9757 14.2108 14.2108 14.9757 13.27 15.455C12.2004 16 10.8003 16 8 16C5.19974 16 3.79961 16 2.73005 15.455C1.78924 14.9757 1.02433 14.2108 0.544967 13.27C0 12.2004 0 10.8003 0 8Z"/>
+</svg>
+<svg class="bezier-point point-2" width="20" height="20" viewBox="-2 -2 20 20">
+<path d="M0 8C0 5.19974 0 3.79961 0.544967 2.73005C1.02433 1.78924 1.78924 1.02433 2.73005 0.544967C3.79961 0 5.19974 0 8 0C10.8003 0 12.2004 0 13.27 0.544967C14.2108 1.02433 14.9757 1.78924 15.455 2.73005C16 3.79961 16 5.19974 16 8C16 10.8003 16 12.2004 15.455 13.27C14.9757 14.2108 14.2108 14.9757 13.27 15.455C12.2004 16 10.8003 16 8 16C5.19974 16 3.79961 16 2.73005 15.455C1.78924 14.9757 1.02433 14.2108 0.544967 13.27C0 12.2004 0 10.8003 0 8Z"/>
+</svg>
+<svg class="bezier-point point-3" width="20" height="20" viewBox="-2 -2 20 20">
+<path d="M0 8C0 5.19974 0 3.79961 0.544967 2.73005C1.02433 1.78924 1.78924 1.02433 2.73005 0.544967C3.79961 0 5.19974 0 8 0C10.8003 0 12.2004 0 13.27 0.544967C14.2108 1.02433 14.9757 1.78924 15.455 2.73005C16 3.79961 16 5.19974 16 8C16 10.8003 16 12.2004 15.455 13.27C14.9757 14.2108 14.2108 14.9757 13.27 15.455C12.2004 16 10.8003 16 8 16C5.19974 16 3.79961 16 2.73005 15.455C1.78924 14.9757 1.02433 14.2108 0.544967 13.27C0 12.2004 0 10.8003 0 8Z"/>
+</svg>
+<svg class="bezier-point point-4" width="20" height="20" viewBox="-2 -2 20 20">
+<path d="M0 8C0 5.19974 0 3.79961 0.544967 2.73005C1.02433 1.78924 1.78924 1.02433 2.73005 0.544967C3.79961 0 5.19974 0 8 0C10.8003 0 12.2004 0 13.27 0.544967C14.2108 1.02433 14.9757 1.78924 15.455 2.73005C16 3.79961 16 5.19974 16 8C16 10.8003 16 12.2004 15.455 13.27C14.9757 14.2108 14.2108 14.9757 13.27 15.455C12.2004 16 10.8003 16 8 16C5.19974 16 3.79961 16 2.73005 15.455C1.78924 14.9757 1.02433 14.2108 0.544967 13.27C0 12.2004 0 10.8003 0 8Z"/>
+</svg>
+
+<style>
+
+.tile.motion .bezier-point {
+	fill: var(--color--identity--on-purple);
+  stroke: var(--color--identity--on-purple);
+  stroke-width: 2px;
+  position: absolute;
+  transition: left var(--tile-transition), right var(--tile-transition), fill var(--tile-transition), stroke var(--tile-transition);
+  z-index: 3;
+}
+
+.tile.motion .bezier-point.point-1 {
+	left: 0;
+  bottom: 0;
+}
+
+.tile.motion .bezier-point.point-2 {
+	left: 25%;
+  bottom: 0;
+}
+
+.tile.motion .bezier-point.point-3 {
+	right: 30%;
+  top: 0;
+}
+
+.tile.motion .bezier-point.point-4 {
+	right: 0;
+  top: 0;
+}
+
+@media (any-hover: hover) {
+.tile.motion:hover .bezier-point.point-2 {
+	left: 50%;
+}
+
+.tile.motion:hover .bezier-point.point-3 {
+	right: 50%;
+}
+
+.tile.motion:hover .bezier-point {
+	fill: var(--text--base);
+  stroke: white;
+}}
+
+.tile.motion .bezier-tangent {
+	position: absolute;
+	height: 2px;
+  background-color: var(--color--identity--on-purple);
+  transition: width var(--tile-transition), background-color var(--tile-transition);
+  z-index: 2;
+}
+
+.tile.motion .bezier-tangent.tangent-1 {
+	bottom: 9px;
+  left: 10px;
+  width: calc(25% - 0px);
+}
+
+.tile.motion .bezier-tangent.tangent-2 {
+	top: 9px;
+  right: 10px;
+  width: calc(30% - 0px);
+}
+
+@media (any-hover: hover) {
+.tile.motion:hover .bezier-tangent.tangent-1 {
+  width: calc(50% - 0px);
+}
+
+.tile.motion:hover .bezier-tangent.tangent-2 {
+  width: calc(50% - 0px);
+}
+
+
+.tile.motion:hover .bezier-tangent {
+	background-color: white;
+}
+}
+
+</style></div><div class="motion-bezier-container"><div class="motion-bezier-container-embed w-embed"><svg class="motion-bezier-path" viewBox="0 0 100 100" preserveAspectRatio="none">
+  <path d="M 0,75 C 30,75 60,25 100,25">
+    <animate attributeName="d" dur="0.35s" fill="freeze" keyTimes="0; 1" keySplines=".4 0 .2 1" calcMode="spline"    
+      to="M 0,75 C 65,75 35,25 100,25"
+      begin="tilemotion.mouseover"
+    />
+    <animate attributeName="d" dur="0.35s" fill="freeze" keyTimes="0; 1" keySplines=".4 0 .2 1" calcMode="spline"  
+      to="M 0,75 C 30,75 60,25 100,25"
+      begin="tilemotion.mouseout"
+    />
+  </path>
+</svg>
+
+<style>
+
+.motion-bezier-path {
+	width: 100%;
+  height: 100%;
+  fill: none;
+  stroke-width: 2px;
+}
+
+.motion-bezier-path path {
+  vector-effect: non-scaling-stroke;
+  stroke: var(--color--identity--on-purple);
+  transition: stroke var(--tile-transition);
+}
+
+@media (any-hover: hover) {
+.tile.motion:hover .motion-bezier-path path {
+    stroke: white;
+}}
+
+
+</style></div></div></div></a></div></nav><div class="nav-wrapper nav-wrapper-gridlines"><div class="menu"><div class="tile-menu-tile nav-button nav-button-gridline"><div class="tile-line nav-l"></div><div class="tile-line nav-r"></div><div class="tile-line nav-t"></div><div class="tile-line nav-b"></div></div></div><div class="nav-tile nav-tile-1 nav-tile-gridlines"><div class="tile-line-wrapper"><div class="tile-line nav-l"></div><div class="tile-line nav-r"></div><div class="tile-line nav-t"></div><div class="tile-line nav-b"></div></div></div><div class="nav-tile nav-tile-2 nav-tile-gridlines"><div class="tile-line-wrapper"><div class="tile-line nav-l"></div><div class="tile-line nav-r"></div><div class="tile-line nav-t"></div><div class="tile-line nav-b"></div></div></div><div class="nav-tile nav-tile-3 nav-tile-gridlines"><div class="tile-line-wrapper"><div class="tile-line nav-l"></div><div class="tile-line nav-r"></div><div class="tile-line nav-t"></div><div class="tile-line nav-b"></div></div></div><div class="nav-tile nav-tile-4 nav-tile-gridlines"><div class="tile-line-wrapper"><div class="tile-line nav-l"></div><div class="tile-line nav-r"></div><div class="tile-line nav-t"></div><div class="tile-line nav-b"></div></div></div><div class="nav-tile nav-tile-5 nav-tile-gridlines"><div class="tile-line-wrapper"><div class="tile-line nav-l"></div><div class="tile-line nav-r"></div><div class="tile-line nav-t"></div><div class="tile-line nav-b"></div></div></div><div class="nav-tile nav-tile-6 nav-tile-gridlines"><div class="tile-line-wrapper"><div class="tile-line nav-l"></div><div class="tile-line nav-r"></div><div class="tile-line nav-t"></div><div class="tile-line nav-b"></div></div></div><div class="nav-tile nav-tile-7 nav-tile-gridlines"><div class="tile-line-wrapper"><div class="tile-line nav-l"></div><div class="tile-line nav-r"></div><div class="tile-line nav-t"></div><div class="tile-line nav-b"></div></div></div><div class="nav-tile nav-tile-8 nav-tile-gridlines"><div class="tile-line-wrapper"><div class="tile-line nav-l"></div><div class="tile-line nav-r"></div><div class="tile-line nav-t"></div><div class="tile-line nav-b"></div></div></div></div></div><div class="menu"><button id="nav-button" aria-label="Navigation menu" tabindex="0" class="tile-menu-tile nav-button"><div class="nav-button-highlight"></div><div class="scroll-chevrons w-embed"><style>
+
+.scroll-chevrons-container {
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+
+.scroll-chevron {
+	position: absolute;
+	width: 52px;
+  right: 14px;
+  color: var(--color--accent--line-solid);
+  transition: transform 1.6s cubic-bezier(.2,0,.3,1), color 1.5s cubic-bezier(.2,0,.3,1);
+}
+
+.scroll-chevrons-container.visible {
+	opacity: 1;
+}
+
+.scroll-chevron.activated {
+	transform: translateY(18px);
+  color: var(--accent--tab);
+  transition: transform 0.65s cubic-bezier(.6,0,.6,1), color 0.65s cubic-bezier(.6,0,.6,1);
+}
+
+.scroll-chevron.chevron-1 {
+  bottom: 42px;
+}
+
+.scroll-chevron.chevron-2 {
+  bottom: 30px;
+}
+
+@media (max-width: 991px) {
+  .scroll-chevron {
+    width: 24px;
+    right: 16px;
+  }
+  .scroll-chevron.activated {
+    transform: translateY(14px);
+  }
+  .scroll-chevron.chevron-1 {
+    bottom: 31px;
+  }
+  .scroll-chevron.chevron-2 {
+    bottom: 22px;
+  }
+}
+
+</style>
+
+<div class="scroll-chevrons-container">
+    <svg class="scroll-chevron chevron-1" width="26" height="14" viewBox="0 0 26 14" fill="currentColor">
+    <path d="M23.2161 0.352539L13 10.1757L2.78391 0.352539L1.00781 2.19967L13 13.7306L24.9922 2.19967L23.2161 0.352539Z"/>
+    </svg>
+    <svg class="scroll-chevron chevron-2" width="26" height="14" viewBox="0 0 26 14" fill="currentColor">
+    <path d="M23.2161 0.352539L13 10.1757L2.78391 0.352539L1.00781 2.19967L13 13.7306L24.9922 2.19967L23.2161 0.352539Z"/>
+    </svg>
+</div></div><div class="nav-button-content"><div class="nav-button-title-container"><h3 class="nav-button-title nav-button-title-1">At Dropbox, our Brand Guidelines help us infuse everything we make with identity.</h3><h3 class="nav-button-title nav-button-title-2">From icons to illustration, logos to language, this collection is the foundation for how Dropbox looks, feels, and sounds like Dropbox.</h3><div class="w-embed w-script"><script>
+
+// Replace last space with a non-breaking space.
+// The Webflow designer doesn't support typing nbsp; directly
+document.querySelectorAll(".nav-button-title").forEach(element => {
+  element.innerHTML = element.innerHTML.replace(/ (?!.* )/, '&nbsp;');
+});
+
+</script></div></div><div class="nav-button-svg menu-logo w-embed"><svg viewBox="0 0 46 42" fill="currentColor">
+<path d="M11.4995 2L0 9.31249L11.4995 16.625L23.001 9.31249L34.5005 16.625L46 9.31249L34.5005 2L23.001 9.31249L11.4995 2Z"/>
+<path d="M11.4995 31.2501L0 23.9376L11.4995 16.625L23.001 23.9376L11.4995 31.2501Z"/>
+<path d="M23.001 23.9376L34.5005 16.625L46 23.9376L34.5005 31.2501L23.001 23.9376Z"/>
+<path d="M23.001 41L11.4995 33.6875L23.001 26.375L34.5005 33.6875L23.001 41Z"/>
+</svg></div><div class="nav-button-svg menu-hamburger w-embed"><svg viewBox="0 0 41 41" fill="currentColor">
+<path d="M32.6719 19.2188H8.32812V21.7812H32.6719V19.2188Z"/>
+<path d="M32.6719 9.96875H8.32812V12.5312H32.6719V9.96875Z"/>
+<path d="M32.6719 29.1094H8.32812V31.6719H32.6719V29.1094Z"/>
+</svg></div><div class="nav-button-svg menu-arrow w-embed"><style>
+
+@media (max-width: 991px) {
+	.menu-arrow-icon {
+  	transform: rotate(-90deg);
+  }
+}
+
+</style>
+
+<div class="menu-arrow-icon">
+<svg viewBox="0 0 41 41" fill="currentColor">
+  <path d="M21.8547 31.1429L13.2634 22.208L32.4624 22.208V19.6455L13.2634 19.6455L21.8547 10.7107L20.0075 8.93457L8.47656 20.9268L20.0075 32.919L21.8547 31.1429Z"/>
+</svg>
+</div></div><div class="nav-button-svg menu-close w-embed"><svg viewBox="0 0 41 41" fill="currentColor">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.311 20.5001L30.8009 28.9899L28.9889 30.8019L20.4991 22.312L12.0092 30.8019L10.1973 28.9899L18.6871 20.5001L10.1973 12.0102L12.0092 10.1982L20.4991 18.6881L28.9889 10.1982L30.8009 12.0102L22.311 20.5001Z"/>
+</svg></div></div><div class="home-logo-container w-embed"><svg class="home-logo" viewBox="120 120 1462 1462">
+  <path d="M663.477 555.977L850.079 673.172L663.477 790.366L476.906 673.172L663.477 555.977ZM663.477 791.542L850.079 908.739L663.477 1025.93L476.906 908.739L663.477 791.542ZM851.951 908.739L1038.52 791.542L1225.09 908.739L1038.52 1025.93L851.951 908.739ZM1225.09 673.172L1038.52 790.366L851.951 673.172L1038.52 555.977L1225.09 673.172ZM1037.59 1065.78L851.015 1182.97L664.413 1065.78L851.015 948.585L1037.59 1065.78Z"/>
+</svg></div></button></div><div class="nav-page-title"></div><a id="outro-mobile-close-button" tabindex="-1" href="#" class="outro-mobile-close-button w-inline-block"><div class="outro-mobile-close-button-embed w-embed"><svg viewBox="0 0 32 32">
+<path d="M22.0304 20.9697L17.0607 16.0001L22.0304 11.0304L20.9697 9.96973L16.0001 14.9394L11.0304 9.96973L9.96973 11.0304L14.9394 16.0001L9.96973 20.9697L11.0304 22.0304L16.0001 17.0607L20.9697 22.0304L22.0304 20.9697Z"/>
+</svg></div></a><a id="partner-info-button" href="#" class="partner-info-button w-inline-block"><div class="partner-info-icon-embed w-embed"><div class="partner-icon-container">
+  <svg class="partner-info-icon" id="partner-info-icon" viewBox="0 0 16 16">
+    <path d="M8 0.25C2.785 0.25 0.25 2.785 0.25 8C0.25 13.215 2.785 15.75 8 15.75C13.215 15.75 15.75 13.215 15.75 8C15.75 2.785 13.215 0.25 8 0.25ZM8 14.25C3.6775 14.25 1.75 12.3225 1.75 8C1.75 3.6775 3.6775 1.75 8 1.75C12.3225 1.75 14.25 3.6775 14.25 8C14.25 12.3225 12.3225 14.25 8 14.25Z"/>
+    <path d="M8 4.25002C7.85166 4.25002 7.70666 4.29401 7.58332 4.37642C7.45999 4.45883 7.36386 4.57597 7.30709 4.71301C7.25033 4.85006 7.23547 5.00086 7.26441 5.14634C7.29335 5.29183 7.36478 5.42546 7.46967 5.53035C7.57456 5.63524 7.7082 5.70667 7.85368 5.73561C7.99917 5.76455 8.14997 5.7497 8.28701 5.69293C8.42406 5.63617 8.54119 5.54004 8.6236 5.4167C8.70601 5.29336 8.75 5.14836 8.75 5.00002C8.75581 4.90001 8.7404 4.7999 8.70476 4.70627C8.66913 4.61265 8.61408 4.52762 8.54324 4.45678C8.4724 4.38594 8.38738 4.3309 8.29375 4.29526C8.20012 4.25963 8.10001 4.24421 8 4.25002Z"/>
+    <path d="M7.25 6.65497L7.25 11.75L8.75 11.75L8.75 6.65497C8.25801 6.78155 7.74199 6.78155 7.25 6.65497Z"/>
+  </svg>
+<svg class="partner-close-icon" id="partner-close-icon" viewBox="0 0 16 16">
+<path d="M7.26945 14.8348H8.73195C9.74257 10.4551 14.1784 9.02227 14.2234 9.00727L14.0003 8.29102L13.7798 7.57439C11.7768 8.27017 10.0261 9.54602 8.75032 11.2396V1.16602H7.25032V11.2396C5.97453 9.54602 4.22379 8.27017 2.22082 7.57439L1.77832 9.00727C1.82295 9.02114 6.25882 10.4551 7.26945 14.8348Z"/>
+</svg>
+</div>
+
+
+<style>
+
+.partner-icon-container {
+	  position: relative;
+    width: 16px;
+    height: 16px;
+}
+
+.partner-info-icon, .partner-close-icon {
+		position: absolute;
+		width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+		fill: currentColor;
+    opacity: 0;
+    transition: opacity 0.7s cubic-bezier(.4,0,.1,1);
+}
+
+.partner-close-icon {
+		transform: rotate(180deg);
+}
+
+.nav-container:not(.outro) .partner-info-icon {
+		opacity: 1;
+}
+
+.nav-container.outro .partner-close-icon {
+		opacity: 1;
+}
+
+@media (max-width: 991px) {
+  .nav-container:not(.outro) .partner-info-icon {
+      opacity: 1;
+  }
+
+  .nav-container.outro .partner-close-icon {
+      opacity: 0;
+  }
+  
+  .nav-container.outro .partner-info-icon {
+      opacity: 1;
+  }
+
+  .nav-container:not(.outro) .partner-close-icon {
+      opacity: 0;
+  }
+}
+
+</style></div><div>Partner Info</div></a><div class="nav-background"></div><div class="nav-enlarge-and-menu-icon-script w-embed w-script"><style>
+  .nav-container.close .menu {
+    z-index: 100;
+    transform: translate(0, 50%) !important;
+    /*transform: translate(-50%, -50%) translateX(calc(-50vw + var(--button-size) / 3))!important;*/
+    transition: transform 0.5s var(--nav-easing-swoop) 0.05s!important;
+  }
+
+  @media (max-width: 991px) {
+    .nav-container.close .menu {
+      transform: translate(-50%, 0) !important;
+      /*transform: translate(-50%, -50%) translateY(calc(50dvh - var(--button-size)* 0.75 / 2))!important;*/
+    }
+  }
+  
+  @keyframes scaleToClose {
+  	from {
+    	transform: scale(1);
+    }
+    to {
+      transform: scale(0.666667);
+    }
+  }
+
+  .nav-container.close .nav-button {
+    transform: scale(calc(2 / 3));
+    animation: scaleToClose 0.3s var(--nav-easing) forwards !important;
+    transition: transform 0.3s var(--nav-easing)!important;
+  }
+
+  .nav-container.close .nav-tile {
+    opacity: 0;
+    transition: 0.2s ease;
+  }
+
+  .nav-container.close .nav-tile.enlarge a {
+    padding-left: var(--opening-col-2-left);
+  }
+
+  .nav-container.close .nav-tile.enlarge .tile-title {
+    color: #fff!important;
+    top: 50%;
+    transform: translateY(-50%) scale(4);
+    transition: 0.6s var(--nav-easing);
+    transition-property: top, transform;
+  }
+
+  @media (max-width: 991px) {
+    .nav-container.close .nav-tile.enlarge a {
+      padding-left: var(--opening-col-1-left);
+    }
+    .nav-container.close .nav-tile.enlarge .tile-title {
+      transform: translateY(-50%) scale(2.5);
+    }
+  }
+
+  .nav-tile.enlarge {
+    opacity: 1!important;
+    transition: 0.6s cubic-bezier(.65,0,.15,1)!important;
+    z-index: 99;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .nav-tile-1.enlarge, .nav-tile-2.enlarge, .nav-tile-3.enlarge, .nav-tile-4.enlarge {
+    top: 0;
+  }
+  .nav-tile-1.enlarge, .nav-tile-2.enlarge, .nav-tile-5.enlarge, .nav-tile-6.enlarge {
+    left: 0;
+  }
+  .nav-tile-5.enlarge, .nav-tile-6.enlarge, .nav-tile-7.enlarge, .nav-tile-8.enlarge {
+    bottom: 0;
+  }
+  .nav-tile-3.enlarge, .nav-tile-4.enlarge, .nav-tile-7.enlarge, .nav-tile-8.enlarge {
+    right: 0;
+  }
+
+  @media (max-width: 991px) {
+    .nav-tile-2.enlarge, .nav-tile-6.enlarge {
+      left: initial;
+      right: 0;
+    }
+    .nav-tile-3.enlarge, .nav-tile-7.enlarge {
+      left: 0;
+      right: initial;
+    }
+  }
+
+  .nav-tile.enlarge a {
+    background-color: var(--surface--background-dark)!important;
+    border-radius: 0px;
+  }
+
+  .nav-tile a div:nth-child(2) {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  .nav-tile.enlarge a div:nth-child(2) {
+    opacity: 0;
+  }
+</style>
+
+<script>
+  //page transitions
+  const navDec = document.querySelector('.nav-container')
+  const navTilesDec = document.querySelectorAll('.nav-tile')
+  const navLinksDec = document.querySelectorAll('.nav-tile > a')
+  
+  const prefersReducedMotionForTransition = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  
+  navLinksDec.forEach((link, i) => {
+    link.addEventListener('click', function(event) {
+      if (window.innerWidth > 991 && !prefersReducedMotionForTransition) {
+        event.preventDefault();
+        const href = this.href;
+
+        navDec.classList.add('close');
+        navTilesDec[i].classList.add('enlarge');
+
+        setMenuMode(1);
+
+        setTimeout(() => {
+          window.location.href = href;
+        }, 600);
+      }
+    });
+  });
+  
+  // Nav menu svg icons
+  const menuIcons = [
+      document.querySelector('.nav-button-svg.menu-logo'),
+      document.querySelector('.nav-button-svg.menu-hamburger'),
+      document.querySelector('.nav-button-svg.menu-arrow'),
+      document.querySelector('.nav-button-svg.menu-close')
+  ];
+
+  function setMenuMode(mode) {
+      menuIcons.forEach((icon, index) => {
+          if (icon) index === mode ? icon.classList.remove('menu-svg-hidden') : icon.classList.add('menu-svg-hidden');
+      });
+  }
+  
+  function initMenuMode(mode) {
+      setMenuMode(mode);
+      menuIcons.forEach(icon => {
+          icon.style.transition = "transform 0.3s cubic-bezier(.25,0,.25,1), opacity 0.3s cubic-bezier(.25,0,.25,1)";
+      });
+  }
+  
+  // Reload if loading from a cache, like when using the browser back/next buttons
+  window.addEventListener("pageshow", (event) => {
+    if (event.persisted) {
+      window.location.reload();
+    }
+  });
+
+</script></div></div><div><div class="nav-script w-embed w-script"><script>
+
+const navButton = document.querySelector("#nav-button");
+const navMenu = document.querySelector(".nav-container > .menu");
+const nav = document.querySelector(".nav");
+const navContainer = document.querySelector(".nav-container");
+const navPageTitle = document.querySelector(".nav-page-title");
+const partnerInfoButton = document.getElementById("partner-info-button");
+const outroMobileCloseButton = document.getElementById("outro-mobile-close-button");
+const navScrollIndicator = document.querySelector(".nav-scroll-indicator");
+const navOutroBackground = document.querySelector(".outro-nav-background");
+const outroPage = document.querySelector(".outro-page");
+
+// Navigation Page Title
+
+const urlSlug = window.location.pathname.split("/").slice(-1)[0];
+const pageTitles = {
+    "framework": "Framework",
+    "voice-and-tone": "Voice & Tone",
+    "logo": "Logo",
+    "typography": "Typography",
+    "iconography": "Iconography",
+    "color": "Color",
+    "imagery": "Imagery",
+    "motion": "Motion",
+};
+
+if (urlSlug in pageTitles) {
+    navPageTitle.innerText = pageTitles[urlSlug];
+    navPageTitle.style.opacity = 1;
+    partnerInfoButton.style.opacity = 1;
+    partnerInfoButton.style.pointerEvents = "initial";
+} else {
+    navPageTitle.style.opacity = 0;
+    partnerInfoButton.style.opacity = 0;
+    partnerInfoButton.style.pointerEvents = "none";
+}
+
+// Navigation and Outro States
+
+let isNavOpen = false;
+let isOutroOpen = false;
+
+initMenuMode(1);
+
+navButton.addEventListener("click", () => {
+    if (event.metaKey) {
+        event.preventDefault();
+        window.location.href = "/";
+    } else {
+        if (isOutroOpen) {
+            closeOutro();
+        } else {
+            setNavState(!isNavOpen);
+        }
+    }
+});
+
+function openNav() {
+    setNavState(true);
+}
+
+function closeNav() {
+    setNavState(false);
+}
+
+function toggleNav() {
+    setNavState(!isNavOpen);
+}
+
+function setNavState(open) {
+
+    navContainer.classList.add('warp');
+
+   	if (isOutroOpen || navContainer.classList.contains("close")) return;
+    
+    if (open) {
+        isNavOpen = true;
+        
+        main.setAttribute('inert', '');
+        partnerInfoButton.setAttribute('inert', '');
+        nav.removeAttribute('inert', '');
+
+        setMenuMode(3);
+
+        navPageTitle.style.transition = "opacity 0.3s var(--nav-easing), transform 0.7s cubic-bezier(.4,0,.1,1)";
+        partnerInfoButton.style.transition = "opacity 0.3s var(--nav-easing), transform 0.7s cubic-bezier(.4,0,.1,1), color 0.9s cubic-bezier(.2,.7,.45,1)";
+        navScrollIndicator.style.transition = "opacity 0.3s var(--nav-easing), transform 0.7s cubic-bezier(.4,0,.1,1)";
+
+        navContainer.classList.add("open");
+        navPageTitle.style.opacity = 0;
+        partnerInfoButton.style.opacity = 0;
+        partnerInfoButton.style.pointerEvents = "none";
+        navScrollIndicator.style.opacity = 0;
+
+        document.body.style.overflow = "hidden";
+    } else {
+        isNavOpen = false;
+        
+        nav.setAttribute('inert', '');
+        main.removeAttribute('inert', '');
+        partnerInfoButton.removeAttribute('inert', '');
+
+        setMenuMode(1);
+
+        navPageTitle.style.transition = "opacity 0.3s var(--nav-easing) 0.1s, transform 0.7s cubic-bezier(.4,0,.1,1)";
+        partnerInfoButton.style.transition = "opacity 0.3s var(--nav-easing) 0.1s, transform 0.7s cubic-bezier(.4,0,.1,1), color 0.9s cubic-bezier(.2,.7,.45,1)";
+        navScrollIndicator.style.transition = "opacity 0.3s var(--nav-easing) 0.1s, transform 0.7s cubic-bezier(.4,0,.1,1)";
+
+        navContainer.classList.remove("open");
+        navPageTitle.style.opacity = 1;
+        partnerInfoButton.style.opacity = 1;
+        partnerInfoButton.style.pointerEvents = "initial";
+        navScrollIndicator.style.opacity = 1;
+
+        document.body.style.overflow = "";
+    }
+}
+
+nav.setAttribute('inert', '');
+
+partnerInfoButton.addEventListener("click", () => {
+    setOutroState(!isOutroOpen);
+});
+
+outroMobileCloseButton.addEventListener("click", () => {
+    closeOutro();
+});
+
+navOutroBackground.addEventListener("click", () => {
+    closeOutro();
+});
+
+function openOutro() {
+    setOutroState(true);
+}
+
+function closeOutro() {
+    setOutroState(false);
+}
+
+function toggleOutro() {
+    setOutroState(!isOutroOpen);
+}
+
+async function setOutroState(open) {
+   	if (isNavOpen || navContainer.classList.contains("close")) return;
+    
+    if (open) {
+        
+        isOutroOpen = true;
+        
+        main.setAttribute('inert', '');
+				outroPage.removeAttribute('inert', '');
+
+        setMenuMode(1);
+
+        navMenu.style.transition = "transform 0.7s cubic-bezier(.4,0,.1,1), opacity 0.7s cubic-bezier(0.4, 0, 0.1, 1)";
+        navContainer.classList.add("outro");
+        document.body.style.overflow = "hidden";
+    } else {
+        isOutroOpen = false;
+
+				outroPage.setAttribute('inert', '');
+        main.removeAttribute('inert', '');
+
+        setMenuMode(1);
+
+        navContainer.classList.remove("outro");
+        document.body.style.overflow = "";
+
+        await Promise.allSettled(navMenu.getAnimations().map((a) => a.finished));
+
+        navMenu.style.transition = "transform 0.5s var(--nav-easing-swoop) 0.05s, opacity 0.7s cubic-bezier(0.4, 0, 0.1, 1)";
+    }
+}
+
+outroPage.setAttribute('inert', '');
+
+// Disable transitions while resizing
+
+let navResizeTimer;
+
+window.addEventListener("resize", function () {
+    clearTimeout(navResizeTimer);
+    nav.parentNode.classList.add("no-transitions");
+
+    navResizeTimer = setTimeout(() => {
+        nav.parentNode.classList.remove("no-transitions");
+    }, 100);
+});
+
+// SCROLL INDICATOR
+
+function handleNavScrollIndicatorResize() {
+    handleNavScrollIndicatorScroll();
+}
+
+function handleNavScrollIndicatorScroll() {
+    // Debounce scroll events
+    if (!handleNavScrollIndicatorScroll.throttled) {
+        handleNavScrollIndicatorScroll.throttled = true;
+        requestAnimationFrame(() => {
+            navScrollIndicatorScrollHandler();
+            handleNavScrollIndicatorScroll.throttled = false;
+        });
+    }
+}
+
+function navScrollIndicatorScrollHandler() {
+    const scrollProgress = Math.min((window.scrollY || window.pageYOffset) / (document.body.scrollHeight - window.innerHeight), 1);
+    navScrollIndicator.style.transition = "initial";
+    navScrollIndicator.style.transform = window.innerWidth <= 991 ? `scaleX(${scrollProgress})` : `scaleY(${scrollProgress})`;
+}
+
+handleNavScrollIndicatorResize();
+window.addEventListener("resize", () => handleNavScrollIndicatorResize());
+window.addEventListener("scroll", () => handleNavScrollIndicatorScroll(true), { passive: true });
+
+// OVERSCROLL
+
+let overscroll = 0;
+let decayInterval = null;
+let overscrollThreshold = 1500;
+let mobileOverscrollThreshold = 200;
+let decayAmount = 15;
+let decayFrequency = 2;
+let progressHistory = new Array(3).fill(0);
+let animationFrameId = null;
+let currentProgress = 0;
+
+const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+
+function startDecay() {
+    if (isTouchDevice) return;
+    // Clear any existing interval first
+    if (decayInterval) clearInterval(decayInterval);
+
+    decayInterval = setInterval(() => {
+        // Reduce overscroll by 10
+        if (overscroll > 0) {
+            overscroll = Math.max(0, overscroll - decayAmount);
+        }
+
+        updateInterfaceForOverscroll();
+
+        // If we've reached 0, stop the decay
+        if (overscroll <= 0) {
+            clearInterval(decayInterval);
+            decayInterval = null;
+        }
+        // If we've reached the threshold, stop the decay, but set it to 0 after 1 second
+        if (overscroll >= overscrollThreshold) {
+            clearInterval(decayInterval);
+            decayInterval = null;
+            setTimeout(() => {
+                overscroll = 0;
+                updateInterfaceForOverscroll();
+            }, 1000);
+        }
+    }, decayFrequency);
+}
+
+if (isTouchDevice) {
+    window.addEventListener("scroll", () => {
+        const maxScrollY = document.documentElement.scrollHeight - window.innerHeight;
+
+        const progress = Math.min(Math.max((window.scrollY - maxScrollY) / mobileOverscrollThreshold, 0), 1);
+        updateInterfaceForOverscroll(true, progress);
+    });
+} else {
+    window.addEventListener("wheel", (e) => {
+        const maxScrollY = document.documentElement.scrollHeight - window.innerHeight;
+
+        if (window.scrollY >= maxScrollY && e.deltaY > 0) {
+            // Overscrolling at the bottom
+            const overscrollSpeed = e.deltaY;
+
+            overscroll += overscrollSpeed;
+
+            updateInterfaceForOverscroll();
+
+            startDecay();
+        }
+    });
+}
+
+function smoothProgress() {
+    const rawProgress = Math.min(overscroll / overscrollThreshold, 1.1);
+    const easedProgress = rawProgress; //Math.pow(1 - Math.pow(1 - rawProgress, 3), 2);
+
+    // Update progress history
+    progressHistory.shift();
+    progressHistory.push(easedProgress);
+
+    // Calculate average
+    const averageProgress = progressHistory.reduce((a, b) => a + b) / progressHistory.length;
+
+    // Calculate smooth progress
+    return currentProgress + (averageProgress - currentProgress) * 0.2;
+}
+
+function updateInterfaceForOverscroll(force = false, forcedProgress = 0) {
+    // Smooth animation
+    const animate = () => {
+        currentProgress = force ? forcedProgress : smoothProgress();
+
+        if (currentProgress <= 0.01) currentProgress = 0;
+
+        document.documentElement.style.setProperty("--overscroll-progress", Math.max(0, Math.min(currentProgress, 1)));
+
+        if (currentProgress >= 1) {
+            openNav();
+        }
+
+        if (Math.abs(currentProgress - smoothProgress()) >= 0.001) {
+            animationFrameId = requestAnimationFrame(animate);
+        } else {
+            if (currentProgress <= 0.05) {
+                document.documentElement.style.setProperty("--overscroll-progress", 0);
+            }
+        }
+    };
+
+    // Cancel any existing animation frame
+    if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+    }
+
+    // Start new animation frame
+    animationFrameId = requestAnimationFrame(animate);
+}
+
+// MENU ICON HOVER
+
+navButton.addEventListener("mouseenter", () => {
+    if (!isNavOpen && !isOutroOpen) setMenuMode(0);
+});
+
+navButton.addEventListener("mouseleave", () => {
+    if (isNavOpen) setMenuMode(3);
+    else if (isOutroOpen) setMenuMode(1);
+    else setMenuMode(1);
+});
+
+// ESCAPE KEY
+document.addEventListener("keydown", (event) => {
+  if (event.key == "Escape") {
+  	isOutroOpen ? closeOutro() : ((event.shiftKey && !isNavOpen) ? toggleOutro() : toggleNav());
+    document.activeElement.blur();
+  }
+});
+
+
+
+</script></div><div class="nav-background-script w-embed w-script"><script>
+
+const partnerInfoButtonForColorChange = document.querySelector("#partner-info-button");
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Elements
+    const navBackground = document.querySelector(".nav-background");
+    const sections = document.querySelectorAll(".opening, .page-section, .color-1, .strat-1, .logo-section, .image-1");
+    let cachedSection = null;
+
+    function handleNavBackgroundResize() {
+        handleNavBackgroundScroll();
+    }
+
+    function handleNavBackgroundScroll() {
+        // Debounce scroll events
+        if (!handleNavBackgroundScroll.throttled) {
+            handleNavBackgroundScroll.throttled = true;
+            requestAnimationFrame(() => {
+                navBackgroundScrollHandler();
+                handleNavBackgroundScroll.throttled = false;
+            });
+        }
+    }
+
+    function navBackgroundScrollHandler() {
+        // Find which section is currently in view
+        let currentSection = null;
+        sections.forEach((section) => {
+            const rect = section.getBoundingClientRect();
+            // Check if section is just starting to appear at the bottom of viewport
+            if (rect.top <= window.innerHeight - 48 && rect.bottom >= 48) {
+                currentSection = section;
+            }
+        });
+
+        // Update nav background color based on current section only if it changed
+        if (currentSection && currentSection != cachedSection) {
+            const sectionColor = window.getComputedStyle(currentSection).backgroundColor;
+            const backgroundColor = sectionColor == "transparent" || sectionColor == "rgba(0, 0, 0, 0)" ? "rgb(255, 255, 255)" : sectionColor;
+            navBackground.style.backgroundColor = backgroundColor;
+            cachedSection = currentSection;
+        
+            // Adjust the partner info button color
+            const [r, g, b] = backgroundColor.match(/\d+/g).map(Number);
+            const isDark = (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255 <= 0.5;
+
+            partnerInfoButtonForColorChange.style.color = isDark ? "#3080FF" : "var(--accent--ui-accent)";
+        }
+    }
+
+    // Execution
+    handleNavBackgroundResize();
+    window.addEventListener("resize", () => handleNavBackgroundResize());
+    window.addEventListener("scroll", () => handleNavBackgroundScroll(), { passive: true });
+});
+
+
+
+</script></div><div class="cursortag-script w-embed w-script"><style>
+.cursortag {
+  position: relative;
+  user-select: none;
+  pointer-events: none;
+}
+
+.ct-background {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  display: inline-flex;
+  gap: 8px;
+  width: max-content;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 0px;
+  background: var(--ct-background);
+  color: var(--ct-foreground);
+  padding: 4px 8px 4px 4px;
+  border-radius: 10px;
+}
+
+.ct-c-right .ct-background {
+  left: -8px;
+  transform: translateX(-100%)
+}
+
+.ct-icon {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.ct-icon-bg {
+  fill: var(--ct-foreground);
+}
+
+.ct-icon-svg {
+  position: absolute;
+  left: 0;
+  fill: var(--ct-background);
+}
+
+.ct-icon-monogram {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ct-background);
+  font-size: 10px;
+  transform: translateY(0.5px);
+}
+
+.ct-text {
+  transform: translateY(0.5px);
+  flex-shrink: 0;
+}
+
+.ct-arrow {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  fill: var(--ct-background);
+}
+
+.ct-c-right .ct-arrow {
+  left: initial;
+  right: -12px;
+  transform: scaleX(-1);
+}
+</style>
+<script>
+
+
+const SVG_NS = "http://www.w3.org/2000/svg";
+
+function createCursorTagIcon(type = 0, monogram) {
+    let ctIcon;
+    if (type == 0) {
+        ctIcon = document.createElement("div");
+        ctIcon.classList.add("ct-icon-monogram");
+        ctIcon.innerHTML = monogram;
+    } else {
+        ctIcon = document.createElementNS(SVG_NS, "svg");
+        ctIcon.classList.add("ct-icon-svg");
+        ctIcon.setAttribute("width", "24");
+        ctIcon.setAttribute("height", "24");
+        ctIcon.setAttribute("viewBox", "0 0 24 24");
+    }
+
+    if (type == 1) {
+        const path1 = document.createElementNS(SVG_NS, "path");
+        path1.setAttribute(
+            "d",
+            "M14.2822 8.52021C14.6787 8.1237 15.0642 8.1237 15.4607 8.52021C15.8572 8.91672 15.8572 9.30221 15.4607 9.69872C15.0642 10.0952 14.6787 10.0952 14.2822 9.69872C13.8857 9.30221 13.8857 8.91672 14.2822 8.52021Z"
+        );
+        const path2 = document.createElementNS(SVG_NS, "path");
+        path2.setAttribute("fill-rule", "evenodd");
+        path2.setAttribute("clip-rule", "evenodd");
+        path2.setAttribute(
+            "d",
+            "M18.4343 6.06069L18.3609 5.62033L17.9205 5.54694C16.3993 5.2934 14.5304 5.53851 12.9415 6.46907C12.4278 6.7699 11.9454 7.14143 11.5151 7.58792L10.359 7.62192C10.0403 7.6313 9.73726 7.76207 9.51184 7.9875L6.91654 10.5828L7.80042 11.4667L9.80354 10.8242C9.75238 11.0469 9.70951 11.2772 9.67551 11.5151L9.63132 11.8245L10.452 12.6452L9.12621 13.9709L10.0101 14.8548L11.3359 13.529L12.1567 14.3499L12.4661 14.3057C12.704 14.2717 12.9342 14.2288 13.1569 14.1777L12.5144 16.1808L13.3983 17.0647L15.9936 14.4694C16.219 14.244 16.3498 13.941 16.3591 13.6223L16.3931 12.4662C16.8397 12.0359 17.2113 11.5534 17.5121 11.0397C18.4427 9.45079 18.6878 7.58194 18.4343 6.06069ZM13.5456 11.3193L12.2197 12.6452L12.593 13.0184C14.4912 12.6652 15.7129 11.6384 16.4335 10.408C17.1134 9.24708 17.3541 7.88975 17.2578 6.72338C16.0914 6.62707 14.7341 6.8678 13.5732 7.5477C12.3429 8.26827 11.316 9.49 10.9628 11.3882L11.3359 11.7613L12.6617 10.4354L13.5456 11.3193Z"
+        );
+        const path3 = document.createElementNS(SVG_NS, "path");
+        path3.setAttribute("d", "M7.40758 13.7114L4.4165 16.6717L5.29552 17.5599L8.28659 14.5995L7.40758 13.7114Z");
+        const path4 = document.createElementNS(SVG_NS, "path");
+        path4.setAttribute("d", "M9.57559 15.6865L7.40192 17.8314L8.27989 18.7212L10.4536 16.5763L9.57559 15.6865Z");
+        ctIcon.append(path1, path2, path3, path4);
+    } else if (type == 2) {
+        const path1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path1.setAttribute(
+            "d",
+            "M12.8198 9.17708C12.8031 9.04266 12.8173 8.9062 12.8613 8.77809C12.9053 8.64998 12.978 8.53361 13.0738 8.43783C13.1695 8.34205 13.2859 8.26938 13.414 8.22538C13.5421 8.18137 13.6786 8.16717 13.813 8.18387C13.9474 8.16717 14.0839 8.18137 14.212 8.22538C14.3401 8.26938 14.4565 8.34205 14.5523 8.43783C14.648 8.53361 14.7207 8.64998 14.7647 8.77809C14.8087 8.9062 14.8229 9.04266 14.8062 9.17708C14.8229 9.3115 14.8087 9.44796 14.7647 9.57607C14.7207 9.70418 14.648 9.82055 14.5523 9.91633C14.4565 10.0121 14.3401 10.0848 14.212 10.1288C14.0839 10.1728 13.9474 10.187 13.813 10.1703C13.6786 10.187 13.5421 10.1728 13.414 10.1288C13.2859 10.0848 13.1695 10.0121 13.0738 9.91633C12.978 9.82055 12.9053 9.70418 12.8613 9.57607C12.8173 9.44796 12.8031 9.3115 12.8198 9.17708Z"
+        );
+        const path2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path2.setAttribute(
+            "d",
+            "M9.28855 9.17708C9.27185 9.04266 9.28604 8.9062 9.33005 8.77809C9.37406 8.64998 9.44672 8.53361 9.5425 8.43783C9.63829 8.34205 9.75466 8.26938 9.88277 8.22538C10.0109 8.18137 10.1473 8.16717 10.2818 8.18387C10.4162 8.16717 10.5526 8.18137 10.6807 8.22538C10.8089 8.26938 10.9252 8.34205 11.021 8.43783C11.1168 8.53361 11.1895 8.64998 11.2335 8.77809C11.2775 8.9062 11.2917 9.04266 11.275 9.17708C11.2917 9.3115 11.2775 9.44796 11.2335 9.57607C11.1895 9.70418 11.1168 9.82055 11.021 9.91633C10.9252 10.0121 10.8089 10.0848 10.6807 10.1288C10.5526 10.1728 10.4162 10.187 10.2818 10.1703C10.1473 10.187 10.0109 10.1728 9.88277 10.1288C9.75466 10.0848 9.63828 10.0121 9.5425 9.91633C9.44672 9.82055 9.37406 9.70418 9.33005 9.57607C9.28604 9.44796 9.27185 9.3115 9.28855 9.17708Z"
+        );
+        const path3 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path3.setAttribute(
+            "d",
+            "M9.28855 14.3177C9.27185 14.1833 9.28604 14.0468 9.33005 13.9187C9.37406 13.7906 9.44672 13.6742 9.5425 13.5785C9.63829 13.4827 9.75466 13.41 9.88277 13.366C10.0109 13.322 10.1473 13.3078 10.2818 13.3245C10.4162 13.3078 10.5526 13.322 10.6807 13.366C10.8089 13.41 10.9252 13.4827 11.021 13.5785C11.1168 13.6742 11.1895 13.7906 11.2335 13.9187C11.2775 14.0468 11.2917 14.1833 11.275 14.3177C11.2917 14.4521 11.2775 14.5886 11.2335 14.7167C11.1895 14.8448 11.1168 14.9612 11.021 15.057C10.9252 15.1527 10.8089 15.2254 10.6807 15.2694C10.5526 15.3134 10.4162 15.3276 10.2818 15.3109C10.1473 15.3276 10.0109 15.3134 9.88277 15.2694C9.75466 15.2254 9.63828 15.1527 9.5425 15.057C9.44672 14.9612 9.37406 14.8448 9.33005 14.7167C9.28604 14.5886 9.27185 14.4521 9.28855 14.3177Z"
+        );
+        const path4 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path4.setAttribute(
+            "d",
+            "M6.8198 11.974C6.8031 11.8395 6.81729 11.7031 6.8613 11.575C6.90531 11.4469 6.97797 11.3305 7.07375 11.2347C7.16953 11.1389 7.28591 11.0663 7.41402 11.0223C7.54212 10.9782 7.67858 10.964 7.81301 10.9807C7.94743 10.964 8.08389 10.9782 8.212 11.0223C8.3401 11.0663 8.45648 11.1389 8.55226 11.2347C8.64804 11.3305 8.7207 11.4469 8.76471 11.575C8.80872 11.7031 8.82291 11.8395 8.80621 11.974C8.82291 12.1084 8.80872 12.2448 8.76471 12.3729C8.7207 12.5011 8.64804 12.6174 8.55226 12.7132C8.45648 12.809 8.3401 12.8817 8.212 12.9257C8.08389 12.9697 7.94743 12.9839 7.81301 12.9672C7.67858 12.9839 7.54212 12.9697 7.41402 12.9257C7.28591 12.8817 7.16953 12.809 7.07375 12.7132C6.97797 12.6174 6.90531 12.5011 6.8613 12.3729C6.81729 12.2448 6.8031 12.1084 6.8198 11.974Z"
+        );
+        const path5 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path5.setAttribute(
+            "d",
+            "M11.5153 5.31338C15.1123 5.0554 19.1612 6.68537 19.9619 10.7266C20.1701 11.7769 19.8847 12.8648 19.0774 13.4555C18.208 14.0917 17.0646 13.9294 16.0496 13.1146L16.0188 13.0899L15.9908 13.0621C15.7912 12.864 15.5393 12.7627 15.2877 12.7628L15.26 12.7628L15.2323 12.7608C15.0643 12.7484 14.8914 12.7993 14.744 12.9157C14.5952 13.0331 14.4806 13.2116 14.4334 13.426C14.3862 13.6407 14.4126 13.8654 14.5042 14.057C14.5954 14.2479 14.7409 14.3855 14.9035 14.4578L14.9302 14.4697L14.956 14.4836C15.7806 14.9303 16.1763 15.8632 16.0338 16.7262C15.8802 17.6566 15.1381 18.4103 13.9366 18.5994C11.6771 18.955 9.20489 18.4479 7.29448 17.3133C5.38429 16.1789 3.92303 14.3369 3.97652 11.9958L3.97668 11.9888L3.97697 11.9819C4.1513 7.76914 7.91082 5.57191 11.5153 5.31338ZM5.47598 12.0369C5.44184 13.6582 6.44454 15.064 8.0604 16.0236C9.67831 16.9844 11.7982 17.4175 13.7034 17.1176C14.349 17.016 14.5187 16.695 14.5539 16.4819C14.5989 16.2089 14.4691 15.9368 14.259 15.8125C13.7711 15.5853 13.383 15.1896 13.1508 14.7039C12.9135 14.2074 12.8502 13.6413 12.9685 13.1037C13.0868 12.5658 13.3823 12.0794 13.8147 11.7382C14.2412 11.4016 14.7719 11.2299 15.3146 11.2629C15.9516 11.2699 16.5554 11.525 17.0154 11.9662C17.6774 12.4862 18.0484 12.3498 18.1916 12.245C18.3989 12.0933 18.6203 11.6727 18.4905 11.0182C17.9016 8.04582 14.8523 6.5779 11.6226 6.80954C8.40291 7.04047 5.60913 8.91768 5.47598 12.0369Z"
+        );
+        ctIcon.append(path1, path2, path3, path4, path5);
+    } else if (type == 3) {
+        const path1 = document.createElementNS(SVG_NS, "path");
+        path1.setAttribute("d", "M7.8311 7.50504L3.6001 12.018L7.8311 16.531L8.9251 15.505L5.6561 12.018L8.9251 8.53104L7.8311 7.50504Z");
+        const path2 = document.createElementNS(SVG_NS, "path");
+        path2.setAttribute("d", "M16.1751 7.50504L15.0811 8.53104L18.3501 12.018L15.0811 15.505L16.1751 16.531L20.4061 12.018L16.1751 7.50504Z");
+        const path3 = document.createElementNS(SVG_NS, "path");
+        path3.setAttribute("d", "M12.6479 5.34961L9.64669 18.3492L11.1082 18.6866L14.1094 5.68704L12.6479 5.34961Z");
+        ctIcon.append(path1, path2, path3);
+    } else if (type == 4) {
+        const path1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path1.setAttribute("fill-rule", "evenodd");
+        path1.setAttribute("clip-rule", "evenodd");
+        path1.setAttribute(
+            "d",
+            "M17.9885 7.1397C17.9885 7.73624 17.7518 8.30842 17.3305 8.7307L10.2175 15.8397L5.96747 16.5312L6.65897 12.2812L13.77 5.1697C14.1923 4.74835 14.7644 4.51172 15.361 4.51172C15.9575 4.51172 16.5297 4.74835 16.952 5.1697L17.3305 5.5487C17.7518 5.97099 17.9885 6.54317 17.9885 7.1397ZM16.27 6.6092L15.8915 6.2307C15.8218 6.16093 15.7386 6.10558 15.6475 6.06782C15.5564 6.03005 15.4588 6.01061 15.3602 6.01061C15.2616 6.01061 15.164 6.03005 15.0729 6.06782C14.9819 6.10558 14.8991 6.16093 14.8295 6.2307L14.033 7.0272L15.483 8.4572L16.27 7.6702C16.3397 7.60055 16.395 7.51785 16.4327 7.42683C16.4704 7.3358 16.4898 7.23824 16.4898 7.1397C16.4898 7.04117 16.4704 6.94361 16.4327 6.85258C16.395 6.76156 16.3397 6.67885 16.27 6.6092ZM8.06197 13.0007L7.78247 14.7182L9.49997 14.4387L14.423 9.5197L12.973 8.0897L8.06197 13.0007Z"
+        );
+        const path2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path2.setAttribute("d", "M5 18.0007H19V19.5007H5V18.0007Z");
+        ctIcon.append(path1, path2);
+    } else if (type == 5) {
+        const path1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path1.setAttribute(
+            "d",
+            "M12 4C6.8415 4 4 6.8415 4 12C4 17.1585 6.8415 20 12 20C17.1585 20 20 17.1585 20 12C20 6.8415 17.1585 4 12 4ZM12 18.5C7.626 18.5 5.5 16.374 5.5 12C5.5 7.626 7.626 5.5 12 5.5C16.374 5.5 18.5 7.626 18.5 12C18.5 16.374 16.374 18.5 12 18.5Z"
+        );
+        const path2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path2.setAttribute("d", "M10 15.5L15.5 12L10 8.5V15.5Z");
+        ctIcon.append(path1, path2);
+    }
+
+    return ctIcon;
+}
+
+function createCursorTag(name, role, monogram, foregroundColor, backgroundColor, direction = 0) {
+    const cursortag = document.createElement("div");
+    cursortag.className = direction == 0 ? "cursortag" : "cursortag ct-c-right";
+    cursortag.style.setProperty("--ct-foreground", foregroundColor);
+    cursortag.style.setProperty("--ct-background", backgroundColor);
+
+    const ctBackground = document.createElement("div");
+    ctBackground.className = "ct-background";
+
+    const ctIcon = document.createElement("div");
+    ctIcon.className = "ct-icon";
+
+    const ctIconBg = document.createElementNS(SVG_NS, "svg");
+    ctIconBg.classList.add("ct-icon-bg");
+    ctIconBg.setAttribute("width", "24");
+    ctIconBg.setAttribute("height", "24");
+    ctIconBg.setAttribute("viewBox", "0 0 24 24");
+    const pathBg = document.createElementNS(SVG_NS, "path");
+    pathBg.setAttribute("d", "M12 0C4.26225 0 0 4.2615 0 12C0 19.7385 4.26225 24 12 24C19.7378 24 24 19.7385 24 12C24 4.2615 19.7378 0 12 0Z");
+    ctIconBg.appendChild(pathBg);
+
+    const ctText = document.createElement("span");
+    ctText.className = "ct-text";
+    ctText.textContent = name;
+
+    const ctArrow = document.createElementNS(SVG_NS, "svg");
+    ctArrow.classList.add("ct-arrow");
+    ctArrow.setAttribute("width", "20");
+    ctArrow.setAttribute("height", "20");
+    ctArrow.setAttribute("viewBox", "0 0 20 20");
+    const pathArrow = document.createElementNS(SVG_NS, "path");
+    pathArrow.setAttribute(
+        "d",
+        "M17.3008 6.04111C18.4599 6.39961 18.4801 8.03307 17.3301 8.42003L11.1802 10.4894C10.8047 10.6158 10.5113 10.9127 10.3895 11.2896L8.45956 17.2583C8.08453 18.4182 6.44069 18.4101 6.07709 17.2466L1.70915 3.26922C1.40885 2.30826 2.30975 1.40471 3.27159 1.70218L17.3008 6.04111Z"
+    );
+    ctArrow.appendChild(pathArrow);
+
+    ctIcon.append(ctIconBg, createCursorTagIcon(role, monogram));
+    ctBackground.append(ctIcon, ctText, ctArrow);
+    cursortag.appendChild(ctBackground);
+
+    return cursortag;
+}
+
+function replaceCursorTags() {
+    const cursortags = document.querySelectorAll(".cursortag");
+    cursortags.forEach((cursortag) => {
+        if (cursortag.children.length > 0) return;
+
+        const name = cursortag.getAttribute("data-name");
+        const role = cursortag.getAttribute("data-role");
+        const monogram = cursortag.getAttribute("data-monogram");
+        const foreground = cursortag.getAttribute("data-foreground");
+        const background = cursortag.getAttribute("data-background");
+        const direction = cursortag.getAttribute("data-direction");
+        const newContent = createCursorTag(name, role, monogram, foreground, background, direction);
+        cursortag.innerHTML = newContent.innerHTML;
+        cursortag.classList.add(...newContent.classList);
+        cursortag.style.setProperty("--ct-foreground", foreground);
+        cursortag.style.setProperty("--ct-background", background);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", replaceCursorTags);
+
+
+
+</script></div></div><div class="opening-animation-script w-embed w-script"><style>
+	/*.line-section > div, .opening .line-hor, .opening .opening-element, .opening-vector-stroke path, .opening-vector-stroke rect, .opening-vector-fill path, .opening-vector-fill rect, .ct-background, .ct-icon-bg, .ct-icon-svg, .ct-icon-monogram, .ct-arrow {
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, fill 0.3s ease-in-out, stroke 0.3s ease-in-out, border 0.3s ease-in-out, outline 0.3s ease-in-out;
+  }
+  .load-in .line-section > div, .load-in .opening .line-hor, .load-in .opening .opening-element, .load-in .opening-vector-stroke, .load-in .opening-vector-fill, .load-in .ct-background, .load-in .ct-icon-bg, .load-in .ct-icon-svg, .load-in .ct-icon-monogram, .load-in .ct-arrow {
+    transition: none!important;
+  }*/
+  .opening-vector-stroke path, .opening-vector-stroke rect, .opening-vector-fill path, .opening-vector-fill rect, .ct-background, .ct-icon-bg, .ct-icon-svg, .ct-icon-monogram, .ct-arrow {
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, fill 0.3s ease-in-out, stroke 0.3s ease-in-out, border 0.3s ease-in-out, outline 0.3s ease-in-out;
+  }
+	.load-in .opening-element, .opening-element.load-in {
+    border: 1px solid white;
+    background-color: var(--surface--background-dark);
+    color: #fff;
+  }
+  .load-in .line-section > div, .line-section .load-in, .load-in .opening .line-hor, .opening .line-hor.load-in, .load-in .line-vertical-left, .line-vertical-left.load-in, .load-in .line-vertical-right, .load-in .opening-hor-top, .load-in .opening-hor-bot, .line-vertical-right.load-in, .load-in .line-horizontal-top, .line-horizontal-top.load-in, .load-in .line-horizontal-bot, .line-horizontal-bot.load-in, .opening-hor-top.load-in, .opening-hor-bot.load-in {
+  	background-color: #fff;
+  }
+  
+  .load-in .opening-vector-stroke path, .opening-vector-stroke.load-in path, .load-in .opening-vector-stroke rect, .opening-vector-stroke.load-in rect {
+  	stroke: #fff;
+    fill: var(--surface--background-dark);
+  }
+  
+  .load-in .opening-vector-fill path, .opening-vector-fill.load-in path, .load-in .opening-vector-fill rect, .opening-vector-fill.load-in rect {
+    fill: #fff;
+  }
+  .load-in .ct-background {
+    color: white;
+    background: transparent;
+    outline: 1px solid white;
+  }
+  .load-in .ct-icon-bg {
+    fill: transparent;
+  }
+  .load-in .ct-icon-svg {
+    fill: white;
+  }
+  .load-in .ct-icon-monogram {
+    color: white;
+  }
+  .load-in .ct-arrow {
+    fill: white;
+  }
+  
+  .opening-mask {
+  	opacity: 0;
+  }
+  
+  .opening.no-transitions, .opening.no-transitions * {
+  	transition: none !important;
+	}
+</style>
+<script>
+/*document.addEventListener('criticalContentLoaded', function () {
+    setTimeout(function () {
+        document.body.classList.remove('load-in');
+    }, 400);
+});*/
+
+
+
+// ELEMENTS
+
+let openingMask;
+let openingVerticalLines;
+let openingHorizontalLines;
+let openingMiscElements;
+let openingForPageFunctionality;
+
+// FUNCTIONS
+
+function setUpOpening() {
+    openingHorizontalLines.forEach((line) => {
+        line.classList.add("load-in");
+        line.style.transform = "scaleX(0)";
+    });
+
+    openingVerticalLines.forEach((line) => {
+        line.classList.add("load-in");
+        line.style.transform = "scaleY(0)";
+    });
+
+    openingMiscElements.forEach((element) => {
+        element.classList.add("load-in");
+        element.style.transform = "scale(0.9)";
+        element.style.opacity = "0";
+    });
+
+    openingMask.forEach((element) => {
+        element.style.opacity = "1";
+    });
+}
+
+function animateInOpening() {
+    openingHorizontalLines.forEach((line, i) => {
+        animateInElement(line, i * 200);
+    });
+
+    openingVerticalLines.forEach((line, i) => {
+        animateInElement(line, i * 200 + 100);
+    });
+
+    openingMiscElements.forEach((element, i) => {
+        animateInElement(element, i * 80 + 160);
+    });
+}
+
+async function animateInElement(element, delay = 0) {
+    const loadInDelay = delay + 400;
+
+    element.style.transition = `opacity 0.7s ${delay}ms cubic-bezier(.6,0,.6,1), transform 0.7s ${delay}ms cubic-bezier(.6,0,.6,1), color 0.3s ${loadInDelay}ms ease-in-out, background-color 0.3s ${loadInDelay}ms ease-in-out, fill 0.3s ${loadInDelay}ms ease-in-out, stroke 0.3s ${loadInDelay}ms ease-in-out, border 0.3s ${loadInDelay}ms ease-in-out, outline 0.3s ${loadInDelay}ms ease-in-out`;
+
+    element.offsetHeight;
+
+    element.style.transform = "initial";
+    element.style.opacity = "initial";
+
+    element.classList.remove("load-in");
+}
+
+// LISTENERS
+
+document.addEventListener("criticalContentLoaded", function () {
+		openingForPageFunctionality = document.querySelector(".opening");
+    openingMask = Array.from(document.querySelectorAll(".opening-mask, .logo-sticky, .logo-0-content"));
+    openingVerticalLines = Array.from(document.querySelectorAll(".opening .line-vertical-left, .opening .line-vertical-right, .opening .line-ver, .logo-sticky .line-vertical-left, .logo-sticky .line-vertical-right"));
+    openingHorizontalLines = Array.from(document.querySelectorAll(".opening .line-horizontal-top, .opening .line-horizontal-bot, .opening .line-hor, .logo-sticky .line-horizontal-top, .logo-sticky .line-horizontal-bot, .opening-hor-top, .opening-hor-bot"));
+    openingMiscElements = document.querySelectorAll(
+        ".opening .opening-mask-inner > *:not([class*='content']):not(.motion-0-bezier-container), .opening .cursortag, .opening .title-wrapper > *:not(.title):not(.title-wrapper):not(.line-hor), .logo-rive-transformer, .opening .bezier-label .annotation, .opening .handle-bezier-point"
+    );
+
+    openingMiscElements = Array.from(openingMiscElements).filter((element) => !openingHorizontalLines.includes(element) && !openingVerticalLines.includes(element));
+
+    setUpOpening();
+    animateInOpening();
+});
+
+
+// Disable transitions while resizing
+
+let openingResizeTimer;
+
+window.addEventListener("resize", function () {
+    clearTimeout(openingResizeTimer);
+    openingForPageFunctionality.classList.add("no-transitions");
+
+    openingResizeTimer = setTimeout(() => {
+        openingForPageFunctionality.classList.remove("no-transitions");
+    }, 100);
+});
+
+
+</script></div><header class="opening strat"><div class="opening-mask"><div class="opening-mask-inner"><div class="strat-0-hor4 line-hor"></div><div typeContent="" class="strat-0-content"><div class="line-vertical-left"></div><div class="line-vertical-right"></div><div class="title-wrapper"><div class="opening-hor-top line-hor"></div><div class="opening-hor-bot line-hor"></div><div aria-label="Hand drawn crown." class="strat-opening-1"><div class="width-full opening-vector-fill w-embed"><svg viewBox="0 0 111 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M53.1954 1.14968C51.6832 2.55702 48.4276 9.32066 47.59 12.7941C47.4501 13.375 46.2017 16.2966 44.8156 19.2866C43.4294 22.2766 41.765 26.098 41.1165 27.7784C38.8069 33.7629 34.2269 42.2383 33.0865 42.6378C30.8126 43.4345 14.3312 30.456 10.5247 24.8713C7.36116 20.2299 1.51161 19.248 0.222098 23.1416C-0.350208 24.8686 0.148108 26.0311 2.13105 27.5958C3.07135 28.3375 4.04233 29.5722 4.47319 30.574C5.18196 32.2212 5.42001 33.4819 6.36184 40.5724C6.59912 42.3578 7.12502 45.7091 7.53058 48.0197C7.93575 50.3302 8.52876 53.9393 8.84807 56.0398C9.16738 58.1403 9.68029 61.1479 9.98848 62.7232C11.6372 71.1623 13.5335 85.4847 13.566 89.743C13.6017 94.4318 15.9549 96.7255 19.3642 95.3942C21.7524 94.4615 31.4908 93.6488 37.195 93.9058C40.2072 94.0418 43.978 93.8917 48.1198 93.4716C51.5985 93.1187 60.1371 92.6837 67.0944 92.505C81.9943 92.1227 94.4129 91.4799 96.5902 90.9789C97.4446 90.7822 99.5947 90.6172 101.368 90.6119C108.885 90.5901 112.77 87.1182 109.548 83.3025C108.396 81.9379 108.232 72.1186 109.059 53.9393C109.851 36.5131 108.761 22.1108 106.517 20.3521C102.803 17.442 91.2167 25.503 81.5703 37.7081C76.2049 44.4965 75.6303 44.2185 73.018 33.5716C67.0388 9.20113 58.8809 -4.14169 53.1954 1.14968ZM67.1097 40.1905C63.9895 27.8342 61.3139 19.4657 58.9898 14.7934C57.0908 10.9759 56.2406 11.3112 54.143 16.703C53.4078 18.5934 52.1666 21.5151 51.3853 23.1955C50.6041 24.8759 49.3813 27.7581 48.6684 29.6009C47.9554 31.4432 45.6428 36.347 43.5291 40.4983C41.4158 44.6493 39.6867 48.1724 39.6867 48.3271C39.6867 50.0235 36.6978 52.4116 34.575 52.4116C32.6043 52.4116 23.2255 46.4924 18.4857 42.2574C15.2619 39.377 13.2042 39.3579 13.7776 42.2139C13.9026 42.8379 14.2702 45.1729 14.5945 47.4029C14.9184 49.6325 15.6816 54.1207 16.2907 57.3765C18.069 66.883 19.3497 74.8485 19.7663 78.9961C20.4468 85.7673 21.3721 87.4508 24.1619 86.9917C24.7944 86.8879 29.1068 86.7084 33.7451 86.5934C38.3833 86.4785 44.162 86.2237 46.5865 86.027C56.2739 85.2418 63.3631 84.8794 73.611 84.6457C90.112 84.2691 94.598 83.9605 98.4248 82.9385C100.874 82.2847 101.019 81.477 101.208 67.4971C101.276 62.4559 101.452 52.3047 101.601 44.9388C101.818 34.1797 101.891 30.6781 100.802 30.273C100.275 30.0767 99.4753 30.6072 98.2872 31.3913C95.6192 33.1519 86.1603 43.4852 82.4102 48.7365C75.9907 57.7248 70.8062 54.8291 67.1097 40.1905Z" fill="#B4DC19"/>
+</svg></div></div><div class="strat-opening-2"><div class="width-full opening-vector-fill w-embed"><svg viewBox="0 0 79 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M38.7023 16.9252C38.7676 13.9226 40.6925 10.2399 42.7083 9.25992C43.9155 8.67303 45.3539 8.94988 46.2855 9.94904C47.4882 11.2385 47.3438 12.3113 44.4959 23.2226C43.7961 25.9032 43.2705 28.2992 43.3273 28.5476C43.3841 28.7959 42.9592 30.8436 42.3831 33.0981C41.807 35.3527 41.171 37.9864 40.9693 38.9516C40.3225 42.0502 36.6395 42.5821 34.3478 39.9083C32.7617 38.0574 32.8855 37.3798 37.7389 21.3845C38.2523 19.6935 38.6856 17.6867 38.7023 16.9252Z" fill="#14C8EB"/>
+<path d="M66.2737 30.5801C73.2791 22.6028 73.611 22.3022 75.5812 22.1469C77.5895 21.9883 78.7921 22.9367 78.909 24.7714C79.0252 26.595 75.8307 31.1818 69.8888 37.7229C68.2492 39.5273 66.4606 41.6991 65.9134 42.5489C65.3665 43.3988 63.846 45.2533 62.5348 46.6704C61.2235 48.0875 59.8463 49.7983 59.4738 50.472C57.7785 53.541 54.4807 53.4566 52.8449 50.3022C51.3864 47.4895 52.3713 44.9403 56.5131 40.8092C60.5528 36.78 64.0207 33.1453 66.2737 30.5801Z" fill="#14C8EB"/>
+<path d="M2.11369 9.67357C0.0381908 3.94912 0.591601 0.806881 3.78609 0.176417C5.74665 -0.210208 7.59352 1.17903 7.88618 3.26129C7.99056 4.00445 8.60697 6.05284 9.25566 7.81318C11.3696 13.5496 13.1067 22.5576 13.4539 29.5827C13.5372 31.264 13.8267 32.2568 14.4249 32.9115C17.044 35.7771 16.9454 37.5286 14.0777 39.0808C9.50463 41.5557 5.47782 36.7543 5.6326 29.0112C5.71053 25.1083 3.69617 14.0386 2.11369 9.67357Z" fill="#14C8EB"/>
+</svg></div></div><div aria-label="Hand drawn file folder." class="strat-opening-3"><div class="width-full opening-vector-fill w-embed"><svg viewBox="0 0 214 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M187.367 144.866C187.616 140.97 189.067 137.45 190.189 133.827C193.454 123.233 196.708 112.65 198.907 101.77C199.746 97.6808 200.199 93.4771 201.367 89.4785C203.01 83.9079 203.634 78.0866 205.844 72.6299C206.344 71.2603 206.667 69.8324 206.808 68.3807C207.89 60.8116 209.905 53.4071 212.805 46.3374C213.293 45.1603 213.639 43.9289 213.836 42.6692C214.194 40.8561 213.962 38.9755 213.177 37.3043C212.391 35.633 211.093 34.2592 209.472 33.3848C206.196 31.5393 202.591 30.252 198.578 31.1064C194.841 31.7977 191.038 32.0575 187.242 31.881C180.553 31.8013 173.854 31.3 167.154 31.881C165.182 32.0633 163.175 31.881 161.18 31.881C160.729 31.8896 160.289 31.7445 159.931 31.4694C159.572 31.1942 159.318 30.8053 159.208 30.3659C158.074 27.3243 156.861 24.2713 155.603 21.2524C155.21 20.1236 154.467 19.1514 153.484 18.4787C152.5 17.806 151.327 17.4684 150.139 17.5158C148.151 17.3585 146.155 17.3319 144.164 17.4361C140.395 17.7664 136.61 17.8767 132.828 17.7666C127.942 17.8349 123.045 18.4158 118.193 18.0626C105.894 17.1513 93.6051 17.9488 81.3054 17.8804C80.0471 17.8804 78.7888 18.0741 77.5304 18.1766C76.2721 18.2792 75.0025 18.45 73.7442 18.45C66.9425 18.45 66.8291 18.4499 64.0404 12.23C61.6712 6.97829 58.0776 3.21906 52.4776 1.51028C50.4312 0.81183 48.3064 0.371737 46.152 0.200182C42.3325 -0.0667273 38.4992 -0.0667273 34.6798 0.200182C26.6084 -0.0846156 17.9703 0.872327 9.29814 1.07738C7.48598 1.09219 5.67927 1.27908 3.90211 1.63557C3.2214 1.71958 2.56927 1.96082 1.99678 2.34034C1.4243 2.71985 0.947 3.22735 0.602249 3.82315C0.257499 4.41895 0.0546512 5.08688 0.00959871 5.7746C-0.0354537 6.46231 0.0785103 7.15116 0.34256 7.78723C0.92666 9.50618 1.35167 11.2757 1.6122 13.0731C2.32638 19.0424 3.24461 24.989 3.69805 30.9697C3.84038 33.6908 4.26206 36.3898 4.95637 39.0237C6.66813 44.9589 7.55237 51.0765 9.04874 57.0686C11.0779 65.1569 12.2455 73.4615 13.7192 81.6751C14.4323 85.059 14.9433 88.4827 15.2496 91.9278C15.4509 97.7439 16.3066 103.518 17.8003 109.141C17.8803 109.515 17.9221 109.897 17.9249 110.28C18.6505 119.006 21.5185 127.368 22.4594 136.049C22.5182 136.593 22.64 137.128 22.8222 137.644C23.8539 140.359 24.5174 143.202 24.7946 146.096C25.01 148.637 26.4951 149.753 29.1817 149.981C29.5592 150.006 29.9379 150.006 30.3154 149.981C37.3664 149.787 44.4289 150.061 51.4686 149.297C57.3994 148.551 63.3982 148.528 69.3344 149.229C73.2695 149.696 77.2456 149.696 81.1807 149.229C87.835 148.591 94.478 147.828 101.178 147.646C105.565 147.52 109.782 148.625 114.135 148.648C124.984 148.648 135.832 148.99 146.692 149.013C149.572 149.013 152.485 149.32 155.308 149.081C161.293 148.557 167.245 149.081 173.208 148.99C176.45 148.99 179.703 149.252 182.923 149.07C186.142 148.887 187.174 147.873 187.367 144.866ZM30.7575 130.729C30.5194 131.196 30.2927 132.392 29.3178 131.538C29.057 131.298 29.2157 130.558 29.1817 130.045C28.6943 127.174 28.2635 124.349 27.7194 121.444C26.3704 114.301 24.84 107.193 23.6497 100.027C23.0602 96.4618 23.2643 92.7594 22.7542 89.1709C21.9493 83.6003 20.8723 78.0639 19.8634 72.5274C18.9225 67.3441 17.9249 62.1721 16.9274 57.0002C16.5759 55.2117 16.2472 53.4232 15.7937 51.6575C13.0364 41.4902 11.2037 31.0922 10.3184 20.5917C10.0917 17.6982 9.53619 14.8274 9.18477 11.9339C8.94671 9.80361 9.38881 9.14284 11.3386 9.04031C17.8343 8.69855 24.3299 8.40239 30.8141 8.20872C35.3486 8.07202 39.8151 8.0947 44.3042 8.0947C46.6654 8.10464 48.9996 8.60095 51.1626 9.55289C52.1854 9.91888 53.1226 10.4919 53.9162 11.2365C54.7098 11.9811 55.343 12.8815 55.7764 13.8819C56.6131 15.892 57.5592 17.8544 58.6104 19.7601C59.3355 21.3175 60.4319 22.6708 61.8023 23.7002C63.1727 24.7295 64.7748 25.4031 66.4664 25.6611C70.9431 26.2746 75.4678 26.4577 79.9791 26.2079C82.6884 26.2079 85.3978 26.0939 88.0958 26.0369C90.4462 26.128 92.8 25.9907 95.1242 25.6269C97.6295 25.1028 100.169 25.4674 102.697 25.5016C111.89 25.6269 121.084 26.6408 130.278 25.6611C131.178 25.5529 132.087 25.5529 132.987 25.6611C136.229 26.0598 139.449 26.4585 142.668 25.4788C143.388 25.4195 144.111 25.4006 144.833 25.4219C147.554 24.9776 149.198 26.037 150.218 28.6343C151.476 31.8127 151.216 32.5304 147.951 32.8266C145.073 33.1873 142.163 33.2178 139.279 32.9177C138.566 32.7741 137.839 32.7205 137.113 32.7582C129.019 33.5784 120.846 32.6785 112.763 33.8974C111.338 34.1422 109.881 34.1422 108.456 33.8974C105.202 33.2367 102.017 33.7151 98.7744 33.8974C93.3671 34.1822 87.9371 33.9543 82.507 33.8974C74.7304 33.8974 66.9538 33.6354 59.2112 32.9063C54.4274 32.462 51.2759 34.3872 49.9156 40.0148C48.986 43.8311 46.9909 47.5221 47.8637 51.6801C45.9479 57.9229 45.9479 64.6214 43.3293 70.7161C42.5107 72.7353 41.9987 74.8665 41.8102 77.0385C41.3208 81.9231 40.2904 86.7376 38.7381 91.3924C37.5297 95.3963 36.8699 99.5469 36.777 103.73C36.4936 108.526 35.0312 113.014 33.8069 117.514C32.9454 120.647 32.0158 123.791 31.1202 126.924C31.458 128.191 31.3291 129.538 30.7575 130.717V130.729ZM180.259 139.068C180.146 139.695 179.805 140.258 179.302 140.647C178.799 141.037 178.171 141.225 177.538 141.175C174.137 141.175 170.657 141.175 167.222 141.175H143.915V140.936C138.326 140.936 132.726 140.845 127.137 140.936C120.631 141.042 114.123 140.818 107.639 140.264C100.413 139.837 93.1649 139.997 85.9646 140.742C80.3739 141.147 74.7652 141.238 69.1644 141.016C62.3076 140.862 55.4475 141.067 48.6119 141.631C44.8257 141.916 41.0167 142.018 37.2191 142.041C34.3737 142.041 34.147 141.653 35.1559 138.737C36.1648 135.821 37.083 133.258 38.1827 130.569C41.2028 122.96 43.2373 114.993 44.2362 106.863C44.8368 101.447 45.8448 96.0853 47.2516 90.8228C48.4502 86.8164 49.2664 82.7043 49.6888 78.5423C49.875 75.9969 50.5325 73.5088 51.6274 71.2059C52.3166 69.72 52.7936 68.1438 53.0444 66.5238C54.042 60.976 54.8695 55.3939 55.8444 49.8461C56.2752 47.3398 56.842 44.8565 57.4201 42.3844C57.7149 41.1427 58.5537 40.7667 59.8574 40.8692C70.1166 41.7008 80.4098 41.6439 90.6804 41.8489C94.4625 42.1037 98.2605 41.9739 102.017 41.4616C105.485 40.8351 108.818 42.3389 112.287 41.8377C115.495 41.382 118.613 40.7667 121.957 41.1882C124.938 41.5642 128.056 40.9604 131.105 40.7781C132.534 40.5541 133.979 40.4588 135.424 40.4933C141.376 41.2224 147.339 40.4364 153.279 40.6643C155.626 40.6062 157.968 40.4237 160.296 40.1175C164.445 39.8441 168.583 39.411 172.766 39.4224C178.003 39.4224 183.263 39.1377 188.489 39.8667C191.958 40.3566 195.381 39.6617 198.691 39.0694C200.445 38.8321 202.229 39.0036 203.906 39.5705C205.799 40.049 206.083 40.8693 205.482 42.7717C202.727 51.4068 199.576 59.9507 198.567 69.0528C198.48 69.9549 198.282 70.8427 197.977 71.6958C195.479 78.7139 193.683 85.9645 192.615 93.3404C191.096 102.454 188.489 111.385 186.097 120.316C184.374 126.639 182.186 132.813 180.259 139.056V139.068Z" fill="#3080FF"/>
+</svg></div></div><div aria-label="Hand drawn lightning bolt." class="strat-opening-4"><div class="width-full opening-vector-fill w-embed"><svg viewBox="0 0 176 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M175.631 18.8086C176.042 15.379 175.682 11.9493 175.811 8.56247C175.982 4.04387 172.97 1.2401 168.589 0.725651C162.215 0.0628948 155.801 -0.146251 149.397 0.0997518C145.727 0.194068 142.047 0.442707 138.368 0.622765C131.412 0.957158 124.456 0.905713 117.499 0.622765C115.044 0.562762 112.593 0.851433 110.218 1.48018C107.548 2.14897 106.462 3.49512 106.068 6.3589C105.958 8.13298 105.981 9.91281 106.137 11.6835C106.205 17.1538 106.085 22.6327 106.197 28.103C106.333 34.5937 109.294 36.4886 114.299 36.6001C120.443 36.7458 126.552 36.54 132.687 36.3514C137.705 36.1198 142.732 36.1628 147.746 36.48C153.47 36.9259 159.186 36.3 164.859 36.7115C166.498 36.7416 168.131 36.5012 169.693 35.9999C170.898 35.7333 172.021 35.1806 172.968 34.3882C173.915 33.5959 174.658 32.5872 175.135 31.447C175.605 30.1587 175.8 28.7858 175.708 27.4171C175.682 24.5447 175.297 21.6295 175.631 18.8086ZM169.855 26.9627C169.855 29.2434 169.351 29.9465 167.289 30.4867C166.496 30.6898 165.684 30.8048 164.867 30.8296C160.367 30.9239 155.857 30.8296 151.382 30.7353C146.488 30.5895 141.577 30.461 136.674 30.3924C131.498 30.3238 126.312 30.3923 121.136 30.7782C118.82 30.9053 116.498 30.8652 114.188 30.6582C112.554 30.5467 112.126 29.9637 112.032 28.2488C111.921 26.0624 112.314 23.8674 111.972 22.2469C111.936 18.9071 111.71 15.572 111.296 12.2579C110.594 7.97085 112.836 5.95593 117.234 6.59042C119.115 6.88158 121.026 6.91619 122.916 6.6933C123.728 6.57357 124.55 6.53049 125.371 6.56467C133.568 7.16486 141.731 6.12739 149.911 6.08452C155.491 5.90871 161.078 6.02033 166.647 6.41892C167.326 6.45371 167.998 6.57178 168.649 6.77047C169.045 6.88625 169.39 7.13334 169.628 7.47133C169.866 7.80933 169.982 8.21821 169.958 8.63105C169.864 11.4691 169.736 14.3072 169.719 17.1452C169.727 20.4292 169.847 23.6959 169.855 26.9627ZM139.027 14.9331C138.896 13.5771 138.627 12.2383 138.223 10.9375C138.132 10.6428 137.974 10.3734 137.761 10.1508C137.548 9.92817 137.286 9.75846 136.996 9.6552C136.706 9.55194 136.396 9.51799 136.09 9.55603C135.785 9.59407 135.493 9.70306 135.237 9.87432C134.658 10.2303 134.158 10.6998 133.765 11.2548C133.012 12.378 132.405 13.6127 131.694 14.7702C130.779 16.2449 130.3 18.0369 128.785 19.1516C126.573 17.7682 124.626 15.9999 123.035 13.9299C122.395 13.0504 121.638 12.2628 120.785 11.5892C119.775 10.8346 117.944 11.5891 117.944 12.841C117.944 16.8023 117.191 20.7378 117.79 24.6991C117.846 25.1046 117.94 25.5037 118.073 25.8909C118.181 26.2898 118.429 26.6361 118.772 26.8661C119.115 27.0962 119.529 27.1944 119.938 27.1427C120.353 27.159 120.757 27.0105 121.063 26.7295C121.369 26.4485 121.552 26.0577 121.572 25.6422C121.649 24.6991 121.572 23.7388 121.572 22.7785C121.572 21.6124 121.333 20.4034 121.846 19.3488C122.933 19.3488 123.412 20.0519 124.011 20.5492C125.269 21.5952 126.475 22.7013 127.758 23.713C128.122 24.0361 128.59 24.2145 129.076 24.2145C129.562 24.2145 130.031 24.0361 130.394 23.713C131.17 22.9505 131.888 22.1308 132.541 21.2608C133.277 20.3177 133.645 19.0915 134.843 18.2341C135.22 19.949 135.579 21.4923 135.938 23.07C136.061 23.7408 136.218 24.4047 136.409 25.0592C136.607 25.4031 136.907 25.6765 137.267 25.841C137.628 26.0055 138.031 26.0529 138.42 25.9766C138.753 25.9071 139.058 25.7393 139.296 25.4949C139.534 25.2505 139.693 24.9406 139.754 24.6048C139.939 23.8086 139.962 22.9836 139.823 22.1783C139.155 19.8032 139.215 17.351 139.027 14.9074V14.9331ZM149.799 13.7327C152.657 13.4926 155.507 13.2783 158.356 13.0211C159.029 13.0053 159.695 12.8868 160.332 12.6695C160.647 12.5262 160.912 12.2905 161.091 11.9936C161.269 11.6966 161.354 11.3523 161.333 11.0061C161.334 10.6627 161.231 10.327 161.039 10.0427C160.847 9.75836 160.574 9.53838 160.255 9.41131C159.368 9.03128 158.386 8.92964 157.44 9.11979C154.33 9.62593 151.172 9.7755 148.028 9.56564C147.618 9.52719 147.204 9.57556 146.814 9.70756C146.423 9.83957 146.065 10.0523 145.761 10.3319C145.458 10.6116 145.217 10.952 145.053 11.331C144.889 11.7101 144.807 12.1193 144.811 12.5323C144.711 13.6263 144.765 14.7291 144.974 15.8077C145.382 18.0949 145.6 20.4122 145.624 22.7356C145.675 23.593 145.624 24.3819 145.701 25.1964C145.889 27.3657 146.505 27.9916 148.747 28.2917C149.411 28.4528 150.099 28.4877 150.775 28.3946C152.653 28.0454 154.568 27.9388 156.473 28.0773C157.561 28.0508 158.64 27.8777 159.682 27.5628C160.133 27.3983 160.51 27.0785 160.747 26.6606C160.983 26.2428 161.064 25.7541 160.974 25.2821C160.852 24.8141 160.56 24.409 160.154 24.1469C159.748 23.8849 159.259 23.7851 158.784 23.8674C157.187 24.3285 155.506 24.4108 153.872 24.1075L153.111 24.1589C152.563 24.1589 152.024 24.2532 151.477 24.279C149.894 24.3647 149.474 23.9703 149.577 22.5041C149.637 21.6467 150.013 21.4152 151.288 21.5009C152.641 21.6478 154.002 21.6965 155.361 21.6467C156.308 21.5327 157.225 21.2418 158.065 20.7893C158.365 20.616 158.601 20.348 158.734 20.0271C158.867 19.7062 158.89 19.3502 158.801 19.0144C158.758 18.6725 158.601 18.3551 158.356 18.1138C158.111 17.8725 157.791 17.7215 157.449 17.6854C156.91 17.6468 156.37 17.6468 155.832 17.6854C154.334 17.6854 152.828 17.814 151.34 17.6854C149.312 17.5397 148.773 16.828 148.773 14.7616C148.756 14.6225 148.771 14.4815 148.817 14.3491C148.863 14.2167 148.938 14.0965 149.037 13.9975C149.136 13.8984 149.256 13.8231 149.388 13.7772C149.52 13.7314 149.661 13.7162 149.799 13.7327Z" fill="#FA551E"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M108.483 41.841C107.507 41.3653 106.475 41.0139 105.411 40.795L105.363 40.7835C100.868 39.7147 100.867 39.7147 100.791 34.9388C100.791 34.8108 100.802 34.6349 100.814 34.4291C100.835 34.0837 100.861 33.6538 100.851 33.224C100.86 32.5423 100.799 31.8614 100.671 31.1919C100.597 30.5762 100.316 30.004 99.8741 29.5693C99.4325 29.1347 98.8567 28.8632 98.241 28.7997C97.6334 28.7322 97.0195 28.846 96.4761 29.1266C95.9327 29.4072 95.4841 29.8423 95.1864 30.3774C91.8494 35.8305 88.7806 41.4323 85.9798 47.1827C85.2931 48.5043 84.9572 49.9806 85.0044 51.4698C85.1156 54.2479 86.2279 55.3025 89.0429 55.4054C89.9661 55.4385 90.7941 55.1815 91.6196 54.9253C92.0795 54.7825 92.5386 54.64 93.0131 54.548C98.0014 53.5877 102.57 51.4527 107.045 49.1205C108.127 48.5233 109.037 47.6584 109.689 46.6083C110.921 44.7477 110.494 42.8785 108.483 41.841ZM93.4767 48.5122C93.1137 48.6383 92.7189 48.6383 92.3558 48.5122C91.8562 48.307 92.0701 47.8583 92.2243 47.5345C92.2312 47.5201 92.238 47.5058 92.2446 47.4919C92.7444 46.4032 93.2579 45.3352 93.7699 44.2704C94.0644 43.658 94.3584 43.0467 94.6489 42.4331C95.4583 42.4959 95.863 43.0218 96.2655 43.5449C96.5225 43.8789 96.7787 44.2118 97.1388 44.4223C97.4327 44.5941 97.7586 44.7026 98.0848 44.8112C98.7845 45.0441 99.4858 45.2776 99.8768 46.1372C98.6532 46.572 97.4378 47.0235 96.2245 47.4742C95.3083 47.8146 94.3933 48.1545 93.4767 48.4865V48.5122Z" fill="#FA551E"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M49.0988 30.4171C51.281 31.2035 55.8877 32.9374 59.336 34.2705C62.7843 35.6032 66.9793 37.2118 68.6582 37.845C74.2112 39.939 75.2116 44.0714 70.3726 44.9285C67.6064 45.4183 67.1065 45.7579 66.8865 47.2962C66.3641 50.9414 66.0627 58.4852 66.3475 60.7887C66.5228 62.2095 66.7418 64.8262 66.8336 66.6032C66.9254 68.3803 67.599 73.159 68.3302 77.2228C69.7902 85.3338 69.7822 85.6192 68.0465 87.0849C65.5493 89.1933 63.1119 88.5936 57.9519 84.6016C51.8951 79.9161 51.2652 81.2179 53.5866 93.6271C54.7095 99.6313 55.8591 103.43 59.4592 113.037C65.4024 128.896 61.1697 132.345 46.0171 123.99C41.9204 121.731 41.2491 121.544 40.954 122.58C40.5175 124.113 43.5434 135.097 45.452 138.909C45.9635 139.93 46.8632 142.156 47.4515 143.855C50.136 151.609 51.5099 155.104 53.0005 157.97C54.5852 161.017 55.4892 164.816 55.266 167.492C55.1436 168.961 55.313 170.342 55.726 171.24C59.9774 180.478 51.964 182.101 47.0829 172.99C44.8207 168.768 41.9174 164.486 40.2571 162.924C39.6783 162.38 38.0187 160.042 36.569 157.729C35.1198 155.416 33.2642 152.552 32.4456 151.365C31.6269 150.179 30.1782 147.262 29.2262 144.885C28.2742 142.507 26.5891 139.229 25.4815 137.6C24.3738 135.972 22.8438 133.636 22.0812 132.411C21.3186 131.185 19.4285 128.543 17.8812 126.54C16.3339 124.537 14.6581 121.937 14.157 120.764C13.656 119.59 12.3565 117.026 11.2693 115.066C9.15447 111.254 5.42727 103.582 2.55475 97.129C-2.15948 86.5396 2.52081 81.9934 13.7012 86.3011C23.8407 90.2082 23.9169 90.2296 24.1969 89.2436C24.559 87.9675 22.8369 82.7756 20.7856 78.9607C19.8133 77.1519 18.6117 74.3923 18.1156 72.8284C17.6195 71.2646 16.529 68.5366 15.6917 66.7662C9.27034 53.1842 11.861 47.3283 21.9422 52.6387C26.0365 54.7952 26.7655 52.4875 24.2787 45.2438C23.8812 44.0864 23.3196 41.55 23.03 39.6073C22.7404 37.6645 22.1868 34.8208 21.7992 33.2878C20.5015 28.1546 21.5071 24.2595 24.308 23.5682C25.406 23.2971 42.2666 27.9554 49.0988 30.4171ZM31.4649 43.4015C29.9103 39.3174 29.3383 33.2651 30.4486 32.6465C30.9823 32.3491 45.2755 36.1201 45.5716 36.6362C45.6325 36.7423 48.279 37.7664 51.4526 38.9119C56.147 40.6064 58.3377 41.3051 59.2565 42.7912C60.121 44.1893 59.8598 46.2843 59.4985 50.5609C59.211 53.9661 59.0626 58.0425 59.1687 59.6195C59.275 61.1961 59.4622 64.1523 59.5847 66.1888C59.7068 68.2252 59.9614 71.1262 60.1498 72.6351C60.7045 77.0748 59.6644 77.0473 53.0764 72.4497C45.2105 66.9599 41.554 70.092 43.8198 80.3791C44.2895 82.512 44.7637 85.2479 44.8731 86.4589C44.9825 87.6699 45.6784 91.8873 46.4194 95.8301C47.6643 102.453 48.2683 104.455 51.8591 113.852C53.7359 118.763 52.6269 119.586 48.0765 116.66C33.1889 107.086 27.0183 109.135 32.0354 121.987C33.0358 124.549 34.2512 128.327 34.7366 130.382C35.222 132.438 35.8888 135.264 36.2181 136.662C36.5477 138.061 37.4003 140.363 38.113 141.778C39.6261 144.783 40.0145 146.243 39.3934 146.589C38.6929 146.98 37.5037 144.98 36.3641 141.494C35.651 139.312 34.6506 137.395 33.222 135.473C24.8359 124.19 18.3071 113.593 15.4583 106.641C14.7097 104.815 13.0637 101.394 11.8005 99.0391C7.904 91.7753 9.52445 91.5621 22.1957 97.672C33.0049 102.884 38.0074 100.007 33.7706 91.0143C33.1752 89.7505 31.7212 86.1132 30.5395 82.9316C29.3579 79.7499 28.0141 76.6239 27.5527 75.9844C27.0916 75.3454 26.03 72.8048 25.1939 70.3387C24.3576 67.8729 23.4523 65.3175 23.1823 64.6609C22.2432 62.3764 23.5174 62.4391 27.9522 64.8971C34.3782 68.4585 37.211 65.2319 34.736 57.1699C33.9805 54.7096 33.0502 50.9063 32.6686 48.7184C32.2869 46.5305 31.7452 44.1379 31.4649 43.4015Z" fill="#FA551E"/>
+</svg></div></div><div aria-label="Hand drawn heart." class="strat-opening-5"><div class="width-full opening-vector-fill w-embed"><svg viewBox="0 0 95 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M70.9155 0.948371C68.5237 1.7161 64.1865 4.79914 62.0952 7.21768C58.6267 11.2286 56.3674 14.2707 55.3126 16.3511C54.7302 17.499 53.7432 19.1764 53.1191 20.0789C52.495 20.9813 51.2962 23.2014 50.4554 25.0123C48.6464 28.9083 47.3113 30.772 46.3292 30.772C45.6848 30.772 41.3392 26.4628 41.3392 25.8237C41.3392 25.678 39.4872 23.9023 37.2233 21.8781C13.9603 1.0755 -10.4139 26.3311 4.65029 55.6291C11.0588 68.0926 13.0119 70.4561 32.7996 89.6947C37.1506 93.925 40.6382 97.7401 43.2069 101.08C47.8806 107.155 48.5579 107.917 50.3701 109.136C53.8251 111.46 58.0666 109.072 62.5998 102.248C63.4104 101.028 65.1176 98.6391 66.3941 96.9386C67.6702 95.2381 70.0069 91.7604 71.5863 89.2105C73.1656 86.6603 75.8741 82.3306 77.6054 79.5891C80.6592 74.7524 86.0352 64.4524 88.3278 59.0446C89.3604 56.6093 90.0994 54.305 92.2216 46.9006C100.427 18.2762 89.6097 -5.05263 70.9155 0.948371ZM83.6242 50.2846C89.4979 27.9493 88.3688 12.2586 80.6255 8.61651C73.1327 5.09211 65.87 11.5174 57.083 29.4437C52.5819 38.6261 52.5249 39.1577 55.6461 42.8571C58.9262 46.7451 55.7835 50.696 50.9995 48.6983C50.0033 48.2824 48.3014 47.7374 47.2179 47.4877C44.2801 46.8107 42.8707 44.9432 42.8707 41.7277C42.8707 39.0336 37.1716 32.0334 30.3048 26.2939C24.1382 21.1396 16.2878 20.9684 11.4758 25.8829C1.92002 35.6428 12.1742 62.402 31.3845 77.8358C35.2144 80.9128 43.2823 89.1536 46.7025 93.4817C53.7482 102.398 53.8684 102.436 57.2132 96.7796C57.9904 95.465 59.3197 93.6093 60.167 92.656C61.0143 91.7027 62.4088 89.727 63.2656 88.2659C64.1225 86.8049 65.968 83.9017 67.3666 81.8145C68.7653 79.7272 70.5617 76.8241 71.3585 75.363C72.1556 73.9019 73.1101 72.365 73.48 71.9475C74.8909 70.3548 82.7719 53.5252 83.6242 50.2846Z" fill="#C8AFF0"/>
+</svg></div></div><div aria-label="Hand drawn “send” button." class="strat-opening-6"><div class="width-full opening-vector-fill w-embed"><svg viewBox="0 0 64 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M63.8695 25.5766C63.9196 21.2782 63.2542 16.9296 62.8177 12.6097C62.7126 11.5838 62.3958 10.5908 61.8876 9.69385C60.9426 7.99899 59.8407 6.3968 58.5964 4.9083C57.0667 3.0483 54.9878 1.7215 52.658 1.11848C49.6702 0.385566 46.5955 0.0697914 43.5214 0.180037C42.0423 0.287436 40.5573 0.287436 39.0782 0.180037C36.807 -0.0600123 34.5167 -0.0600123 32.2454 0.180037C28.4964 0.53824 24.7616 1.0898 20.991 0.645631C19.281 0.645631 17.5639 0.760256 15.8611 0.645631C11.4466 0.301756 7.83343 2.01397 4.71395 4.94407C2.95783 6.45609 1.82562 8.56771 1.53724 10.8688C1.37268 12.4592 1.09365 14.0425 1.07218 15.6329C1.0221 19.7451 1.07218 23.8644 1.12226 27.9765C1.12226 28.4422 1.22243 28.8936 0.936242 29.2661C-0.322995 30.8709 0.0347415 32.7837 0.0848248 34.5604C0.22792 39.0093 0.50696 43.4581 0.871852 47.8927C1.07934 50.3929 1.37269 52.972 3.01828 55.0567C5.80148 58.5743 9.09266 60.8596 13.9579 61.01C18.494 61.1533 23.0802 60.8453 27.602 61.6476C28.5098 61.7208 29.4232 61.68 30.3208 61.5259C30.9914 61.3993 31.6707 61.325 32.3528 61.3038C37.6831 61.6978 43.0849 61.139 48.3723 61.9127C51.2289 62.2484 54.1151 61.6099 56.5645 60.1003C60.9146 57.6072 63.9553 54.0036 63.8838 48.5589C63.8838 48.215 63.9339 47.8425 63.941 47.5273C64.1342 40.1985 63.7836 32.9269 63.8695 25.5766ZM58.6751 50.1207C58.6262 51.1568 58.216 52.1429 57.516 52.9075C54.8616 55.9881 51.4846 57.4853 47.4994 56.8907C43.9578 56.3534 40.4233 56.8119 37.4827 56.4824C34.4133 56.7976 31.8949 56.1098 29.3979 56.64C28.9481 56.7078 28.4886 56.6274 28.0885 56.4108C26.6418 55.6693 24.9638 55.5203 23.4093 55.9952C20.898 56.6543 18.401 56.2317 15.9255 56.1457C14.9023 56.1457 13.8792 55.9164 12.8561 55.8735C9.55772 55.7159 7.79765 53.4878 6.46687 50.8586C6.01365 49.6879 5.7714 48.446 5.75139 47.1906C5.5439 45.1489 5.49382 43.0856 5.3078 41.0438C5.13559 39.336 5.23703 37.6116 5.6083 35.9358C6.17269 33.1386 6.32694 30.2739 6.0662 27.4321C5.70485 22.5283 5.76949 17.6025 6.25938 12.71C6.71013 8.75541 10.6095 5.54591 14.6662 5.54591C16.0271 5.60228 17.3838 5.73377 18.7301 5.93988C21.1058 6.2557 23.5138 6.23886 25.8849 5.88977C30.9497 5.1419 36.0746 4.88283 41.1889 5.11609C43.5643 5.20922 45.9397 5.35959 48.3437 5.39541C53.352 5.47421 55.7631 8.33984 57.8309 12.5595C58.4247 13.763 58.1385 15.2675 58.2029 16.6072C58.2816 18.4412 58.5606 20.2323 58.8039 22.0304C59.0797 23.7254 59.1637 25.446 59.0543 27.1598C58.6823 31.272 59.0042 35.3556 59.1259 39.4606C59.1903 43.0283 58.8254 46.5387 58.6751 50.1207ZM44.108 14.415C43.6716 14.544 43.2709 14.7732 42.8345 14.9093C35.644 17.1015 28.9185 20.5403 21.7852 22.9116C20.8237 23.2698 19.8928 23.7059 19.002 24.2154C17.3922 25.0679 17.0845 26.3647 18.0933 27.9049C18.7943 28.9541 19.8478 29.7167 21.0626 30.0541C24.1931 31.1007 27.2442 32.3721 30.192 33.8583C30.7094 34.0825 31.1759 34.4095 31.5633 34.8196C31.9508 35.2297 32.251 35.7142 32.4458 36.2439C33.1613 38.0493 33.8123 39.876 34.5922 41.6599C34.9634 42.6125 35.4436 43.5188 36.0232 44.3608C36.2821 44.7698 36.6447 45.1028 37.0741 45.3256C37.5036 45.5484 37.9843 45.6531 38.4674 45.6291C38.9504 45.605 39.4184 45.4531 39.8237 45.1888C40.2289 44.9244 40.5568 44.5571 40.7739 44.1244C41.638 42.6434 42.3066 41.0565 42.7629 39.4033C44.3084 34.2738 45.4245 29.0153 47.1416 23.9288C47.8571 21.9014 47.9788 19.6878 48.3508 17.7033C48.408 14.8377 46.741 13.584 44.108 14.3863V14.415ZM34.2989 26.6727C33.3187 27.3891 32.4458 28.9079 31.3368 28.7001C29.6743 28.5147 28.1284 27.7547 26.9652 26.5509C28.6252 25.2972 30.6499 25.0106 32.3886 24.1366C34.178 23.2137 36.0915 22.555 38.0694 22.1808C37.1753 23.9413 35.8845 25.4693 34.2989 26.644V26.6727ZM40.1658 29.7604C39.5576 32.0887 39.3573 34.5317 38.3556 36.8099C38.1052 36.5806 37.8691 36.4589 37.8047 36.2798C37.2824 34.8111 36.1448 33.4141 36.2807 31.8882C36.4167 30.3622 38.556 30.1974 39.2857 28.9007C39.4461 28.618 39.6304 28.3495 39.8366 28.0984C40.0082 27.9743 40.1992 27.8799 40.4019 27.819C40.5235 28.0912 40.7882 28.3921 40.7382 28.6285C40.5972 29.0201 40.4047 29.3912 40.1658 29.7318V29.7604ZM26.1067 34.9042C26.1191 34.6487 26.0747 34.3936 25.9767 34.1574C25.8786 33.9212 25.7294 33.7097 25.5397 33.5383C25.3501 33.3669 25.1247 33.2399 24.88 33.1664C24.6353 33.0929 24.3774 33.0747 24.1248 33.1132C23.2163 33.3044 22.405 33.8121 21.8353 34.546C20.1253 36.38 18.4726 38.2641 16.827 40.1555C15.9684 41.1513 15.9684 41.8391 16.5479 42.971C16.7512 43.3937 17.085 43.7396 17.4999 43.9577C17.9148 44.1757 18.3888 44.2543 18.8517 44.1817C19.185 44.1957 19.5169 44.1318 19.8212 43.995C20.1255 43.8582 20.3937 43.6523 20.6047 43.3936C22.0356 41.7531 23.4666 40.1627 24.7759 38.429C25.533 37.3872 25.993 36.1589 26.1067 34.8755V34.9042ZM28.8899 38.6295C28.5724 38.5869 28.2495 38.6121 27.9424 38.7035C27.6353 38.7949 27.3511 38.9503 27.1083 39.1596C26.4649 39.8023 25.8672 40.4894 25.3197 41.2157C24.4325 42.4694 24.6042 43.5226 25.7132 44.5327C26.1189 44.9449 26.6685 45.1834 27.2463 45.1981C27.8241 45.2128 28.3851 45.0026 28.8112 44.6116C29.8337 43.8597 30.5502 42.763 30.8288 41.5238C30.9105 41.2034 30.9241 40.8693 30.8689 40.5433C30.8136 40.2173 30.6906 39.9065 30.5079 39.631C30.3251 39.3555 30.0867 39.1215 29.808 38.9441C29.5293 38.7666 29.2165 38.6498 28.8899 38.6009V38.6295Z" fill="#3080FF"/>
+</svg></div></div><h1 class="tile-title">Framework</h1></div></div><div class="strat-canvas"><div class="strat-toolbar"><div id="markerTool" class="type-remote-button w-embed"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M27.0331 9.99241L26.0521 8.99266C25.5897 8.51896 25.0373 8.14253 24.4273 7.88551C23.8173 7.6285 23.162 7.49609 22.5001 7.49609C21.8381 7.49609 21.1829 7.6285 20.5729 7.88551C19.9629 8.14253 19.4104 8.51896 18.9481 8.99266L10.0343 18.0677V21.1502C10.0403 22.3469 9.57246 23.4974 8.73307 24.3504L6.81982 26.2899L11.6363 27.8957L11.9626 27.5649C12.3662 27.1488 12.8493 26.818 13.3832 26.5922C13.9171 26.3663 14.4909 26.25 15.0706 26.2502H18.1118L27.0368 17.1684C27.9708 16.2073 28.4929 14.9198 28.4922 13.5796C28.4915 12.2395 27.968 10.9525 27.0331 9.99241V9.99241ZM17.1683 24.0002H15.0683C13.9003 23.9979 12.753 24.3087 11.7458 24.9002L11.3836 24.5312C11.9746 23.5 12.2849 22.3319 12.2836 21.1434V18.9857L12.7816 18.4787L17.6858 23.4752L17.1683 24.0002ZM19.2631 21.8679L14.3596 16.8752L19.2646 11.8824L24.1673 16.8752L19.2631 21.8679ZM25.7131 15.2372L20.8726 10.3074C21.4035 9.92242 22.0535 9.73754 22.7076 9.78544C23.3617 9.83333 23.9778 10.1109 24.4471 10.5692L25.4251 11.5682C25.8932 12.0503 26.1781 12.6809 26.2305 13.3508C26.283 14.0208 26.0997 14.688 25.7123 15.2372H25.7131Z" fill="currentColor"/>
+</svg></div><div id="eraserTool" class="type-remote-button w-embed"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17.0117 25.8814L17.9351 26.8048L27.8186 16.9209L17.3433 6.44556L7.45929 16.3292L8.37484 17.2447L5.42999 20.1896C4.1275 21.4921 4.1275 23.6038 5.42999 24.9063L9.02521 28.5015H14.41L17.0117 25.8814ZM7.02098 21.7806L9.96585 18.8357L15.4207 24.2904L13.4734 26.2515H9.95719L7.02098 23.3153C6.59717 22.8915 6.59717 22.2044 7.02098 21.7806Z" fill="currentColor"/>
+<path d="M29.9998 28.5H19.0815L21.7057 26.25H29.9998V28.5Z" fill="currentColor"/>
+</svg></div></div><div class="w-embed w-script"><style>
+  #whiteboard {
+    display: block;
+  }
+</style>
+
+<canvas id="whiteboard"></canvas>
+
+<script>
+  const markerTool = document.getElementById('markerTool')
+  const eraserTool = document.getElementById('eraserTool')
+  const canvas = document.getElementById('whiteboard');
+  const ctx = canvas.getContext('2d');
+  const markerColor = '#C8AFF0';
+  const markerWidth = 7;
+  const eraserRadius = 50;
+
+  let drawing = false;
+  let tool = 'marker'; // Default tool
+  selectTool()
+
+  // Stacks for undo and redo
+  const undoStack = [];
+  const redoStack = [];
+
+  // Store all drawing actions for re-rendering
+  const actions = [];
+
+  // Save the current canvas state to the undo stack
+  function saveState() {
+    undoStack.push(actions.slice()); // Save a shallow copy of the actions array
+    if (undoStack.length > 20) {
+      undoStack.shift(); // Limit stack size to 20
+    }
+    redoStack.length = 0; // Clear redo stack on new action
+  }
+
+  // Redraw the canvas from the actions array
+  function redrawCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
+    actions.forEach(action => {
+      if (action.type === 'marker') {
+        ctx.strokeStyle = action.color;
+        ctx.lineWidth = action.width;
+        ctx.lineCap = 'round';
+        ctx.beginPath();
+        ctx.moveTo(action.startX, action.startY);
+        ctx.lineTo(action.endX, action.endY);
+        ctx.stroke();
+      } else if (action.type === 'eraser') {
+        ctx.clearRect(action.x - action.radius / 2, action.y - action.radius / 2, action.radius, action.radius);
+      }
+    });
+  }
+
+  // Resize canvas and redraw content
+  function resizeCanvas() {
+    const previousWidth = canvas.width;
+    const previousHeight = canvas.height;
+
+    // Update canvas dimensions
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    // Re-render the actions to fit the new canvas size
+    redrawCanvas();
+  }
+
+  // Initial canvas setup
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  // Switch tool based on button clicks
+  markerTool.addEventListener('click', () => {
+    tool = 'marker'
+    selectTool()
+  });
+  eraserTool.addEventListener('click', () => {
+    tool = 'eraser'
+    selectTool()
+  });
+
+  // Start drawing
+  canvas.addEventListener('mousedown', (e) => {
+    drawing = true;
+    saveState(); // Save state before starting a new action
+    ctx.beginPath();
+    ctx.moveTo(e.offsetX, e.offsetY);
+  });
+
+  // Stop drawing
+  canvas.addEventListener('mouseup', () => drawing = false);
+  canvas.addEventListener('mouseout', () => drawing = false);
+
+  // Draw or erase
+  canvas.addEventListener('mousemove', (e) => {
+    if (!drawing) return;
+
+    const x = e.offsetX;
+    const y = e.offsetY;
+
+    if (tool === 'marker') {
+      ctx.strokeStyle = markerColor;
+      ctx.lineWidth = markerWidth;
+      ctx.lineCap = 'round';
+      ctx.lineTo(x, y);
+      ctx.stroke();
+
+      // Record marker action
+      actions.push({
+        type: 'marker',
+        color: markerColor,
+        width: markerWidth,
+        startX: ctx.prevX || x,
+        startY: ctx.prevY || y,
+        endX: x,
+        endY: y,
+      });
+    } else if (tool === 'eraser') {
+      ctx.clearRect(x - eraserRadius / 2, y - eraserRadius / 2, eraserRadius, eraserRadius);
+
+      // Record eraser action
+      actions.push({
+        type: 'eraser',
+        x: x,
+        y: y,
+        radius: eraserRadius,
+      });
+    }
+
+    // Save the last position
+    ctx.prevX = x;
+    ctx.prevY = y;
+  });
+
+  // Handle Undo (Ctrl+Z) and Redo (Ctrl+Y or Ctrl+Shift+Z)
+  document.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'z' && !e.shiftKey) { // Undo (Ctrl+Z)
+      e.preventDefault()
+      if (undoStack.length > 0) {
+        redoStack.push(actions.slice()); // Save current actions to redo stack
+        actions.length = 0; // Clear actions
+        actions.push(...undoStack.pop()); // Restore the last saved state
+        redrawCanvas();
+      }
+    } else if (((e.ctrlKey || e.metaKey) && e.key === 'y') || ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'z')) { // Redo (Ctrl+Y or Ctrl+Shift+Z)
+      e.preventDefault()
+      if (redoStack.length > 0) {
+        undoStack.push(actions.slice()); // Save current actions to undo stack
+        actions.length = 0; // Clear actions
+        actions.push(...redoStack.pop()); // Restore the next saved state
+        redrawCanvas();
+      }
+    }
+  });
+
+
+
+  function selectTool() {
+    if (tool == 'marker') {
+      markerTool.style.color = '#fff'
+      markerTool.style.background = '#000'
+      eraserTool.style.color = 'inherit'
+      eraserTool.style.background = 'transparent'
+    }
+    if (tool == 'eraser') {
+      markerTool.style.color = 'inherit'
+      markerTool.style.background = 'transparent'
+      eraserTool.style.color = '#fff'
+      eraserTool.style.background = '#000'
+    }
+  }
+
+  if (window.matchMedia('(hover: none)').matches) {
+    document.querySelector('.strat-toolbar').style.display = "none";
+  }
+</script>
+
+<script src="https://unpkg.com/@rive-app/canvas@2.1.0"></script></div></div></div></div></header><main><div><div class="w-embed w-script"><script>
+
+// This is used by other scripts
+// We set it here because main is now in the DOM
+const main = document.querySelector("main");
+
+// Dispatch our own criticalContentLoaded event when content above the fold is done loading
+document.dispatchEvent(new CustomEvent('criticalContentLoaded'));
+
+/*
+
+Pick this up any time with the following code:
+
+document.addEventListener('criticalContentLoaded', () => {
+});
+
+*/
+
+</script></div></div><section class="strat-1"><div class="strat-1-images"><div class="strat-1-image-7"><img src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673510d6e91f0e5fee55b64b_tamogoyaki%202-5.webp" loading="eager" sizes="(max-width: 991px) 254.82315063476562px, 26vw" srcset="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673510d6e91f0e5fee55b64b_tamogoyaki%202-5-p-500.webp 500w, https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673510d6e91f0e5fee55b64b_tamogoyaki%202-5.webp 659w" alt="A signed contract." class="strat-1-img"/></div><div class="strat-1-image-6"><img src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673511e1c310df25a51bcc74_image.webp" loading="eager" sizes="(max-width: 479px) 98vw, (max-width: 767px) 49vw, (max-width: 991px) 234.1405792236328px, 30vw" srcset="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673511e1c310df25a51bcc74_image-p-500.webp 500w, https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673511e1c310df25a51bcc74_image.webp 690w" alt="A marketing brochure with a purple 3D graphic on the cover." class="strat-1-img"/></div><div class="strat-1-image-4"><img src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/670444c5d9b4a15ac849560f_tamogoyaki%204.webp" loading="eager" sizes="(max-width: 479px) 218.33319091796875px, (max-width: 767px) 45vw, (max-width: 991px) 28vw, 29vw" srcset="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/670444c5d9b4a15ac849560f_tamogoyaki%204-p-500.webp 500w, https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/670444c5d9b4a15ac849560f_tamogoyaki%204.webp 723w" alt="Hands with green painted nails holding a raspberry dessert." class="strat-1-img"/></div><div class="strat-1-image-5"><img src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/6704518815b93ffb765b243c_tamogoyaki%202.webp" loading="eager" sizes="(max-width: 991px) 234.8018798828125px, 26vw" srcset="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/6704518815b93ffb765b243c_tamogoyaki%202-p-500.webp 500w, https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/6704518815b93ffb765b243c_tamogoyaki%202.webp 740w" alt="A film photo of a street in Tokyo." class="strat-1-img"/></div><div class="strat-1-image-3"><img src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/67351325270472b1de3540d5_tamogoyaki%202-2.webp" loading="eager" sizes="(max-width: 991px) 163.4005126953125px, 23vw" srcset="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/67351325270472b1de3540d5_tamogoyaki%202-2-p-500.webp 500w, https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/67351325270472b1de3540d5_tamogoyaki%202-2.webp 526w" alt="A large room with a skylight." class="strat-1-img"/></div><div class="strat-1-image-2"><img src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/6735127b006faa67378f6da5_tamogoyaki%203.webp" loading="eager" sizes="(max-width: 991px) 199.6368408203125px, 26vw" srcset="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/6735127b006faa67378f6da5_tamogoyaki%203-p-500.png 500w, https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/6735127b006faa67378f6da5_tamogoyaki%203.webp 648w" alt="A spreadsheet with numerical values in each cell." class="strat-1-img"/></div><div class="strat-1-image-1"><img src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673518b9ad47a57e77d3e2ea_tamogoyaki%202-1.webp" loading="eager" sizes="(max-width: 991px) 263.50762939453125px, 35vw" srcset="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673518b9ad47a57e77d3e2ea_tamogoyaki%202-1-p-500.webp 500w, https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673518b9ad47a57e77d3e2ea_tamogoyaki%202-1.webp 756w" alt="A film crew on set with a boom microphone and a white backdrop in a desert." class="strat-1-img"/></div><div class="strat-1-image-8"><img src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673518cf672bfed48060b5b3_tamogoyaki%202.webp" loading="eager" sizes="(max-width: 991px) 324.94830322265625px, 37vw" srcset="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673518cf672bfed48060b5b3_tamogoyaki%202-p-500.webp 500w, https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673518cf672bfed48060b5b3_tamogoyaki%202.webp 756w" alt="Two dogs looking up at the camera." class="strat-1-img"/></div><div class="strat-1-cursortag-1"><div data-name="Trina" data-role="0" data-foreground="var(--color--identity--pink)" data-background="var(--color--identity--on-pink)" data-direction="1" data-monogram="TW" class="cursortag"></div></div><div class="strat-1-cursortag-2"><div data-name="Beth" data-role="0" data-foreground="var(--color--identity--orange)" data-background="var(--color--identity--on-orange)" data-direction="0" data-monogram="BS" class="cursortag"></div></div></div><div typeContent="" class="strat-1-content"><div class="strat-1-ver1"></div><div class="strat-1-ver2"></div><div class="strat-1-title"><div class="strat-1-hor1"></div><div class="title-wrap"><h1>How </h1><h1>we </h1><h1>all </h1><h1>work </h1><h1>today </h1><h1>is </h1><div class="relative"><h1>messy</h1><div class="strat-1-circle w-embed"><svg viewBox="0 0 241 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M136.312 5.36757C121.141 3.18061 105.259 3.35023 89.4749 3.35023C78.8142 3.35023 67.6107 3.69543 57.8105 5.53568C46.3147 7.69434 35.4387 9.44345 26.9943 13.3996C21.3741 16.0326 16.4391 19.1871 12.9527 22.3282C8.59577 26.2536 4 30.2672 4 34.6003C4 38.152 4.2907 41.4473 6.92141 44.8738C13.0054 52.7983 27.1666 59.6793 44.6642 64.188C53.429 66.4464 63.2056 68.387 72.8888 69.9224C84.4805 71.7605 96.7765 73.7587 108.888 74.779C118.336 75.5749 128.044 75.302 137.678 75.302C150.884 75.302 164.422 75.4623 177.211 73.9571C191.574 72.2668 206.755 66.5797 214.342 61.5916C232.69 49.5277 248.183 31.7982 227.724 18.6671C221.808 14.8702 195.655 8.12268 172.926 8.12268" stroke="#0061FE" stroke-width="6.13235" stroke-linecap="round"/>
+</svg></div></div></div><div class="strat-1-hor2"></div></div></div></section><section class="page-section"><div class="page-section-grid"><div typeContent="" id="w-node-_3b587b06-2633-b3cc-9d36-6be3a7634bf1-ded5153e" class="strat-2-content"><div class="line-vertical-left"></div><div class="line-vertical-right"></div><div class="strat-2-title"><div class="strat-2-line-vertical-left"></div><div class="line-horizontal-top"></div><h2>Dropbox is designed to simplify the frenzy of modern work</h2><div class="line-horizontal-bot"></div></div><div class="strat-2-grid"><div class="line-horizontal-top"></div><div class="strat-2-grid-item _1"><div class="strat-2-annotation"><div class="annotation">mov_4621.mp4</div></div><img src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673518cf672bfed48060b5b3_tamogoyaki%202.webp" loading="lazy" sizes="(max-width: 991px) 60.9375px, 43.078125px" srcset="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673518cf672bfed48060b5b3_tamogoyaki%202-p-500.webp 500w, https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673518cf672bfed48060b5b3_tamogoyaki%202.webp 756w" alt="Two dogs looking up at the camera." class="strat-2-1"/></div><div class="strat-2-grid-item _2"><div class="strat-2-annotation"><div class="annotation">BTS_film.jpg</div></div><img src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673518b9ad47a57e77d3e2ea_tamogoyaki%202-1.webp" loading="lazy" sizes="(max-width: 991px) 60.9375px, 43.078125px" srcset="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673518b9ad47a57e77d3e2ea_tamogoyaki%202-1-p-500.webp 500w, https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673518b9ad47a57e77d3e2ea_tamogoyaki%202-1.webp 756w" alt="A film crew on set with a boom microphone and a white backdrop in a desert." class="strat-2-2"/></div><div class="strat-2-grid-item _3"><div class="strat-2-annotation"><div class="annotation">FinanceSheet-2025.png<br/></div></div><img src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/6735127b006faa67378f6da5_tamogoyaki%203.webp" loading="lazy" sizes="(max-width: 991px) 49.515625px, 35px" srcset="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/6735127b006faa67378f6da5_tamogoyaki%203-p-500.png 500w, https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/6735127b006faa67378f6da5_tamogoyaki%203.webp 648w" alt="A spreadsheet with numerical values in each cell." class="strat-2-3"/></div><div class="strat-2-grid-item _4"><div class="strat-2-annotation"><div class="annotation">img2546.jpg</div></div><img src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/67351325270472b1de3540d5_tamogoyaki%202-2.webp" loading="lazy" sizes="(max-width: 991px) 100vw, 26.921875px" srcset="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/67351325270472b1de3540d5_tamogoyaki%202-2-p-500.webp 500w, https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/67351325270472b1de3540d5_tamogoyaki%202-2.webp 526w" alt="A large room with a skylight." class="strat-2-4"/></div><div class="strat-2-grid-item _5"><div class="strat-2-annotation"><div class="annotation">tokyopolaroid.jpg</div></div><img src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/6704518815b93ffb765b243c_tamogoyaki%202.webp" loading="lazy" sizes="(max-width: 991px) 100vw, 43.078125px" srcset="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/6704518815b93ffb765b243c_tamogoyaki%202-p-500.webp 500w, https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/6704518815b93ffb765b243c_tamogoyaki%202.webp 740w" alt="A film photo of a street in Tokyo." class="strat-2-5"/></div><div class="strat-2-grid-item _6"><div class="strat-2-annotation"><div class="annotation">dessertselect.tiff</div></div><img src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/670444c5d9b4a15ac849560f_tamogoyaki%204.webp" loading="lazy" sizes="(max-width: 991px) 100vw, 26.921875px" srcset="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/670444c5d9b4a15ac849560f_tamogoyaki%204-p-500.webp 500w, https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/670444c5d9b4a15ac849560f_tamogoyaki%204.webp 723w" alt="Hands with green painted nails holding a raspberry dessert." class="strat-2-6"/></div><div class="strat-2-grid-item _7"><div class="strat-2-annotation"><div class="annotation">marketing-brochure.pdf</div></div><img src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673511e1c310df25a51bcc74_image.webp" loading="lazy" sizes="(max-width: 991px) 45.703125px, 32.3125px" srcset="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673511e1c310df25a51bcc74_image-p-500.webp 500w, https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673511e1c310df25a51bcc74_image.webp 690w" alt="A marketing brochure with a purple 3D graphic on the cover." class="strat-2-7"/></div><div class="strat-2-grid-item _8"><div class="strat-2-annotation"><div class="annotation">DxHealthSystems-NDA.pdf</div></div><img src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673510d6e91f0e5fee55b64b_tamogoyaki%202-5.webp" loading="lazy" sizes="(max-width: 991px) 100vw, 32.3125px" srcset="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673510d6e91f0e5fee55b64b_tamogoyaki%202-5-p-500.webp 500w, https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/673510d6e91f0e5fee55b64b_tamogoyaki%202-5.webp 659w" alt="A signed contract." class="strat-2-8"/></div><div class="line-horizontal-bot"></div></div></div></div></section><div class="w-embed w-script"><style>
+	.strat-2-grid img {
+  	opacity: 0;
+    transition: 0.4s;
+  }
+  
+  .strat-1-circle path {
+  	stroke-dashoffset: 500;
+    stroke-dasharray: 500;
+    transition: 0.6s ease;
+  }
+</style>
+<script>
+
+	const strat1Cont = document.querySelector('.strat-1')
+	const strat1Content = document.querySelector('.strat-1-content')
+  const strat1Images = document.querySelectorAll('.strat-1-images > div')
+  const strat1Path = document.querySelector('.strat-1-circle path')
+  const strat2Content = document.querySelector('.strat-2-content')
+  const strat2Images = document.querySelectorAll('.strat-2-grid img')
+  const strat2Cursors = document.querySelectorAll('.strat-1-cursortag-1, .strat-1-cursortag-2')
+
+	function animateOnScroll() {
+  	var draw = strat1Cont.getBoundingClientRect().top - 100
+    var start = strat1Cont.getBoundingClientRect().top
+    var end = strat1Cont.getBoundingClientRect().height
+    var start2 = strat2Content.getBoundingClientRect().top - (strat2Content.getBoundingClientRect().height / 2)
+    
+    function animate(progress) {
+      var ease = easeInQuad(progress);
+      
+      strat2Cursors[0].style.transform = `translate(${-30 * ease}vw,${30 * ease}dvh)`
+      strat2Cursors[1].style.transform = `translate(${10 * ease}vw,${-50 * ease}dvh)`
+      
+      strat1Images[0].style.transform = `translate(${-30 * ease}vw,${60 * ease}dvh) rotate(${3 + 15 * ease}deg)`
+      strat1Images[1].style.transform = `translate(${-10 * ease}vw,${60 * ease}dvh) rotate(${-6 + 10 * ease}deg)`
+      strat1Images[2].style.transform = `translate(${35 * ease}vw,${60 * ease}dvh) rotate(${-10 - 10 * ease}deg)`
+      strat1Images[3].style.transform = `translate(${10 * ease}vw,${60 * ease}dvh) rotate(${6.1 - 10 * ease}deg)`
+      strat1Images[4].style.transform = `translate(${30 * ease}vw,${-30 * ease}dvh) rotate(${18 + 10 * ease}deg)`
+      strat1Images[5].style.transform = `translate(${10 * ease}vw,${-40 * ease}dvh) rotate(${-3 + 10 * ease}deg)`
+      strat1Images[6].style.transform = `translate(${-10 * ease}vw,${-35 * ease}dvh) rotate(${1 - 10 * ease}deg)`
+      strat1Images[7].style.transform = `translate(${-30 * ease}vw,${-30 * ease}dvh) rotate(${-8.2 - 10 * ease}deg)`
+    }
+
+    function easeOutQuad(t) {
+      return t * (2 - t);
+    }
+    function easeInQuad(t) {
+      return Math.pow(t, 2);
+    }
+    function easeInOutQuint(t) {
+      t /= 0.5;
+      if (t < 1) return 0.5 * Math.pow(t, 5);
+      t -= 2;
+      return 0.5 * (Math.pow(t, 5) + 2);
+    }
+
+    function scrollHandler() {
+      var scroll = window.scrollY || window.pageYOffset;
+      var progress = Math.min((scroll - start) / (end - start), 1)
+
+      if (scroll < draw) {
+        strat1Path.style.strokeDashoffset = '500'
+      } 
+      if (scroll >= draw) {
+        strat1Path.style.strokeDashoffset = '0'
+      }
+      if (scroll < draw) {
+      	animate(0)
+      } 
+      if (scroll >= start && scroll <= end) {
+        animate(progress);
+      }
+      if (scroll > end) {
+      	animate(1)
+      } 
+      if (scroll < start2) {
+      	for (let i = 0; i < strat2Images.length; i++) {
+        	setTimeout(function(){
+        		strat2Images[i].style.opacity = '0'
+          }, i * 50)
+        }
+      }
+      if (scroll >= start2) {
+      	for (let i = 0; i < strat2Images.length; i++) {
+        	setTimeout(function(){
+        		strat2Images[i].style.opacity = '1'
+          }, i * 50)
+        }
+      }
+    }
+
+    window.addEventListener('scroll', scrollHandler);
+  }
+  
+  animateOnScroll();
+  window.addEventListener('resize', animateOnScroll);
+</script></div><section class="page-section strat-3"><div class="page-section-grid"><div id="w-node-_0c5aa527-8e54-f4f8-e524-0c5f02b2bca3-ded5153e" class="strat-3-content"><div id="w-node-_0c5aa527-8e54-f4f8-e524-0c5f02b2bca4-ded5153e" class="page-section-grid-area"><div class="annotation carousel-annotation">The Pillars</div></div><div typeContent="" id="w-node-_0c5aa527-8e54-f4f8-e524-0c5f02b2bca7-ded5153e" class="carousel-content"><div class="line-vertical-left"></div><div id="w-node-_0c5aa527-8e54-f4f8-e524-0c5f02b2bcaa-ded5153e" class="strat-carousel-info"><div class="line-horizontal-top"></div><h2 class="carousel-heading">Our design strategy prompts </h2><div class="carousel-title--block"><div class="block-content"><h2>humanity,</h2><div aria-hidden="true" class="annotation">1</div></div></div><div class="carousel-title--block"><div class="block-content"><h2>clarity,</h2><div aria-hidden="true" class="annotation">2</div></div></div><div class="carousel-title--block"><div class="block-content"><h2>action,</h2><div aria-hidden="true" class="annotation">3</div></div></div><div class="carousel-header-joiner"><h2 class="carousel-heading">&amp; </h2><div class="carousel-title--block"><div class="block-content"><h2>delight</h2><div aria-hidden="true" class="annotation">4</div></div></div></div><div class="carousel-hor2"></div><div class="w-embed"><style>
+.carousel-info > h1 {
+	display: inline;
+}
+.carousel-info h1 {
+	line-height: 72px;
+}
+.carousel-info .annotation {
+	margin-top: 8px;
+}
+</style></div></div><div id="w-node-_0c5aa527-8e54-f4f8-e524-0c5f02b2bcca-ded5153e" class="carousel-panel"><div id="w-node-_0c5aa527-8e54-f4f8-e524-0c5f02b2bccc-ded5153e" class="carousel-control-area"><div class="carousel-controls"><button class="carousel-control"><div class="w-embed"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M16 0C5.682 0 0 5.682 0 16C0 26.318 5.682 32 16 32C26.318 32 32 26.318 32 16C32 5.682 26.318 0 16 0Z" fill="#1E1919"/>
+  <path class="progress" d="M16 7C20.9706 7 25 11.0294 25 16C25 20.9706 20.9706 25 16 25C11.0294 25 7 20.9706 7 16C7 11.0294 11.0294 7 16 7Z" stroke-width="18" stroke="rgba(255,255,255,0.6)"/>
+</svg></div><div class="ui-label control">1</div></button><button class="carousel-control"><div class="w-embed"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 0C5.682 0 0 5.682 0 16C0 26.318 5.682 32 16 32C26.318 32 32 26.318 32 16C32 5.682 26.318 0 16 0Z" fill="#1E1919"/>
+<path class="progress" d="M16 7C20.9706 7 25 11.0294 25 16C25 20.9706 20.9706 25 16 25C11.0294 25 7 20.9706 7 16C7 11.0294 11.0294 7 16 7Z" stroke-width="18" stroke="rgba(255,255,255,0.6)"/>
+</svg></div><div class="ui-label control">2</div></button><button class="carousel-control"><div class="w-embed"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 0C5.682 0 0 5.682 0 16C0 26.318 5.682 32 16 32C26.318 32 32 26.318 32 16C32 5.682 26.318 0 16 0Z" fill="#1E1919"/>
+<path class="progress" d="M16 7C20.9706 7 25 11.0294 25 16C25 20.9706 20.9706 25 16 25C11.0294 25 7 20.9706 7 16C7 11.0294 11.0294 7 16 7Z" stroke-width="18" stroke="rgba(255,255,255,0.6)"/>
+</svg></div><div class="ui-label control">3</div></button><button class="carousel-control"><div class="w-embed"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 0C5.682 0 0 5.682 0 16C0 26.318 5.682 32 16 32C26.318 32 32 26.318 32 16C32 5.682 26.318 0 16 0Z" fill="#1E1919"/>
+<path class="progress" d="M16 7C20.9706 7 25 11.0294 25 16C25 20.9706 20.9706 25 16 25C11.0294 25 7 20.9706 7 16C7 11.0294 11.0294 7 16 7Z" stroke-width="18" stroke="rgba(255,255,255,0.6)"/>
+</svg></div><div class="ui-label control">4</div></button></div><div class="carousel-text-subtle"><p class="p-large">Warm, soulful, and relatable. We&#x27;re here to keep life organized and make work easier, no matter where it happens or who you’re working with.</p><p class="p-large">Clarity isn’t simply about reduction. It’s about surfacing what matters, cutting out what doesn’t, and reducing complexity.</p><p class="p-large">We believe in designing experiences that feel wonderfully functional, for experts and beginners — so our users always know what to do next. They should never have to read a manual to understand how things work.</p><p class="p-large">We design small moments of joy into everything we do, so people have fun, meaningful ways to express themselves. We design experiences for work, but they should always feel pleasant, and never dull.</p></div></div><div id="w-node-_0c5aa527-8e54-f4f8-e524-0c5f02b2bce6-ded5153e" class="carousel-examples-container"><div class="carousel-examples"><div class="carousel-example strat-carousel"><div aria-label="An illustration of two hands giving each other a high five." data-w-id="7c8b6de8-7d13-f3b7-1e1d-de92642d9e5d" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/67101ce28ee78852dd898744_Collaboration_HighFive_8FPS.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="2.625"></div></div><div class="carousel-example strat-carousel"><div aria-label="An illustration of a light bulb shining." data-w-id="7c8b6de8-7d13-f3b7-1e1d-de92642d9e5f" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/67101d2e7f033a4f0aa4ac5d_AI_Lightbulb_8FPS.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="2"></div></div><div class="carousel-example strat-carousel"><div aria-label="An illustration of a flag, waving in the wind." data-w-id="7c8b6de8-7d13-f3b7-1e1d-de92642d9e61" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/67101d47d3ff6fce477b1251_Notifications_Flag_8FPS.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="1.75"></div></div><div class="carousel-example strat-carousel"><div aria-label="An illustration of a magical floating document." data-w-id="7c8b6de8-7d13-f3b7-1e1d-de92642d9e63" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/67101d5338dc662a347f554a_AI_FlyingDocument_8FPS.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="2"></div></div></div><div class="carousel-lines"><div class="line-vertical-left"></div><div class="line-horizontal-top"></div></div></div><div class="line-horizontal-bot"></div></div><div class="line-vertical-right"></div><div class="w-embed w-script"><style>
+  .carousel-title--block {
+    opacity: 0.4;
+    transition: 0.4s ease;
+  }
+  .carousel-title--block.active {
+    opacity: 1;
+  }
+  .carousel-examples {
+    justify-content: start;
+    overflow: hidden;
+  }
+  .carousel-examples > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: shuffleOut 0.6s ease-in forwards;
+  }
+  .carousel-examples > div.active {
+    transform: translateY(100%) scale(1);
+    filter: brightness(1);
+    animation: shuffleIn 0.8s cubic-bezier(.3,1,.3,1) forwards;
+    z-index: 1;
+  }
+  .carousel-control path.progress {
+    stroke-dasharray: 58;
+    stroke-dashoffset: 0;
+  }
+  .carousel-control.active path.progress {
+    stroke-dashoffset: 58;
+    animation: 4s linear progress forwards;
+  }
+  @keyframes progress {
+    0% {stroke-dashoffset: 58;}
+    100% {stroke-dashoffset: 0;}
+  }
+
+
+  .carousel-title--block.selected {
+    opacity: 1!important;
+  }
+  .carousel-control.selected path.progress {
+    stroke-dashoffset: 58!important;
+  }
+  .carousel-examples > div.deselected {
+    opacity: 1!important;
+    transform: translateY(0%) scale(1);
+    filter: brightness(1);
+    animation: shuffleOut 0.6s ease-in forwards!important;
+    z-index: auto!important;
+  }
+  .carousel-examples > div.selected {
+    opacity: 1!important;
+    filter: brightness(1)!important;
+    transform: translateY(100%) scale(1);
+    animation: shuffleIn 0.8s cubic-bezier(.3,1,.3,1) forwards!important;
+    z-index: 99!important;
+  }
+  @keyframes shuffleOut {
+    0% {transform: translateY(0%) scale(1); filter: brightness(1)}
+    100% {transform: translateY(0%) scale(0.9); filter: brightness(0.6)}
+  }
+  @keyframes shuffleIn {
+    0% {transform: translateY(100%) scale(1);}
+    100% {transform: translateY(0%) scale(1);}
+  }
+</style>
+<script>
+  const carouselContent = document.querySelector('.carousel-content')
+  const blocks = document.querySelectorAll('.carousel-title--block')
+  const controls = document.querySelectorAll('.carousel-control')
+  const carouselExample = document.querySelector('.carousel-examples')
+  const carouselExamples = document.querySelectorAll('.carousel-examples > div')
+  const carouselTexts = document.querySelectorAll('.carousel-text-subtle .p-large')
+  const slideTime = 4000
+  const selected = []
+
+  let interval;
+  let timeouts = []; 
+
+  function checkIfCarouselVisible() {
+    const sectionTop = carouselContent.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (sectionTop <= windowHeight && sectionTop >= 0) {
+      carousel();
+      interval = setInterval(carousel, slideTime * controls.length);
+      window.removeEventListener("scroll", checkIfCarouselVisible);
+    }
+  }
+
+  function carousel() {
+    timeouts.forEach(timeout => clearTimeout(timeout));
+    timeouts = [];
+
+    for (let i = 0; i < controls.length; i++) {
+      const timeout = setTimeout(function() {
+        selected.push(i)
+        for (let n = 0; n < controls.length; n++) {
+          controls[n].classList.remove('active')
+          blocks[n].classList.remove('active')
+          carouselExamples[n].classList.remove('active')
+          carouselExamples[n].style.opacity = '0'
+          carouselTexts[n].style.display = 'none'
+        }
+        carouselExamples[i === 0 ? controls.length - 1 : i - 1].style.opacity = '1';
+        carouselExamples[i].style.opacity = '1'
+        controls[i].classList.add('active')
+        blocks[i].classList.add('active')
+        carouselExamples[i].classList.add('active')
+        carouselTexts[i].style.display = 'block'
+
+      }, slideTime * i);
+
+      timeouts.push(timeout);
+    }
+  }
+
+  window.addEventListener("scroll", checkIfCarouselVisible);
+  checkIfCarouselVisible();
+
+  controls.forEach((item, i) => {
+    controls[i].onclick = function() {
+      select(i)
+    };
+    blocks[i].onclick = function() {
+      select(i)
+    };
+  });
+
+  function select(i) {
+    clearInterval(interval);
+    timeouts.forEach(timeout => clearTimeout(timeout));
+
+    selected.push(i)
+    for (let n = 0; n < controls.length; n++) {
+      carouselExamples[n].style.opacity = '0'
+      carouselExamples[n].style.animation = 'none'
+      controls[n].classList.remove('active','selected')
+      blocks[n].classList.remove('active','selected')
+      carouselExamples[n].classList.remove('active','selected','deselected')
+      carouselTexts[n].style.display = 'none'
+    }
+    carouselExamples[selected[selected.length - 2]].classList.add('deselected')
+    controls[i].classList.remove('active')
+    blocks[i].classList.remove('active')
+    carouselExamples[i].classList.remove('active','deselected')
+    controls[i].classList.add('selected')
+    blocks[i].classList.add('selected')
+    carouselExamples[i].classList.add('selected')
+    carouselTexts[i].style.display = 'block'
+  }
+
+</script></div></div></div></div></section><section class="page-section dark"><div class="page-section-grid dark"><div typeContent="" id="w-node-_8da08f51-c74d-d422-a41d-8a1059bbc179-ded5153e" class="strat-4-content"><h2 class="strat-4-heading">Good design systems have structure. Great ones have design strategy.</h2><div class="strat-4-rive-wrap"><div class="strat-4-rive-desktop" data-rive-url="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/6761932a95844786666a46db_strategy-web.riv" data-rive-state-machine="State Machine 1" data-rive-artboard="main" data-rive-autoplay="true" data-rive-is-touch-scroll-enabled="true" data-rive-automatically-handle-events="false" data-rive-fit="contain" data-rive-alignment="center" data-animation-type="rive"><canvas style="height:100%;width:100%"></canvas></div><div class="strat-4-rive-mobile" data-rive-url="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/6761932fd6dd15823a8a2b89_strategy-mobile.riv" data-rive-state-machine="State Machine 1" data-rive-artboard="main" data-rive-autoplay="true" data-rive-is-touch-scroll-enabled="true" data-rive-automatically-handle-events="false" data-rive-fit="contain" data-rive-alignment="center" data-animation-type="rive"><canvas style="height:100%;width:100%"></canvas></div></div></div></div></section></main><footer class="footer"><div class="footer-content"><a href="https://www.dropbox.com/terms" target="_blank" class="annotation footer-link">Dropbox Terms of Service</a><a href="https://www.dropbox.com/privacy" target="_blank" class="annotation footer-link">Dropbox Privacy Policy</a><a href="https://www.dropbox.com/de/lp/about/impressum" target="_blank" class="annotation footer-link">Impressum</a><a href="https://assets.dropbox.com/warp/en-us/modern-slavery/Dropbox_Modern_Slavery_Statement.pdf" target="_blank" class="annotation footer-link">Modern Slavery Statement</a><a href="http://www.dropbox.com/support/de-cancel-contract" target="_blank" class="annotation footer-link">Cancel Contract</a><a href="#manage-cookies" class="annotation footer-link">Cookies &amp; CCPA preferences</a></div><div class="w-embed"><style>
+
+@media (min-width: 992px) and (max-width: 1280px) {
+  .footer {
+    padding-left: 120px;
+    padding-right: 120px;
+    justify-content: left;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 12px 60px;
+    text-align: left;
+  }
+}
+
+
+</style></div></footer><script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=66c503d081b2f012369fc5d2" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/js/webflow.schunk.f2d8318baac05106.js" type="text/javascript"></script><script src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/js/webflow.schunk.0857190632618bc1.js" type="text/javascript"></script><script src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/js/webflow.schunk.8050d0d21005bb76.js" type="text/javascript"></script><script src="https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/js/webflow.56e37dcf.2a89e3e52a5ac396.js" type="text/javascript"></script><script>
+
+setTimeout(function() {
+    console.log("Made by Daybreak: https://daybreak.studio");
+}, 1000);
+
+</script></body></html>

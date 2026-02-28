@@ -1,0 +1,57 @@
+/** @generated -- This file is automatically synced from @dropbox/dig-content-icons@5.11.2. DO NOT MODIFY! **/
+
+/**
+  This file should not be imported into your CSS or SASS files - the CSS variables will be available on the page for you to use.
+  (SEE #design-systems ON SLACK if you have questions)
+**/
+
+.dig-ctz1wx2_5-11-2{
+  --dig-ctz1wx0_5-11-2:var(--dig-color__fileicon__container);
+  --dig-ctz1wx1_5-11-2:var(--dig-color__fileicon__shadow);
+  box-sizing:border-box;
+}
+.dig-ctz1wx3_5-11-2{
+  --dig-ctz1wx0_5-11-2:var(--dig-color__background__base);
+}
+.dig-ctz1wx5_5-11-2{
+  --dig-ctz1wx0_5-11-2:transparent;
+  --dig-ctz1wx1_5-11-2:transparent;
+}.dig-by16w01_5-11-2{
+  box-shadow:inset 0 0 0 1px var(--dig-color__border__subtle);
+}
+.dig-by16w00_5-11-2 .dig-by16w01_5-11-2{
+  box-shadow:none;
+  height:auto;
+  place-self:center;
+  transform:none;
+  width:auto;
+}
+:where(.dig-by16w00_5-11-2 .dig-by16w01_5-11-2 img,.dig-by16w00_5-11-2 .dig-by16w01_5-11-2 svg){
+  aspect-ratio:auto;
+  display:block;
+  height:auto;
+  object-fit:contain;
+  width:auto;
+}.dig-86akn92_5-11-2{
+  --dig-86akn90_5-11-2:var(--dig-radius__small);
+  --dig-86akn91_5-11-2:var(--dig-color__border__subtle);
+  border-radius:var(--dig-86akn90_5-11-2);
+}
+.dig-86akn94_5-11-2{
+  --dig-86akn90_5-11-2:var(--dig-radius__circular);
+}
+.dig-86akn95_5-11-2{
+  --dig-86akn90_5-11-2:var(--dig-radius__small);
+}
+.dig-86akn9b_5-11-2,.dig-86akn9c_5-11-2{
+  --dig-86akn90_5-11-2:var(--dig-radius__xsmall);
+}
+.dig-86akn9d_5-11-2{
+  box-shadow:inset 0 0 0 1px var(--dig-86akn91_5-11-2);
+}
+.dig-86akn9e_5-11-2{
+  border-radius:var(--dig-86akn90_5-11-2);
+  grid-area:1 / 1 / -1 / -1;
+  height:100%;
+  width:100%;
+}
