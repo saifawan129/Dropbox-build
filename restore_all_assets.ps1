@@ -80,14 +80,56 @@ function Restore-Asset($path, $originFile) {
 }
 
 # Scan all index.html files
-$htmlFiles = Get-ChildItem -Path $root -Recurse -Filter index.html
+$htmlFiles = Get-ChildItem -Path $root -Recurse -Filter *.html
 foreach ($html in $htmlFiles) {
+    Write-Host "Processing $($html.FullName)..."
     $content = Get-Content $html.FullName -Raw
-    # Match img/67... or ../img/67...
-    # Using a simpler regex to catch all hashed assets
-    $matches = [regex]::Matches($content, '(\.\./)?img/[A-Za-z0-9%._\-]+\.[A-Za-z0-9]+')
-    foreach ($m in $matches) {
+    $modified = $false
+
+    # 1. Match relative img paths: img/... or ../img/...
+    $relativeMatches = [regex]::Matches($content, '(\.\./)*img/[A-Za-z0-9%._\-]+\.[A-Za-z0-9]+')
+    foreach ($m in $relativeMatches) {
         Restore-Asset $m.Value $html.FullName
+    }
+
+    # 2. Match CDN URLs: https://cdn.prod.website-files.com/...
+    $cdnMatches = [regex]::Matches($content, 'https://cdn\.prod\.website-files\.com/[A-Za-z0-9]+/[A-Za-z0-9%._\-]+\.[A-Za-z0-9]+')
+    foreach ($m in $cdnMatches) {
+        $url = $m.Value
+        if ($url -match "([^/]+\.[A-Za-z0-9]+)$") {
+            $filename = $matches[1]
+            $localFilename = [uri]::UnescapeDataString($filename)
+            
+            # Determine target img dir relative to current HTML
+            $subpageDir = Split-Path $html.FullName -Parent
+            $targetImgDir = Join-Path $subpageDir "img"
+            if (!(Test-Path $targetImgDir)) {
+                New-Item -ItemType Directory -Path $targetImgDir -Force | Out-Null
+            }
+            $targetPathLocal = Join-Path $targetImgDir $localFilename
+
+            # Download if not exists
+            if (!(Test-Path $targetPathLocal)) {
+                Write-Host "  Downloading CDN asset: $localFilename"
+                try {
+                    Invoke-WebRequest -Uri $url -OutFile $targetPathLocal -ErrorAction Stop
+                }
+                catch {
+                    Write-Warning "  Failed to download $url"
+                    continue
+                }
+            }
+
+            # Replace CDN URL with local relative path
+            $relativePath = "img/" + $filename
+            $content = $content.Replace($url, $relativePath)
+            $modified = $true
+        }
+    }
+
+    if ($modified) {
+        Set-Content $html.FullName $content
+        Write-Host "  Updated HTML with local paths."
     }
 }
 

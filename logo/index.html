@@ -5,6 +5,7 @@
 
 <head>
   <meta charset="utf-8" />
+  <base href="/logo/" />
   <title>Logo - Dropbox Brand Guidelines</title>
   <meta content="Our logo is the most instantly recognizable symbol of the brand." name="description" />
   <meta content="Logo - Dropbox Brand Guidelines" property="og:title" />
@@ -19,6 +20,7 @@
   <meta content="3tCRabxJ2U9f5U63I6kPjRzRX-6Mc17_xew2pnbksyA" name="google-site-verification" />
   <meta content="Webflow" name="generator" />
   <link href="../css/brand-app-site.webflow.css" rel="stylesheet" type="text/css" />
+  <link href="css/brand-app-site.webflow.6721586f7.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
@@ -4001,17 +4003,32 @@
 
   </script>
   <script>
-    // Fallback to reveal content if opening animation hangs
+    // Comprehensive fallback to reveal content if Webflow IX2 animations hang
     setTimeout(function () {
-      const openingMasks = document.querySelectorAll(".opening, .opening-mask, .logo-sticky, .logo-0-content");
-      openingMasks.forEach(el => {
-        el.style.opacity = "1";
-        el.style.visibility = "visible";
+      // Force all elements visible - Webflow IX2 sets opacity:0 on initial states
+      document.querySelectorAll('*').forEach(function (el) {
+        var style = window.getComputedStyle(el);
+        if (style.opacity === '0' && !el.classList.contains('nav-scroll-indicator') && !el.classList.contains('outro-nav-background')) {
+          el.style.setProperty('opacity', '1', 'important');
+        }
+        if (style.visibility === 'hidden') {
+          el.style.setProperty('visibility', 'visible', 'important');
+        }
       });
-      // Specifically hide the loading overlay if it exists
-      const loadingOverlay = document.querySelector(".opening-animation-script");
-      if (loadingOverlay) loadingOverlay.style.display = "none";
-    }, 2000);
+      // Ensure body is scrollable
+      document.body.style.overflow = 'auto';
+      document.documentElement.style.overflow = 'auto';
+      // Remove any fixed/stuck overlays
+      document.querySelectorAll('.opening, .opening-mask, .opening-animation-script').forEach(function (el) {
+        el.style.display = 'none';
+      });
+      // Ensure main content sections are visible
+      document.querySelectorAll('main, .page-section, .page-content, section').forEach(function (el) {
+        el.style.setProperty('opacity', '1', 'important');
+        el.style.setProperty('visibility', 'visible', 'important');
+      });
+      console.log('Fallback: Forced all content visible');
+    }, 1500);
   </script>
 </body>
 
