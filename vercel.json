@@ -1,0 +1,13 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/color", "destination": "/color/index.html" },
+    { "source": "/typography", "destination": "/typography/index.html" },
+    { "source": "/motion", "destination": "/motion/index.html" },
+    { "source": "/imagery", "destination": "/imagery/index.html" },
+    { "source": "/logo", "destination": "/logo/index.html" },
+    { "source": "/iconography", "destination": "/iconography/index.html" },
+    { "source": "/voice-and-tone", "destination": "/voice-and-tone/index.html" }
+  ]
+}
